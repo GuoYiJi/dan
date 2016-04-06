@@ -258,3 +258,46 @@ body{
     border-radius: .1rem;
 
 }
+.loading {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+.ui-loading-wrap {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    text-align: center;
+    height: 40px;
+}
+.ui-loading {
+    display: block;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/loading_sprite.png);
+    -webkit-background-size: auto 20px;
+    -webkit-animation: am-rotate 1s steps(12) infinite;
+}
+
+@-webkit-keyframes am-rotate {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -240px 0
+    }
+}
+@-webkit-keyframes am-rotate2 {
+    from {
+        background-position: 0 0
+    }
+
+    to {
+        background-position: -444px 0
+    }
+}
