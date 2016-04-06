@@ -115,18 +115,19 @@
                     </div>
                 </section>
 
-                <!--底部部分-->
-                <footer id="footer">
-                    <div class="footer_z"><img src="img/tu_15.png"></div>
-                    <div class="footer_text">
-                        <input type="text" class="text1" placeholder="我也说一句......">
-                    </div>
-                    <input type="submit" value="发送" class="fs">
-                </footer>
-                <!--底部结束-->
             </div>
         </div>
     </div>
+
+    <!--底部部分-->
+    <footer id="footer">
+        <div class="footer_z"><img src="img/tu_15.png"></div>
+        <div class="footer_text">
+            <input type="text" class="text1" placeholder="我也说一句......">
+        </div>
+        <input type="submit" value="发送" class="fs">
+    </footer>
+    <!--底部结束-->
 </body>
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/iscroll.js"></script>
@@ -173,7 +174,11 @@ $(function(){
             mouseWheel: true,
             interactiveScrollbars: true,
             shrinkScrollbars: true,
-            fadeScrollbars: true
+            fadeScrollbars: true,
+            topOffset: pullDownOffset,
+            onRefresh: function (){
+                alert(1);
+            }
         });
     }
     document.addEventListener('touchmove', function (e){
