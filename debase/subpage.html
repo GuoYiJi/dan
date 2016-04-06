@@ -206,6 +206,9 @@ $(function(){
     document.addEventListener('touchmove', function (e) {
         e.preventDefault();
     }, false);
+    $('#scroller').on('touchend', function (){
+        console.log(1);
+    })
     loaded();
 })
 
