@@ -1,0 +1,165 @@
+
+.just-back {
+}
+.just, .back {
+	float: left;
+	width: 50%;
+}
+
+.ms-round {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	width: .8rem;
+	height: .8rem;
+	z-index: 10;
+}
+.ms-round .circle0:after {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	content: "";
+	width: .6rem;
+	height: .6rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+.ms-round .circle0 {
+	z-index: 11;
+ 	border-radius: 50%;
+	background-image: -webkit-linear-gradient( 90deg, rgb(206,208,212) 0%, rgb(246,246,246) 100%);
+	background-image: linear-gradient( 90deg, rgb(206,208,212) 0%, rgb(246,246,246) 100%);
+}
+.ms-round .circle0:active {
+	background-image: -webkit-linear-gradient( -90deg, rgb(206,208,212) 0%, rgb(246,246,246) 100%);
+	background-image: linear-gradient( -90deg, rgb(206,208,212) 0%, rgb(246,246,246) 100%);
+}
+.just .circle0:after {
+	background-image: url(../img/just.png);
+}
+.back .circle0:after {
+	background-image: url(../img/back.png);
+}
+.just > span, .back > span {
+	font-size: 0.14rem;
+	line-height: .35rem;
+	color: #fff;
+}
+.circle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	border-radius: 50%;
+	opacity: 0;
+}
+.circle0 {
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	width: .7rem;
+	height: .7rem;
+	background-repeat: no-repeat;
+	background-size: contain;
+	opacity: 1;
+}
+.circle1 {
+	z-index: 7;
+	margin-left: -.55rem;
+	margin-top: -.55rem;
+	width: 1.1rem;
+	height: 1.1rem;
+	background-color: rgba(235, 175, 175, .3);
+}
+.circle2 {
+	z-index: 8;
+	margin-left: -.45rem;
+	margin-top: -.45rem;
+	width: .9rem;
+	height: .9rem;
+	background-color: rgba(245, 204, 204, .2);
+}
+.circle3 {
+	z-index: 9;
+	margin-left: -0.3rem;
+	margin-top: -0.3rem;
+	width: .6rem;
+	height: .6rem;
+	background-color: rgba(245, 204, 204, .2);
+}
+
+.c1 {
+	animation: zoom 1s .3s linear;
+	-webkit-animation: zoom 1s .3s linear;
+}
+.c2 {
+	animation: zoom 1s .2s linear;
+	-webkit-animation: zoom 1s .2s linear;
+}
+.c3 {
+	animation: zoom 1s .1s linear;
+	-webkit-animation: zoom 1s .1s linear;
+}
+
+@keyframes zoom {
+    0% {
+        -webkit-transform: scale(0.8);
+        opacity: 0
+    }
+
+    50% {
+        -webkit-transform: scale(1);
+        opacity: 1
+    }
+
+    100% {
+        -webkit-transform: scale(1.4);
+        opacity: 0.2
+    }
+}
+
+.just-line span i {
+	left: 0;
+	width: 100%;
+	max-width: 195%;
+	min-width: 5%;
+	overflow: hidden;
+}
+.back-line span i {
+	right: 0;
+	left: auto;
+	width: 100%;
+	max-width: 195%;
+	min-width: 5%;
+	overflow: hidden;
+}
+
+.shake {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+    	animation-delay:1.5s;
+	-webkit-animation-delay:1.5s; /* Safari 和 Chrome */
+}
+
+@keyframes shake {
+    0%,100% {
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0)
+    }
+
+    10%,30%,50%,70%,90% {
+        -webkit-transform: translate3d(-5px,0,0);
+        transform: translate3d(-5px,0,0)
+    }
+
+    20%,40%,60%,80% {
+        -webkit-transform: translate3d(5px,0,0);
+        transform: translate3d(5px,0,0)
+    }
+}
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}

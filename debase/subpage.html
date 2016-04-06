@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="pragram" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>辩论赛</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/subpage.css">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="scroller">
+            <div id="box">
+                <!--头部正反-->
+                <header id="header">
+                    <div class="vs"><img src="img/vs_03.png"></div>
+                    <div class="header_left">
+                        <div class="circle zz"></div>
+                        <div class="leftz">
+                            <div class="number">
+                                <span>128</span>
+                                <img src="img/left.png" class="tt2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header_right">
+                        <div class="circle ff"></div>
+                        <div class="leftz">
+                            <div class="number">
+                                <span>178</span>
+                                <img src="img/right.png" class="tt2">
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!--内容区域-->
+                <section id="section">
+                    <!--聊天对话框-->
+                    <div class="dialog1">
+                        <div class="dialog_img"><img src="img/tu_07.png"></div>
+                        <div class="dialog1-block">
+                            <div class="dialog_text-block">
+                                <div class="dialog_text">可以替代贝尼特斯，齐达内必须能替代啊......</div>
+                            </div>
+                            <div class="time">
+                                <span class="time_text">03-29<i>14:02</i></span>
+                            </div>
+                            <div class="zan active zanLeft">
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog1">
+                        <div class="dialog_img"><img src="img/tu_07.png"></div>
+                        <div class="dialog1-block">
+                            <div class="dialog_text-block">
+                                <div class="dialog_text">可以替代贝尼特斯</div>
+                            </div>
+                            <div class="time">
+                                <span class="time_text">03-29<i>14:02</i></span>
+                            </div>
+                            <div class="zan zanLeft">
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog1 dialog2">
+                        <div class="dialog_img  tu11"><img src="img/tu_11.png"></div>
+                        <div class="dialog1-block">
+                            <div class="dialog_text-block">
+                                <div class="dialog_text">可以替代贝尼特斯</div>
+                            </div>
+                            <div class="time">
+                                <span class="time_text">03-29<i>14:02</i></span>
+                            </div>
+                            <div class="zan zanRight">
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog1">
+                        <div class="dialog_img"><img src="img/tu_07.png"></div>
+                        <div class="dialog1-block">
+                            <div class="dialog_text-block">
+                                <div class="dialog_text">穆里尼奥重出江湖，继续带领皇马吧！！</div>
+                            </div>
+                            <div class="time">
+                                <span class="time_text">03-29<i>14:02</i></span>
+                            </div>
+                            <div class="zan zanLeft">
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dialog1 dialog2 ">
+                        <div class="dialog_img  tu11"><img src="img/tu_11.png"></div>
+                        <div class="dialog1-block">
+                            <div class="dialog_text-block">
+                                <div class="dialog_text">可以替代贝尼特斯</div>
+                            </div>
+                            <div class="time">
+                                <span class="time_text">03-29<i>14:02</i></span>
+                            </div>
+                            <div class="zan zanRight">
+                                <span>24</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!--底部部分-->
+                <footer id="footer">
+                    <div class="footer_z"><img src="img/tu_15.png"></div>
+                    <div class="footer_text">
+                        <input type="text" class="text1" placeholder="我也说一句......">
+                    </div>
+                    <input type="submit" value="发送" class="fs">
+                </footer>
+                <!--底部结束-->
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/font-size.js"></script>
+<script type="text/javascript">
+$(function(){
+    var _leftThis = parseInt($('.header_left span').html());
+    var _rightThis = parseInt($('.header_right span').html());
+    $(".zanLeft").on('touchstart',function(){
+        zan($(this),$('.header_left span'));
+    })
+    $(".zanRight").on('touchstart',function(){
+        zanRight($(this),$('.header_right span'));
+    })
+
+    function zan(obj,html){
+        if( obj.hasClass('active') ){
+            obj.removeClass('active');
+            _leftThis--;
+            html.html(_leftThis);
+        }else{
+            obj.addClass('active');
+            _leftThis++;
+            html.html(_leftThis);
+        }
+    }
+    function zanRight(obj,html){
+        if( obj.hasClass('active') ){
+            obj.removeClass('active');
+            _rightThis--;
+            html.html(_rightThis);
+        }else{
+            obj.addClass('active');
+            _rightThis++;
+            html.html(_rightThis);
+        }
+    }
+    // 下拉刷新
+    var myScroll, pullDownEl, pullDownOffset, pullUpEl, pullUpOffset, generatedCount;
+    generatedCount = 0;
+    function loaded(){
+        myScroll = new IScroll('#wrapper', {
+            scrollbars: true,
+            mouseWheel: true,
+            interactiveScrollbars: true,
+            shrinkScrollbars: true,
+            fadeScrollbars: true
+        });
+    }
+    document.addEventListener('touchmove', function (e){
+        e.preventDefault()
+    }, false);
+    loaded();
+})
+
+</script>
+</html>

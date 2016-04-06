@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>辩论赛</title>
+
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/animation.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+	<script>
+		$(function(){
+
+			setTimeout(function(){
+				$('.Plea').addClass('Plea-active');
+			},1000);
+			$('.PleaZ').on('transitionend, webkitTransitionEnd', function (){
+				var _height;
+				_height = $('body').outerHeight();
+				_height = _height >= 650 ? _height : 650;
+				/*$('#container').css({
+					height: _height
+				});*/
+			});
+			$('.plate').on('transitionend, webkitTransitionEnd', function (){
+				$('.J_shake').addClass('animated shake');
+			});
+			
+		})
+	</script>
+
+</head>
+<body ontouchstart="">
+
+<section id="container" style="overflow: hidden;">
+	<!-- 头部辩论模块 -->
+	<div class="Plea">
+		<!-- 辩论 -->
+		<div class="fistLeft"></div>
+		<div class="fistRight"></div>
+		<div class="PleaBg"></div>
+		<div class="PleaZ"></div>
+		<div class="font-B"></div>
+		<div class="font-Y"></div>
+		<div class="lightLeft"></div>
+		<div class="lightRight"></div>
+		<!-- 今日话题 -->
+		<div class="today"></div>
+		<div class="plate">
+			<div class="plateFont J_shake">齐达内将要执教皇家马德里足球队，你认为他能比贝尼特斯执教的效果更好么？</div>
+			<span class="plateTime"><i>第6期</i><i>2016-06-18</i></span>
+		</div>
+	</div>
+
+	<!-- 正反 -->
+	<div class="just-back-wrap">
+		<div class="just-back">
+			<div class="just">
+				<div class="just-round ms-round">
+					<a class="circle circle0 J_bar" href="javascript:;" data-target="just"></a>
+				</div>
+				<span>我认为能</span>
+			</div>
+			<div class="back">
+				<div class="back-round ms-round">
+					<a class="circle circle0 J_bar" href="javascript:;" data-target="back"></a>
+				</div>
+				<span>我认为不能</span>
+			</div>
+		</div>
+		<div class="just-back-line">
+			<div class="just-line">
+				<span><i data-target="just-bar"></i></span>
+				<div>支持数<i data-target="just-number">0</i></div>
+			</div><div class="back-line">
+				<span><i data-target="back-bar"></i></span>
+				<div>支持数<i data-target="back-number">0</i></div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<footer id="footer"></footer>
+
+<script>
+	var _w1, _w2, _speed;
+	_w1 = 100;
+	_w2 = 100;
+	_speed = 2;
+	$('.J_bar').on('touchstart', function (){
+		var _$num, _target, _num, _this, $_$just_bar, _$back_bar;
+		_this = $(this);
+		_target = _this.data('target');
+		_$just_bar = $('[data-target=\'just-number\']');
+		_$back_bar = $('[data-target=\'back-number\']');
+		_$num = $('[data-target=\'' + _target + '-number\']');
+		_num = parseInt(_$num.text());
+		_$num.text(++_num);
+		_a = _$just_bar.text();
+		_b = _$back_bar.text();
+		if (_target == 'just') {
+			_w1 = _w1 + _speed;
+			_w2 = _w2 - _speed;
+			$('[data-target=\'just-bar\']').width(_w1 + '%');
+			$('[data-target=\'back-bar\']').width(_w2 + '%');
+		} else {
+			_w1 = _w1 - _speed;
+			_w2 = _w2 + _speed;
+			$('[data-target=\'just-bar\']').width(_w1 + '%');
+			$('[data-target=\'back-bar\']').width(_w2 + '%');
+		}
+		// 咻一咻特效
+		var _html = '<i class="circle circle1 c1"></i><i class="circle circle2 c2"></i><i class="circle circle3 c3"></i>';
+		_this.parent().append(_html);
+					
+					
+		
+	})
+</script>
+<script type="text/javascript" src="js/font-size.js"></script>
+</body>
+</html>

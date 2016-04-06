@@ -1,0 +1,254 @@
+﻿
+body,html{ height: 100%;}
+body{
+    padding-bottom: 100px;
+    background: url(../img/bg.jpg) center no-repeat;
+    background-size: 100% 100%;
+    -webkit-box-sizing: initial;
+    -moz-box-sizing: initial;
+    box-sizing: initial;
+}
+#container{ width: 100%; height: 100%;}
+
+/* 头部辩论模块 */
+.Plea{ 
+	width: 100%; height: 100%; position: relative; padding-top: 0.2rem;
+}
+.Plea > *{
+	-webkit-transition: all .3s;
+	   -moz-transition: all .3s;
+			transition: all .3s;
+}
+.fistLeft{
+	position: absolute;
+	left: 0.7rem;
+	width: 0.9rem;
+	height: 0.6rem;
+	background: url(../img/fistLeft.png) center no-repeat;
+	background-size: 100% auto;
+    box-sizing: initial;
+}
+.fistRight{
+    position: absolute;
+    top: 0;
+    right: 0.65rem;
+    width: 1rem;
+    height: 0.8rem;
+    background: url(../img/fistRight.png) center no-repeat;
+    background-size: 100% auto;
+}
+.PleaBg{
+	width: 1.8rem;
+	height: 1.5rem;
+	position: absolute;
+	left: 0;
+	top: 0.5rem;
+	right: 0;
+	bottom: auto;
+	margin: 0 auto;
+	background: url(../img/PleaBg.png) center no-repeat;
+	background-size: 100% auto;
+}
+.PleaZ{
+    width: 0.85rem;
+    height: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0.45rem;
+    right: 0;
+    bottom: auto;
+    margin: 0 auto;
+    background: url(../img/Plea.png) center no-repeat;
+    background-size: 100% auto;
+}
+.font-B{
+    width: 0.9rem;
+    height: 1rem;
+    position: absolute;
+    left: 0.35rem;
+    top: 1rem;
+    background: url(../img/font-B.png) center no-repeat;
+    background-size: 100% auto;
+}
+.font-Y{
+    width: 0.6rem;
+    height: 1rem;
+    position: absolute;
+    right: 0.6rem;
+    top: 1rem;
+    background: url(../img/font-Y.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+/* 今日话题 */
+.today{
+	width: 100%;
+	position: absolute;
+	top: 2rem;
+	background: url(../img/line.png) center no-repeat;
+	background-size: 200% auto;
+	height: 0.5rem;
+}
+.plate{
+	width: 2.2rem;
+    position: absolute;
+    top: 2.12rem;
+    left: 0;
+    background: url(../img/plate.png) center no-repeat;
+    background-size: 100% auto;
+    height: 1.83rem;
+    bottom: auto;
+    right: 0;
+    margin: 0 auto;
+}
+.plateFont{
+    color: #e6eff4;
+    position: absolute;
+    bottom: auto;
+    top: 0.75rem;
+    width: 1.7rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 0.12rem;
+    line-height: 0.22rem;
+    height: 0.8rem;
+    overflow: auto;
+}
+.plateTime{
+	color: #cde4ef;
+	position: absolute;
+    bottom: 0.14rem;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.plateTime i{
+	display: inline-block;
+    padding: 0 5px;
+}
+
+/* 正反 */
+.just-back-wrap{
+	position: absolute;
+	top: 3.9rem;
+	width: 100%;
+	text-align: center;
+}
+.just-back{}
+.just,
+.back{}
+.just-round,
+.back-round{}
+.just span,
+.back span{}
+.back{}
+.back-round{}
+
+.just-back-line{
+    width: 100%;
+    overflow: hidden;
+    line-height: 0.3rem;
+    font-size: 0.14rem;
+    color: #bbbbbb;
+}
+.just-back-line > div{
+    display: inline-block;
+    width: 1.4rem;
+}
+
+.just-back-line span{
+	display: block;
+    width: 100%;
+    position: relative;
+}
+.just-line span,
+.just-line span i{
+    border-radius: 5rem 0 0 5rem;
+	height: 0.07rem;
+}
+.back-line span,
+.back-line span i{
+    border-radius: 0 5rem 5rem 0;
+	height: 0.07rem;
+}
+
+.just-back-line span i{
+	content: '';
+	position: absolute;
+	top: 0;
+}
+.just-line span i{ right: 0; background: #b74343;}
+.back-line span i{ left: 0; background: #83b333;}
+
+.just-line{}
+.back-line{}
+.just-line div{
+	text-align: left;
+	overflow: hidden;
+}
+.back-line div{
+	text-align: right;
+	overflow: hidden;
+}
+.just-line div i,
+.back-line div i{
+	font-size: 0.18rem;
+}
+.just-line div i{
+	float: right;
+	color: #e55564;
+	padding-right: 0.1rem;
+}
+.back-line div i{
+	float: left;
+	color: #81a14b;
+	padding-left: 0.1rem;
+}
+
+.lightLeft,
+.lightRight{
+	position: absolute;
+	top: 1.8rem;
+	width: 3.2rem;
+	height: 0.4rem;
+	opacity: 0.2;
+    background: -webkit-linear-gradient(right,white, rgba(0,0,0,0.1) ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right,white, rgba(0,0,0,0.1) ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right,white, rgba(0,0,0,0.1) ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right,white, rgba(0,0,0,0.1)); /* 标准的语法（必须放在最后） */
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+       -moz-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+}
+.lightLeft{
+	left: -1rem;
+}
+.lightRight{;
+	right: -1rem;
+    background: -webkit-linear-gradient(left,white, rgba(0,0,0,0.1) ); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left,white, rgba(0,0,0,0.1) ); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left,white, rgba(0,0,0,0.1) ); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to left,white, rgba(0,0,0,0.1)); /* 标准的语法（必须放在最后） */
+    transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -moz-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+
+
+
+/* 尾部 */
+#footer{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 0.15rem;
+    width: 100%;
+    background: url(../img/footer.png) center no-repeat;
+    background-size: auto 100%;
+    margin: 5px 0;
+}
+
