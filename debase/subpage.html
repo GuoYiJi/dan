@@ -184,7 +184,9 @@ $(function(){
             var y = this.y,
                 maxY = this.maxScrollY - y
             if(y >= 40){
-                $('#J_loading').show();
+                $('#J_loading').show().css({
+                    position: 'relative'
+                });
                 return "";
             }else if(y < 40 && y > 0){
                 return "";
@@ -193,7 +195,7 @@ $(function(){
         
         myScroll.on("slideDown",function(){
             if(this.y > 40){
-                location.reload()
+                //location.reload()
                 $('#scroller').css({
                     '-webkit-transform': 'translate(0, 40px)'
                 })
