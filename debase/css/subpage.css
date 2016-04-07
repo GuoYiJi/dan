@@ -19,7 +19,7 @@ body{
 
 #scroller {
     position: absolute;
-    min-height: 102%;
+    min-height: 105%;
     z-index: 1;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     width: 100%;
