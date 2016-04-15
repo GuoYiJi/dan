@@ -5,6 +5,7 @@
 body,html{ height: 100%;}
 body{
     font-size: 62.5%;
+    max-width: 640px;
 }
 
 #wrapper {
@@ -14,7 +15,7 @@ body{
     bottom: 48px;
     left: 0;
     width: 100%;
-    overflow: hidden;
+    height: 100%;
 }
 
 #scroller {
@@ -51,6 +52,8 @@ body{
     left: 0;
     top: 0;
     z-index: 9999;
+    position: fixed;
+    overflow: hidden;
 }
 #header .header_left{
     width: 50%;
@@ -74,14 +77,28 @@ body{
 #header .header_left .zz{
     width: .54rem;
     height: .54rem;
-    background: url("../img/z_03.png") center no-repeat;
+    background: url("../img/z_03_03.png") center no-repeat;
     background-size: 100% 100%;
+    border-radius: 100%;
+    box-shadow: 0 20px 90px #454647;
+    -webkit-box-shadow: 0 20px 90px #454647;
+    -moz-box-shadow:  0 20px 90px #454647;
+    -ms-box-shadow: 0 20px 90px #454647;
+    -o-box-shadow:  0 20px 90px #454647;
+    border: none;
 }
 #header .header_right .ff{
     width: .54rem;
     height: .54rem;
     background: url("../img/f_03.png") center no-repeat;
     background-size: 100% 100%;
+    border-radius: 100%;
+    box-shadow: 0 20px 90px #454647;
+    -webkit-box-shadow: 0 20px 90px #454647;
+    -moz-box-shadow:  0 20px 90px #454647;
+    -ms-box-shadow: 0 20px 90px #454647;
+    -o-box-shadow:  0 20px 90px #454647;
+    border: none;
 }
 .header_left .leftz .number{
     margin-left: .09rem;
@@ -131,8 +148,11 @@ body{
 
 #section{
     width: 100%;
-    height: 100%;
+    height: auto;
     background: #ffffff;
+    position: absolute;
+    top: 0.74rem;
+    padding-bottom: .5rem;
 }
 .dialog1{
     width: 100%;
@@ -192,7 +212,7 @@ body{
     margin-left: 0.1rem;
 }
 .time .time_text{
-    color: #e2e2e2;
+    color: #707070;
     font-size: .09rem;
 }
 
@@ -215,10 +235,11 @@ body{
 
 #footer{
     width: 100%;
-    height: .43rem;
+    height: .40rem;
     background: #f1f1f1;
     position: fixed;
     bottom: 0;
+    z-index: 99;
 }
 #footer .footer_z{
     width: 9%;
@@ -240,10 +261,12 @@ body{
     margin-top: -.11rem;
     border: 1px solid #e0e1e1;
     border-radius: .5rem;
+    overflow: hidden;
 }
 #footer .footer_text .text1{
+    width: 95%;
     margin-left: .1rem;
-    line-height: .25rem;
+    line-height: .23rem;
     outline: none;
 }
 #footer .fs{

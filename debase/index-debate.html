@@ -62,23 +62,32 @@
 			<div class="just">
 				<div class="just-round ms-round">
 					<a class="circle circle0 J_bar" href="javascript:;" data-target="just"></a>
+					<i class="circle circle1 c1"></i>
+					<i class="circle circle2 c2"></i>
 				</div>
 				<span>我认为能</span>
 			</div>
 			<div class="back">
 				<div class="back-round ms-round">
 					<a class="circle circle0 J_bar" href="javascript:;" data-target="back"></a>
+					<i class="circle circle1 c1"></i>
+					<i class="circle circle2 c2"></i>
 				</div>
 				<span>我认为不能</span>
 			</div>
 		</div>
 		<div class="just-back-line">
-			<div class="just-line">
-				<span><i data-target="just-bar"></i></span>
-				<div>支持数<i data-target="just-number">0</i></div>
-			</div><div class="back-line">
-				<span><i data-target="back-bar"></i></span>
-				<div>支持数<i data-target="back-number">0</i></div>
+			<ul>
+				<li  style="width: 48%" class="zleft" ></li>
+				<li style="width: 52%" class="zright" ></li>
+			</ul>
+			<div class="num-z">
+				<span>支持率</span>
+				<i>0</i>
+			</div>
+			<div class="num-y">
+				<span>支持率</span>
+				<i>0</i>
 			</div>
 		</div>
 	</div>
@@ -87,7 +96,7 @@
 <footer id="footer"></footer>
 
 <script>
-	var _w1, _w2, _speed;
+/*	var _w1, _w2, _speed;
 	_w1 = 100;
 	_w2 = 100;
 	_speed = 2;
@@ -102,24 +111,13 @@
 		_$num.text(++_num);
 		_a = _$just_bar.text();
 		_b = _$back_bar.text();
-		if (_target == 'just') {
-			_w1 = _w1 + _speed;
-			_w2 = _w2 - _speed;
-			$('[data-target=\'just-bar\']').width(_w1 + '%');
-			$('[data-target=\'back-bar\']').width(_w2 + '%');
-		} else {
-			_w1 = _w1 - _speed;
-			_w2 = _w2 + _speed;
-			$('[data-target=\'just-bar\']').width(_w1 + '%');
-			$('[data-target=\'back-bar\']').width(_w2 + '%');
-		}
+
+
 		// 咻一咻特效
 		var _html = '<i class="circle circle1 c1"></i><i class="circle circle2 c2"></i><i class="circle circle3 c3"></i>';
 		_this.parent().append(_html);
-					
-					
 		
-	})
+	})*/
 </script>
 <script type="text/javascript" src="js/font-size.js"></script>
 </body>
