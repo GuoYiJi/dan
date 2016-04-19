@@ -207,6 +207,7 @@
 	height: 58px;
 	background-image: url(../img/slider-left-right.png);
 	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .M-b-slider .arrow-btns {
 	position: absolute;
