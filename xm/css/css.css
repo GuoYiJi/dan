@@ -241,7 +241,118 @@
 	right: 0;
 }
 .M-b-slider .arrow-btns {}
+.M-count {
+	margin: 0 auto;
+	width: 1200px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+}
+.M-count li {
+	float: left;
+	padding-left: 50px;
+	margin: 26px 0;
+	width: 400px;
+	height: 48px;
+	line-height: 48px;
+	border-right: 1px solid #eee;
+	background-image: url(../img/ppt_icon.png);
+	background-repeat: no-repeat;
+	background-position-x: 155px;
+}
+.M-count li p {
+	float: left;
+	font-size: 15px;
+}
+.M-count li span {
+	padding-left: 55px;
+	float: left;
+	font-size: 30px;
+	color: #090;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.M-count li span em {
+	margin-left: 3px;
+	font-size: 14px;
+}
+.footer-t {
+	width: 100%;
+	border-top: 1px solid #e1e1e1;
+	background-color: #fff;
+}
+.footer-t-box {
+	padding: 64px 0;
+	margin: 0 auto;
+	width: 1200px;
+}
+.footer-t-item {
+	float: left;
+	padding-right: 60px;
+}
+.jiaoyi dt {
+	float: left;
+	width: 184px;
+	height: 152px;
+}
+.jiaoyi dd {
+	float: left;
+	margin-left: 30px;
+}
+.jiaoyi dd p {
+	font-size: 16px;
+	line-height: 28px;
+}
+.jiaoyi dd em {
+	color: #ff7200;
+}
 
+.jiaoyi h2 {
+	font-size: 30px;
+	line-height: 44px;
+	font-weight: normal;
+	color: #5f5f5f;
+}
+.jiaoyi .qq {
+	margin-top: 10px;
+	font-size: 16px;
+	line-height: 28px;
+}
+.jiaoyi .qq i {
+	display: inline-block;
+	margin-left: 5px;
+	margin-right: 15px;
+	width: 112px;
+	height: 36px;
+	background-position: 0 -158px;
+	vertical-align: -6px;
+}
+.foot-t-icon {
+	display: block;
+	background-image: url(../img/foot-t-icon.png);
+	background-repeat: no-repeat;
+}
+.zhinan dl {
+	padding-left: 56px;
+	padding-right: 10px;
+	width: 288px;
+	border-right: 1px solid #aaa;
+	border-left: 1px solid #aaa;
+}
+.zhinan dt, .renzheng dt {
+	padding-bottom: 25px;
+	font-size: 18px;
+	line-height: 18px;
+}
+.zhinan dd a {
+	float: left;
+	width: 110px;
+	line-height: 28px;
+}
+.renzheng dd i {
+	margin-bottom: 10px;
+	width: 142px;
+	height: 47px;
+}
 .clearfix:after, .clearfix:before {
 	display: block;
 	content: "";
