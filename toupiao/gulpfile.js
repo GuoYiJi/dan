@@ -1,8 +1,8 @@
 var gulp, sass, _watchSass, _cssDist;
 gulp = require('gulp');
 sass = require('gulp-sass');
-_watchSass = 'toupiao/scss/**/*.scss';
-_cssDist = 'toupiao/css';
+_watchSass = 'scss/**/*.scss';
+_cssDist = 'css';
 gulp.task('watch', function (){
 
     gulp.run("sass:src");

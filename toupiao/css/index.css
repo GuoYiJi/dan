@@ -1,0 +1,7 @@
+@charet "utf-8";
+body {
+  width: 16rem; }
+
+.a {
+  background: red;
+  width: 16rem; }
