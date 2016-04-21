@@ -9,8 +9,6 @@
         border-left: 1px solid $color;
 
         @include transform-origin(0, 0);
-
-        @include scale(0.5, 1);
     }
 }
 
@@ -82,8 +80,8 @@
 @mixin border($color: $border-color, $radius: 0, $place: ':after') {
     &#{$place} {
         content: "";
-        width: 200%;
-        height: 200%;
+        width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -94,8 +92,6 @@
         @if($radius){
             border-radius: $radius * 2;
         }
-
-        @include scale(0.5, 0.5);
         @include transform-origin(0, 0);
     }
 }

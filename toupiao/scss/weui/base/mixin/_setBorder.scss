@@ -1,0 +1,4 @@
+
+@mixin border( $borderWidth, $borderColor, $borderType: solid ){
+	border: $borderWidth $borderColor $borderType;
+}

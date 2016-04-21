@@ -1,0 +1,21 @@
+@import "_vars";
+@import "../../base/fn";
+.weui_avatar {
+	display: block;
+	margin-right: $margin-sm;
+	width: $avatar_width;
+	height: $avatar_height;
+	border-radius: 4px;
+	&_lg {
+		width: $avatar_width_lg;
+		height: $avatar_height_lg;
+	}
+}
+.weui_avatar_border {
+	@include border( 1px, #ccc );
+}
+
+.weui_thumb {
+	width: 34px;
+	height: 34px;
+}

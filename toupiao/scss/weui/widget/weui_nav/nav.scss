@@ -1,0 +1,43 @@
+
+@import "./weui_nav_vars";
+.weui_nav {
+	position: fixed;
+	z-index: $zIndex-sm;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: $weui_nav-bg-color;
+	border-top: 1px solid #b2b2b2;
+	&-flex {
+
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		text-align: center;
+		& > .weui_nav-item {
+			flex: 1;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			&:active {
+				background-color: lighten( $globalTextColor, 40% );
+			}
+			&.active {
+				a {
+					color: $nav_active_color;
+				}
+			}
+		}
+		& a {
+			display: block;
+			color: $globalTextColor;
+		}
+	}
+	&-icon {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		width: $weui_nav-icon-width;
+		height: $weui_nav-icon-height;
+		background-color: #7a7e83;
+	}
+}

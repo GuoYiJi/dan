@@ -1,7 +1,8 @@
-var gulp, sass, _watchSass, _cssDist;
+var gulp, sass, _watchSass, _scss, _cssDist;
 gulp = require('gulp');
 sass = require('gulp-sass');
 _watchSass = 'scss/**/*.scss';
+_scss = 'scss/*.scss';
 _cssDist = 'css';
 gulp.task('watch', function (){
 
@@ -13,7 +14,7 @@ gulp.task('watch', function (){
 })
 
 gulp.task('sass:src', function (){
-	gulp.src( [_watchSass, '!_*.scss'] )
+	gulp.src( [_scss, '!_*.scss'] )
 		.pipe( sass() ).on('error', sass.logError)
 		.pipe( gulp.dest(_cssDist) );
 })

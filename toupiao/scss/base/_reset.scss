@@ -41,7 +41,7 @@ button {
 
 
 body {
-    font-size: 14px/$ppr;
+    font-size: 28px / $ppr;
     font-family: 'Lucida Grande','Microsoft YaHei','Helvetica Neue',Helvetica,STHeiTi,sans-serif;; 
     line-height: 1.3;
     color: $color-default;
@@ -102,17 +102,6 @@ button{
     -webkit-appearance: none;
     border: 0;
     background: none;
-}
-
-a{
-    -webkit-touch-callout:none;
-    text-decoration: none; 
-    color: inherit;
-}
-a:active{
-  background-color: $color-transparent;
-  color: $color-default;
-  @include opacity(.8);
 }
 
 :focus{
