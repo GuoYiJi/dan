@@ -1,0 +1,63 @@
+@import "../base/_vars";
+@import "../base/_mixins";
+
+
+.M-tabs {
+	ul {
+		text-align: center;
+		@include box();
+	}
+	li {
+		@include box-flex(1);
+		a {
+			display: block;
+			line-height: 80px / $ppr;
+			color: #fff;
+		}
+		i {
+			font-size: 32px / $ppr;
+		}
+	}
+	.pri {
+		background-color: #43b5c6;
+	}
+	.yel {
+		margin: 0 10px / $ppr;
+		background-color: #f5a043;
+	}
+	.hot {
+		background-color: #fc4c44;
+	}
+}
+
+.M-box {
+	position: relative;
+	margin: 40px / $ppr 0 0;
+	padding-top: 80px / $ppr;
+	border: 5px solid #ef4f4f;
+	border-radius: 8px / $ppr;
+	background-color: #fbf9fe;
+	.box-tit {
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		top: 0;
+		padding: 0 20px / $ppr;
+		line-height: 80px / $ppr;
+		border-radius: 8px / $ppr;
+		background-color: #ef4f4f;
+		color: #fff;
+		font-weight: 600;
+		@include translate(-50%, -40px / $ppr);
+		@include box();
+		& > span {
+			@include box-flex(1);
+			width: 50%;
+		}
+	}
+}
+.M-btns {
+	padding: 10px / $ppr;
+	& > a {
+	}
+}

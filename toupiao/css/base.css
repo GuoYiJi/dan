@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*CSS Reset*/
 body,
 div,
@@ -108,6 +109,37 @@ em, s, i {
   word-break: break-all;
   -ms-word-wrap: break-word;
   word-wrap: break-word; }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_1461310341_4849534.eot");
+  /* IE9*/
+  src: url("//at.alicdn.com/t/font_1461310341_4849534.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_1461310341_4849534.woff") format("woff"), url("//at.alicdn.com/t/font_1461310341_4849534.ttf") format("truetype"), url("//at.alicdn.com/t/font_1461310341_4849534.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.icon:before {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em; }
+
+.icon-process:before {
+  content: ""; }
+
+.icon-shuoming:before {
+  content: ""; }
+
+.icon-xuanshou:before {
+  content: ""; }
 
 .text-gray {
   color: #8d8d8d !important; }
@@ -239,3 +271,64 @@ em, s, i {
 
 .line-through {
   text-decoration: line-through; }
+
+.M-tabs ul {
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box; }
+
+.M-tabs li {
+  -moz-box-flex: 1;
+  /* Firefox */
+  -webkit-box-flex: 1;
+  /* Safari 和 Chrome */
+  flex: 1; }
+  .M-tabs li a {
+    display: block;
+    line-height: 1.70667rem;
+    color: #fff; }
+  .M-tabs li i {
+    font-size: 0.68267rem; }
+
+.M-tabs .pri {
+  background-color: #43b5c6; }
+
+.M-tabs .yel {
+  margin: 0 0.21333rem;
+  background-color: #f5a043; }
+
+.M-tabs .hot {
+  background-color: #fc4c44; }
+
+.M-box {
+  position: relative;
+  margin: 0.85333rem 0 0;
+  padding-top: 1.70667rem;
+  border: 5px solid #ef4f4f;
+  border-radius: 0.17067rem;
+  background-color: #fbf9fe; }
+  .M-box .box-tit {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 0;
+    padding: 0 0.42667rem;
+    line-height: 1.70667rem;
+    border-radius: 0.17067rem;
+    background-color: #ef4f4f;
+    color: #fff;
+    font-weight: 600;
+    -webkit-transform: translate(-50%, -0.85333rem);
+    transform: translate(-50%, -0.85333rem);
+    display: -webkit-box;
+    display: -moz-box; }
+    .M-box .box-tit > span {
+      -moz-box-flex: 1;
+      /* Firefox */
+      -webkit-box-flex: 1;
+      /* Safari 和 Chrome */
+      flex: 1;
+      width: 50%; }
+
+.M-btns {
+  padding: 0.21333rem; }

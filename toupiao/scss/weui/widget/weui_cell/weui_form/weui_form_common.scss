@@ -3,6 +3,7 @@
 .weui_label{
   display:block;
   width:3em;
+  color: #000;
 }
 .weui_input {
     width: 100%;
@@ -10,9 +11,9 @@
     outline: 0;
     -webkit-appearance: none;
     background-color: transparent;
-    font-size: inherit;
-    color: inherit;
-    height: $weuiCellLineHeight + em;
+    font-size: 32px / $ppr;
+    color: #000;
+    height: $weuiCellLineHeight;
     line-height: $weuiCellLineHeight;
 
     // hides the spin-button
@@ -26,7 +27,7 @@
     border: 0;
     resize: none;
     width: 100%;
-    font-size: 1em;
+    font-size: 32px / $ppr;
     line-height: inherit;
     outline: 0;
 }
@@ -53,7 +54,7 @@
         }
     }
     .weui_cell_hd {
-        padding-right: 1em;
+        padding-right: 32px / $ppr;
     }
     .weui_cell_ft{
         font-size:0;
