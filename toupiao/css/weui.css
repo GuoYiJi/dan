@@ -19,12 +19,6 @@ a {
 li {
   list-style: none; }
 
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
 .mr-sm {
   margin-right: 5px; }
 
@@ -60,9 +54,6 @@ li {
 
 .text-default {
   color: #B2B2B2; }
-
-.bg_gray {
-  background-color: #888; }
 
 @font-face {
   font-weight: normal;
@@ -807,10 +798,40 @@ button.weui_btn_plain_default, input.weui_btn_plain_default {
   -webkit-tap-highlight-color: transparent; }
 
 .weui_tabbar {
-  position: absolute;
+  position: fixed;
+  z-index: 20;
   left: 0;
   bottom: 0;
-  width: 100%; }
+  padding-bottom: 0.21333rem;
+  width: 100%;
+  height: 2.34667rem;
+  display: -webkit-box;
+  display: -moz-box;
+  background-color: #f7f7fa; }
+  .weui_tabbar > a {
+    -moz-box-flex: 1;
+    /* Firefox */
+    -webkit-box-flex: 1;
+    /* Safari 和 Chrome */
+    flex: 1;
+    display: block;
+    padding-top: 0.29867rem;
+    text-align: center;
+    color: #000;
+    font-size: 0.68267rem; }
+    .weui_tabbar > a > i {
+      font-size: 0.85333rem; }
+  .weui_tabbar > .active {
+    color: #04BE02; }
+  .weui_tabbar:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    border-top: 1px solid #979797;
+    transform-origin: 0 0; }
 
 /*@import "weui/widget/weui_page/weui_msg";
 

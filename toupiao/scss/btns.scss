@@ -4,11 +4,6 @@
     "./base/_vars",
     "./base/_mixins";
 
-.banner-img {
-	display: block;
-	width: 100%;
-	height: auto;
-}
 .btns {
 	padding: (10px / $ppr) 0;
 	& > a {

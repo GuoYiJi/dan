@@ -1,10 +1,8 @@
 @font-face {
   font-family: 'iconfont';
-  src: url('//at.alicdn.com/t/font_1461310341_4849534.eot'); /* IE9*/
+  src: url('../fonts/iconfont.eot'); /* IE9*/
   src: url('//at.alicdn.com/t/font_1461310341_4849534.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('//at.alicdn.com/t/font_1461310341_4849534.woff') format('woff'), /* chrome、firefox */
-  url('//at.alicdn.com/t/font_1461310341_4849534.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url('//at.alicdn.com/t/font_1461310341_4849534.svg#iconfont') format('svg'); /* iOS 4.1- */
+  url('../fonts/iconfont.woff') format('woff'); /* iOS 4.1- */
 }
 
 .icon:before{
@@ -32,8 +30,15 @@
 		}
 	}
 }
-@include icons(process, '\e605');
+@include icons(woyaocansai, '\e605');
 @include icons(shuoming, '\e60a');
 @include icons(xuanshou, '\e607');
+@include icons(home, '\e600');
+@include icons(jinrong, '\e603');
+@include icons(paihang, '\e601');
+@include icons(cansai, '\e602');
+@include icons(chapaiming, '\e604');
+@include icons(process, '\e606');
+@include icons(oval47611, '\e609');
 
 

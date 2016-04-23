@@ -1,13 +1,22 @@
 @import "../base/_vars";
 @import "../base/_mixins";
 
-
+.clearfix {
+	&:after, &:before {
+		display: block;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}
 .M-tabs {
 	ul {
 		text-align: center;
 		@include box();
 	}
 	li {
+		font-size: 36px / $ppr;
 		@include box-flex(1);
 		a {
 			display: block;
@@ -29,7 +38,56 @@
 		background-color: #fc4c44;
 	}
 }
-
+.weui_tabbar ~ .M-pic {
+	padding-bottom: 110px / $ppr;
+}
+.M-pic {
+	padding-top: 15px / $ppr;
+	padding-left: 15px / $ppr;
+	padding-right: 5px / $ppr;
+	& > li {
+		padding-right: 10px / $ppr;
+		padding-bottom: 10px / $ppr;
+		float: left;
+		width: 50%;
+	}
+	.pic-cell {
+		position: relative;
+		@include border();
+	}
+	.pic-inner {
+		padding: 5px / $ppr;
+	}
+	.pic-tt {
+		position: relative;
+		padding-top: 100%;
+		width: 100%;
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	h3, .pic-btns, p {
+		padding: (5px / $ppr) (10px / $ppr);
+	}
+	p {
+		@include box();
+		& > span {
+			@include box-flex(1);
+			display: block;
+		}
+	}
+	.pic-btns {
+		a {
+			border-radius: 10px;
+			line-height: 60px / $ppr;
+		}
+	}
+}
 .M-box {
 	position: relative;
 	margin: 40px / $ppr 0 0;
@@ -48,10 +106,12 @@
 		background-color: #ef4f4f;
 		color: #fff;
 		font-weight: 600;
+		font-size: 30px / $ppr;
 		@include translate(-50%, -40px / $ppr);
 		@include box();
 		& > span {
 			@include box-flex(1);
+			padding: 0 10px / $ppr;
 			width: 50%;
 		}
 	}
@@ -59,5 +119,38 @@
 .M-btns {
 	padding: 10px / $ppr;
 	& > a {
+	}
+}
+
+.banner-img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+
+$search-color: #8ac0af;
+.search {
+	padding: 30px / $ppr 0;
+	form {
+		@include box();
+	}
+	@at-root #{&}_input {
+		margin-right: 20px / $ppr;
+		padding: 5px / $ppr 20px / $ppr;
+		height: 60px / $ppr;
+		border: 4px solid $search-color;
+		border-radius: 8px;
+		@include box-flex(8);
+		display: block;
+	}
+	@at-root #{&}_submit {
+		padding: 0 30px / $ppr;
+		border: none;
+		height: 60px / $ppr;
+		background-color: $search-color;
+		@include box-flex(2);
+		color: #fff;
+		border-radius: 8px;
 	}
 }

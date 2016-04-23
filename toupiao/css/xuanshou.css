@@ -1,0 +1,102 @@
+@charset "UTF-8";
+.container {
+  margin: 1.49333rem 0.42667rem 0;
+  padding-bottom: 2.34667rem; }
+
+.user-box {
+  padding-left: 0.42667rem;
+  padding-right: 0.42667rem;
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.con-tit > ul {
+  margin-left: -0.32rem;
+  display: -webkit-box;
+  display: -moz-box; }
+  .con-tit > ul li {
+    position: relative;
+    padding: 0.42667rem 0;
+    margin-left: 0.32rem;
+    background-color: #fee8eb;
+    border-radius: 8px;
+    text-align: center;
+    width: 50%;
+    -moz-box-flex: 1;
+    /* Firefox */
+    -webkit-box-flex: 1;
+    /* Safari 和 Chrome */
+    flex: 1; }
+    .con-tit > ul li p {
+      font-size: 0.72533rem; }
+    .con-tit > ul li > span {
+      font-size: 0.55467rem; }
+    .con-tit > ul li em {
+      color: #e94662; }
+    .con-tit > ul li:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #f0e3ea;
+      box-sizing: border-box;
+      pointer-events: none;
+      border-radius: 8px;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+
+.prev-tit {
+  padding: 0.42667rem 0 0.85333rem;
+  text-align: center;
+  font-size: 0.68267rem;
+  font-weight: bold; }
+
+.pic > h3 {
+  font-size: 0.81067rem;
+  color: #e94662; }
+
+.pic > p {
+  padding-top: 0.21333rem;
+  padding-bottom: 0.32rem;
+  font-size: 0.59733rem;
+  border-bottom: 1px dashed #ccc; }
+
+.pic > img {
+  display: block;
+  margin: 0.64rem 0;
+  width: 100%;
+  height: auto; }
+
+.pic-btns ul {
+  margin-left: -0.85333rem;
+  display: -webkit-box;
+  display: -moz-box; }
+  .pic-btns ul li {
+    -moz-box-flex: 1;
+    /* Firefox */
+    -webkit-box-flex: 1;
+    /* Safari 和 Chrome */
+    flex: 1;
+    margin-left: 0.85333rem;
+    width: 50%; }
+
+.pic-ft {
+  padding: 0.64rem 0;
+  border-radius: 10px;
+  overflow: hidden; }
+  .pic-ft ul {
+    display: -webkit-box;
+    display: -moz-box; }
+    .pic-ft ul li {
+      padding: 0.42667rem;
+      background-color: #fee69c;
+      font-size: 0.72533rem;
+      font-weight: 600;
+      text-align: center;
+      -moz-box-flex: 1;
+      /* Firefox */
+      -webkit-box-flex: 1;
+      /* Safari 和 Chrome */
+      flex: 1; }

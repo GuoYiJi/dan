@@ -1,9 +1,33 @@
 
 @import "../../base/fn";
+@import "../../../base/mixins";
+@import "../../../base/vars";
 
 .weui_tabbar {
-	position: absolute;
+	position: fixed;
+	z-index: 20;
 	left: 0;
 	bottom: 0;
+	padding-bottom: 10px / $ppr;
 	width: 100%;
+	height: 110px / $ppr;
+	@include box();
+	& > a {
+		@include box-flex(1);
+		display: block;
+		padding-top: 14px / $ppr;
+		text-align: center;
+		color: #000;
+		font-size: 32px / $ppr;
+		& > i {
+			font-size: 40px / $ppr;
+		}
+	}
+	& > .active {
+		color: $color-success;
+	}
+	background-color: #f7f7fa;
+	&:before {
+		@include setTopLine(#979797);
+	}
 }
