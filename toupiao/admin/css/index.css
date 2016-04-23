@@ -45,6 +45,7 @@
 .user-info .user-detail .user-job { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-top: 15px; }
 
 .work-nav .work-nav-ul .work-nav-li { height: 24px; line-height: 24px; padding: 0 10px; margin: 5px 0; cursor: pointer; }
+.work-nav .work-nav-ul .work-nav-li a{ display: block; width: 100%; height: 100%; line-height: inherit; }
 .work-nav .work-nav-ul .work-nav-li i { float: right; line-height: inherit; display: none; }
 .work-nav .work-nav-ul .work-nav-li.active { background: #f0f2f4; }
 .work-nav .work-nav-ul .work-nav-li.active i { display: block; }
@@ -86,104 +87,65 @@ select::-ms-expand { display: none; }
 .new-order-header .new-header-right { background-position: -442px 0; }
 .new-order-header .new-header-right.active { background-position: -442px -24px; }
 
-.perfect-add { overflow: hidden; padding-left: 120px; background: url(../img/add2.png) 100px center no-repeat; color: #3ca0e6; cursor: pointer; }
 
-/*  nav-app
-.nav-tab-wrap{
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.1);
-	z-index: 999;
-	display: none;
-}
+.admin{ margin-top: 20px;}
+.admin .admin-block{ overflow: hidden;}
+.admin .admin-block label{ float: left; width: 190px; text-align: right;letter-spacing:2px; line-height: 24px;}
+.admin .admin-block .admin-text{ float: left; position: relative; width: 400px; line-height: 24px; margin-bottom: 20px; margin-left: 10px}
+.admin .admin-block .admin-text input,
+.admin .admin-block .admin-text select{ width: 400px; border: 1px solid #e5e5e5; height: 24px; line-height: 24px; padding: 0 5px;}
+.admin .admin-block img{ width: 200px; height: 110px;}
 
-.nav-tab{
-	position: fixed;
-	top: -140px;
-	left: 0;
-	width: 100%;
-	height: 140px;
-	border: 1px solid #ccc;
-	border-left: 0;
-	border-right: 0;
-	background-color: #fff;
-	z-index: 9999;
-	opacity: 0.95;
-	ul{
-		width: 400px;
-		margin-left: 300px;
-		.nav-app{
-			float: left;
-			width: 60px;
-			padding: 0 10px;
-			text-align: center;
-			margin-top: 10px;
-			position: relative;
-			cursor: pointer;
+.admin .admin-time{ text-align: center;}
+.admin .admin-time .admin-text input{ width: 190px; float: left;}
+.admin .admin-time .admin-text i{}
 
-			i{
-				display: block;
-				width: 40px;
-				height: 40px;
-				background: url(../img/nav-app.png);
-				position: relative;
-			}
-			i:after{
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 10px;
-				height: 10px;
-				border-radius: 10px;
-				border: 1px solid #ccc;
-				z-index: 999;
-				background: #fff;
-			}
-			i.nav-project  { background-position: 0     0;}
-			i.nav-purchase { background-position: 40px  0;}
-			i.nav-file     { background-position: 80px  0;}
-			i.nav-chat     { background-position: 120px 0;}
-			i.nav-template { background-position: 160px 0;}
-			i.nav-personnel{ background-position: 200px 0;}
-			i.nav-finance  { background-position: 240px 0;}
-			i.nav-task     { background-position: 0     40px;}
-			i.nav-check    { background-position: 40px  80px;}
+.admin .admin-block .admin-file{ position: absolute; left: 230px; top: 40px; width: 60px; height: 30px;}
+.admin .admin-block .admin-file span{ cursor: pointer; display: block; width: inherit; height: inherit; border: 1px solid #ccc; background: #e5e5e5; line-height: 28px; text-align: center; color: #000;}
+.admin .admin-block .admin-file input{ width: inherit; height: inherit; position: absolute; left: 0; top: 0; z-index: 1; opacity: 0}
 
-			div{
-				display: block;
-				width: 100%;
-				color: #808080;
-				margin-top: 2px;
-			}
-		}
-		.nav-app.active{
-			i:after{
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				width: 10px;
-				height: 10px;
-				border-radius: 10px;
-				border: 1px solid #fff;
-				z-index: 999;
-				background: #62d36a;
-			}
-		}
-	}
-}  */
-.loading { position: fixed; z-index: 9999; }
-.loading img { position: fixed; left: 50%; top: 50%; margin-left: -24px; margin-right: -24px; }
+.admin .admin-submit{ text-align: center; width: 550px;}
+.admin .admin-submit input{ margin: 0 5px; cursor: pointer; width: 50px; height: 20px; line-height: 18px; text-align: center; color: #fff; border: 1px solid #327cc5;  background-color: #318ede;}
+.admin .admin-submit input.active{ color: #6a656a; border-color: #ccc; background-color: #e5e5e5;}
 
-.new-order-tab-bottom { margin-top: 20px; padding: 0 10px; padding-top: 10px; border-top: 1px solid #ccc; width: 98%; overflow: hidden; }
-.new-order-tab-bottom .left a img { display: inline-block; vertical-align: middle; font-size: 0; }
-.new-order-tab-bottom .right a { color: #4c89f9; }
-.new-order-tab-bottom .right a img { display: inline-block; vertical-align: middle; font-size: 0; }
-.new-order-tab-bottom div { display: inline-block; padding-right: 20px; }
-.new-order-tab-bottom div * { line-height: 25px; display: inline-block; color: #808080; }
 
-/*# sourceMappingURL=index.css.map */
+.input-200{ width: 200px !important; display: block; margin: 10px 0;}
+
+input[type=radio],
+input[type=checkbox]{ margin-bottom: 10px; margin-right: 15px}
+
+
+/*list*/
+.list{ margin-top: 20px;}
+.list-head{}
+.list-head a{margin: 0 3px; color: #000; display: inline-block; padding: 0 15px 0 20px; border: 1px solid #ccc; background: #e5e5e5 url(../img/add.png) 4px center no-repeat; height: 30px; line-height: 28px; text-align: center; }
+.list-head a.not-add{ background-image: none;}
+.list-head span{}
+
+.list-tab{ margin-top: 20px;}
+.list-tab table{ border-top: 1px solid #ccc; border-left: 1px solid #ccc; width: 100% ;}
+.list-tab table tr:nth-of-type(1){ background-color: #e5e5e5;}
+.list-tab table td{ border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; padding: 5px 10px;}
+.list-tab table td img{ width: 70px; height: 40px}
+
+.list-btn a{ color: #000; display: inline-block; padding: 0 15px 0 20px; border: 1px solid #ccc; background-color: #e5e5e5 ; height: 30px; line-height: 28px; text-align: center; }
+.list-btn a.black{ background-color: #4b494c; color: #fff}
+.list-btn a.guree{ background-color: #44b540; color: #fff}
+
+/*admin*/
+.admin{}
+.admin .list-head a{ padding: 0 20px; background-image: none;}
+.admin .list-head input{ width: 230px; height: 30px; border: 1px solid #e5e5e5; padding: 0 5px;}
+.admin .list-head select{ width: 100px; height: 30px; border: 1px solid #e5e5e5; padding: 0 5px;}
+.admin .list-head input[type=checkbox]{ margin-right: 5px;}
+
+.list-font{ padding-left: 10px; margin-top: 10px;}
+.list-font span{ padding: 0 10px}
+.list-font a{margin: 0 3px; color: #000; display: inline-block; padding: 0 20px; border: 1px solid #ccc; background: #e5e5e5 ; height: 20px; line-height: 18px; text-align: center; }
+
+.admin .list-tab img{ height: 40px; width: auto;}
+.admin .list-tab .admin-check img{ width: 23px; height: auto;}
+
+
+
+
