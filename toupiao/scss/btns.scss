@@ -3,10 +3,10 @@
 @import
     "./base/_vars",
     "./base/_mixins";
- body {
- 	width: 750px / $ppr;
- }
-.a {
-	background: red;
-	width: (750px / $ppr);
+
+.btns {
+	padding: (10px / $ppr) 0;
+	& > a {
+		margin: 10px / $ppr;
+	}
 }

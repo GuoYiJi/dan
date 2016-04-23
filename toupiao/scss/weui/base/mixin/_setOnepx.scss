@@ -27,7 +27,6 @@
     height: 1px;
     border-top: 1px solid $c;
     transform-origin: 0 0;
-    transform: scaleY(0.5);
 }
 
 @mixin setBottomLine($c: #C7C7C7) {
@@ -39,7 +38,6 @@
     height: 1px;
     border-bottom: 1px solid $c;
     transform-origin: 0 100%;
-    transform: scaleY(0.5);
 }
 
 @mixin setLeftLine($c: #C7C7C7) {

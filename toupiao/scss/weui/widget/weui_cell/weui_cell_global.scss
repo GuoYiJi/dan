@@ -21,7 +21,6 @@
     }
 }
 .weui_cells {
-    margin-top: $weuiCellsMarginTop;
     background-color: $weuiCellBg;
     line-height: $weuiCellLineHeight;
     font-size: $weuiCellFontSize; //cell中间有效高度23px，跟客户端默认图标尺寸一致
@@ -40,10 +39,11 @@
 }
 
 .weui_cells_title {
-    margin-top: .77em;
+    margin-top: 20px / $ppr;
+    margin-bottom: 10px / $ppr;
     padding-left: $weuiCellGapH;
     padding-right: $weuiCellGapH;
-    color: $globalTextColor;
+    color: #000;
     font-size: $weuiCellTipsFontSize;
 
     &+.weui_cells{

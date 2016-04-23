@@ -1,0 +1,95 @@
+@charset "utf-8";
+// variables
+@import
+    "./base/_vars",
+    "./base/_mixins";
+
+.container {
+	margin: (70px / $ppr) (20px / $ppr) 0;
+	padding-bottom: 110px / $ppr;
+}
+.user-box {
+	padding-left: 20px / $ppr;
+	padding-right: 20px / $ppr;
+	border-bottom: none;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.con-tit {
+	& > ul {
+		margin-left: -(15px / $ppr);
+		@include box();
+		li {
+			position: relative;
+			padding: 20px / $ppr 0;
+			margin-left: 15px / $ppr;
+			background-color: #fee8eb;
+			border-radius: 8px;
+			text-align: center;
+			width: 50%;
+			@include box-flex(1);
+			p {
+				font-size: 34px / $ppr;
+			}
+			& > span {
+				font-size: 26px / $ppr;
+			}
+			em {
+				color: $color-hot;
+			}
+			@include border(#f0e3ea, 4px);
+		}
+	}
+}
+.prev-tit {
+	padding: (20px / $ppr) 0 (40px / $ppr);
+	text-align: center;
+	font-size: 32px / $ppr;
+	font-weight: bold;
+}
+.pic {
+	& > h3 {
+		font-size: 38px / $ppr;
+		color: $color-hot;
+	}
+	& > p {
+		padding-top: 10px / $ppr;
+		padding-bottom: 15px / $ppr;
+		font-size: 28px / $ppr;
+		border-bottom: 1px dashed #ccc;
+	}
+	& > img {
+		display: block;
+		margin: 30px / $ppr 0;
+		width: 100%;
+		height: auto;
+	}
+	@at-root #{&}-btns {
+		ul {
+			margin-left: -40px / $ppr;
+			@include box();
+			li {
+				@include box-flex(1);
+				margin-left: 40px / $ppr;
+				width: 50%;
+
+			}
+		}
+	}
+	@at-root #{&}-ft {
+		padding: 30px / $ppr 0;
+		border-radius: 10px;
+		overflow: hidden;
+		ul {
+			@include box();
+			li {
+				padding: 20px / $ppr;
+				background-color: #fee69c;
+				font-size: 34px / $ppr;
+				font-weight: 600;
+				text-align: center;
+				@include box-flex(1);
+			}
+		}
+	}
+}
