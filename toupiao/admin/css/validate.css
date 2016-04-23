@@ -1,0 +1,27 @@
+.validate .validate-block-one { position: relative; }
+.validate .validate-one { position: relative; width: 663px; margin: 0 auto; padding: 0 90px; margin-bottom: 60px; overflow: hidden; padding-top: 40px; }
+.validate .validate-one .validate-file { float: left; }
+.validate .validate-one .validate-file .validate-lable span { line-height: 24px; float: left; margin-right: 10px; }
+.validate .validate-one .validate-file .validate-lable .validate-up { width: 65px; height: 24px; position: relative; float: left; }
+.validate .validate-one .validate-file .validate-lable .validate-up input { width: inherit; height: inherit; border: none; position: absolute; left: 0; top: 0; }
+.validate .validate-one .validate-file .validate-lable .validate-up input[type=file] { opacity: 0; z-index: 999; }
+.validate .validate-one .validate-file .validate-lable .validate-up input[type=button] { background: #64bbfa; color: #fff; }
+.validate .validate-one .validate-img { overflow: hidden; width: 185px; height: 220px; background: #f0f2f4; display: flex; align-items: center; justify-content: center; color: #ccc; margin-left: 5px; }
+.validate .validate-one .validate-code { float: right; }
+.validate .validate-one .validate-code .validate-code-input input { border: 1px solid #ccc; width: 184px; height: 24px; padding-left: 5px; margin-left: 5px; }
+
+.validate-prompt { position: absolute; left: 0; bottom: auto; top: -35px; right: 0; width: 663px; margin: 0 auto; padding-left: 20px; }
+
+.validate-lable { margin-right: 10px; overflow: hidden; margin-bottom: 10px; }
+
+.validate-font { text-align: center; padding: 100px 0; }
+
+.validate-font2 { color: #4c89f9; font-size: 14px; line-height: 40px; }
+.validate-font2 a { text-decoration: underline; }
+
+.validate-audit { text-align: center; font-size: 18px; color: #4c89f9; font-weight: bold; line-height: 18px; margin-top: 80px; }
+.validate-audit i { width: 23px; height: 18px; background: url(../img/check2.png) center no-repeat; margin-right: 10px; padding: 20px; }
+
+.validate-audit2 i { background: url(../img/check3.png) center no-repeat; }
+
+/*# sourceMappingURL=validate.css.map */

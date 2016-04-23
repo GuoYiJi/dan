@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>项目e免费项目管理</title>
+	<!--[if IE]>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<![endif]-->
+	
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="css/day/rendezvous.css">
+
+	<script src="js/com/jquery-2.1.4.min.js"></script>
+	<script src="js/js.js"></script>
+
+</head>
+<body>
+
+<div class="header">
+	<div class="top">
+		<div class="company">
+			<i class="logo"><img src="img/logo.png" alt="logo"></i>
+			<a class="companyName" href="index.html">深圳云联万企</a>
+			<span class="companyCode"><i><img src="img/notCode.png" alt="验证"></i>未验证</span>
+			<!-- <span class="companyCode active"><i><img src="img/endCode.png" alt="验证"></i>已验证</span> -->
+		</div>
+		<div class="sign-out">
+			<a href="javascript:;" class="sign-out-name">杨逸谋</a>，
+			<a href="javascript:;" class="out">退出</a>
+		</div>
+	</div>
+	<div class="nav-show">
+		<div class="nav">
+			<ul class="nav-ul">
+				<li class="nav-li active"><a href="index.html">工作台</a></li>
+				<li class="nav-li"><a href="project/project.html">项目</a></li>
+				<li class="nav-li"><a href="purchase/purchase.html">采购</a></li>
+				<li class="nav-li"><a href="file/file.html">文件</a></li>
+				<li class="nav-li"><a href="chat/chat.html">沟通</a></li>
+				<li class="nav-li"><a href="template/template.html">模版</a></li>
+				<li class="nav-li"><a href="crew/crew.html">人员</a></li>
+				<li class="nav-li"><a href="analyze/analyze.html">财务</a></li>
+				<li class="nav-li"><a href="mission/mission.html">任务</a></li>
+				<li class="nav-li"><a href="clocking_in/clocking_in.html">考勤</a></li>
+			</ul>
+			<!-- 下拉列表 <i class="nav-add"></i> -->
+		</div>
+	</div>
+</div>
+<div id="container">
+	<div class="content">
+		<div class="main">
+			<!--工作台-->
+			<div class="workbench">
+				<table class="work-table" cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="work-td" width="18%">
+							<div class="work-td-border">
+								<div class="work-admin">
+									<div class="user-info">
+										<a href="javascript:;"><img class="head-image" src="img/default-user.png" alt="用户头像"></a>
+										<div class="user-detail">
+											<a href="javascript:;" title="杨羊">杨羊</a>
+											<div class="user-job" title="管理员">管理员</div>
+										</div>
+									</div>
+									<div class="user-info work-nav">
+										<ul class="work-nav-ul">
+											<li class="work-nav-li active"><i>5</i>待办事情</li>
+											<li class="work-nav-li" id="assign"><i>3</i>交办事情</li>
+											<li class="work-nav-li" id="perfect">完善资料</li>
+											<li class="work-nav-li" id="validate">企业认证</li>
+										</ul>
+									</div>
+									<div class="code">
+										<div class="calendar_day">
+											<div id="rendez-vous-french"></div>
+										</div>
+
+										<script src="js/day/syntaxhighlighter/shCore.js"></script>
+										<script src="js/day/rendezvous.js"></script>
+										<script src="js/day/app.js"></script>
+									</div>
+								</div>
+							</div>
+						</td>
+						<td class="work-td work-td-show">
+							<div class="work-td-border">
+								<div class="work-main-title">
+									<div class="left work-title">待办事情：<span>5</span></div>
+									<div class="right work-title">
+										<select class="work-select">
+											<option>请选择项目</option>
+											<option>润汇大厦项目</option>
+											<option>万达广场项目</option>
+											<option>万科地产项目</option>
+											<option>三水中学项目</option>
+											<option>白坭填项目</option>
+										</select>
+									</div>
+								</div>
+								<div class="work-main-table">
+									<table cellpadding="0" cellspacing="0" border="0" width="100%">
+										<tr>
+											<td width="40">
+												<div class="work-main-table-top"><img src="img/icon1.png"></div>
+												<div class="work-main-table-bottom"><span class="work-title">考勤</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-black">请假：病假</span></div>
+												<div class="work-main-table-bottom"><span class="work-main-small">感冒发烧肚子痛，肾虚肾亏脸色差。</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-red">未完成</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-small">润汇大厦项目</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-yellow">2天</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td width="105">
+												<div class="work-main-table-top"><span class="work-main-small">2016.03.30<i class="right">16:00</i></span></div>
+												<div class="work-main-table-bottom work-main-blue">
+													<span class="left">潘总</span>
+													<a href="javascript:;" class="downIcon"><img src="img/downIcon.png" alt="下载" title="下载"></a>
+													<a href="XJDetailed.html" class="right"><img src="img/lt.png" alt="详情页" title="详情页"></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td width="40">
+												<div class="work-main-table-top"><img src="img/icon2.png"></div>
+												<div class="work-main-table-bottom"><span class="work-title">任务</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-black">请假：病假</span></div>
+												<div class="work-main-table-bottom"><span class="work-main-small">砌西座12层的墙</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-guree">未完成</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-small">润汇大厦项目</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-yellow">40工时</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td width="105">
+												<div class="work-main-table-top"><span class="work-main-small">2016.03.30<i class="right">16:00</i></span></div>
+												<div class="work-main-table-bottom work-main-blue">
+													<span class="left">潘总</span>
+													<a href="javascript:;" class="downIcon"><img src="img/downIcon.png" alt="下载" title="下载"></a>
+													<a href="XJDetailed.html" class="right"><img src="img/lt.png" alt="详情页" title="详情页"></a>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td width="40">
+												<div class="work-main-table-top"><img src="img/icon3.png"></div>
+												<div class="work-main-table-bottom"><span class="work-title">财务</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-black">报备：润汇大厦9-19层材料+人工费用</span></div>
+												<div class="work-main-table-bottom"><span class="work-main-small">准备好资金，随时备用。接下来的工作量大，人力物力要跟上。</span></div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-red">未完成</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-small">润汇大厦项目</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td>
+												<div class="work-main-table-top"><span class="work-main-yellow">2天</span></div>
+												<div class="work-main-table-bottom">&nbsp;</div>
+											</td>
+											<td width="105">
+												<div class="work-main-table-top"><span class="work-main-small">2016.03.30<i class="right">16:00</i></span></div>
+												<div class="work-main-table-bottom work-main-blue">
+													<span class="left">潘总</span>
+													<a href="javascript:;" class="downIcon"><img src="img/downIcon.png" alt="下载" title="下载"></a>
+													<a href="XJDetailed.html" class="right"><img src="img/lt.png" alt="详情页" title="详情页"></a>
+												</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+								<!--待办事情-->
+						</td>
+						<td class="work-td work-td-show" style="display:none;">
+								<!--交办事情-->
+						</td>
+						<td class="work-td work-td-show" style="display:none;">
+								<!--完善资料-->
+						</td>
+						<td class="work-td work-td-show" style="display:none;">
+								<!--企业认证-->
+						</td>
+					</tr>					
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

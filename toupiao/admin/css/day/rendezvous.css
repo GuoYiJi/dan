@@ -1,0 +1,151 @@
+.calendar_day{
+	margin-top: 15px;
+}
+.rendezvous-input {
+	text-align: left;
+	display: none;
+}
+.rendezvous-input input{
+}
+.rendezvous-popup {
+	z-index: 100;
+	background: rgba(255,255,255,.5);
+}
+.rendezvous-datepicker {
+	width: 100%;
+	font-size: 0.9rem;
+	cursor: default;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.rendezvous-datepicker * {
+	box-sizing: border-box;
+	background: none;
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	font-size: 12px;
+	line-height: 1.2em;
+	font-family: "microsoft yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden
+}
+.rendezvous-datepicker button::-moz-focus-inner, .rendezvous-datepicker input::-moz-focus-inner {
+border:0;
+padding:0
+}
+.rendezvous-datepicker-navigation {
+	background-color: #fff;
+	/* border: 1px solid #e6e6e6; */
+}
+.rendezvous-datepicker-navigation-action {
+	height: 2.2em;
+	line-height: 2.2em;
+	display: block;
+	float: left;
+	text-align: center;
+	color: #000;
+	font-size: 16px;
+}
+.rendezvous-datepicker-navigation-previous, .rendezvous-datepicker-navigation-next:hover{
+	color: blue;
+}
+.rendezvous-datepicker-navigation-previous, .rendezvous-datepicker-navigation-next {
+	width: 25%;
+	font-family: '宋体';
+	cursor: pointer;
+}
+.rendezvous-datepicker-navigation-up {
+	width: 50%;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 35px;
+	height: 35px;
+}
+.rendezvous-datepicker-calendar {
+	/* border: 1px solid rgba(0,0,0,0.18); */
+	border-top: 0 none;
+	margin-top: 3px;
+	background: #fff;
+}
+.rendezvous-datepicker-calendar-header {
+}
+.rendezvous-datepicker-calendar-body {
+	/* margin-top: 0.35em; */
+	margin-bottom: 0.3em
+}
+.rendezvous-datepicker-calendar-title {
+	display: block;
+	float: left;
+	color: #666;
+	/* background: #dee7e3; */
+	/* border-left: 1px solid #e5ece9; */
+}
+.rendezvous-datepicker-calendar-value, .rendezvous-datepicker-calendar-dummy-value, .rendezvous-datepicker-calendar-selected-value {
+	display: block;
+	float: left;
+	/* padding: 0 0.18em; */
+	color: #222
+}
+.rendezvous-datepicker-calendar-value {
+	/* background-color: #f9f9f9 */
+}
+.rendezvous-datepicker-calendar-value:hover {
+	color: #000;
+	background-color: #ececec
+}
+.rendezvous-datepicker-calendar-selected-value {
+	background-color: #218fee;
+	color: #fff;
+}
+.rendezvous-datepicker-calendar-selected-value:hover {
+	color: #000;
+	background-color: #dfdfdf
+}
+.rendezvous-datepicker-calendar-week-day, .rendezvous-datepicker-calendar-day {
+	width: 14%;
+}
+.rendezvous-datepicker-calendar-week-day {
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+
+}
+.rendezvous-datepicker-calendar-day {
+	height: 29px;
+	line-height: 29px;
+	text-align: center;
+	border-radius: 100%;
+	margin-bottom: 10px;
+}
+.rendezvous-datepicker-calendar-month {
+	width: 31.33333%;
+	margin: 1%;
+	height: 1.8em;
+	line-height: 1.8em;
+	text-align: center
+}
+.rendezvous-datepicker-calendar-year {
+	width: 48%;
+	margin: 1%;
+	height: 1.8em;
+	line-height: 1.8em;
+	text-align: center
+}
+.rendezvous-datepicker-clear {
+	clear: both
+}
+/*www.sucaijiayuan.com*/
+
+
+
+ @media only screen and (max-width: 1440px) {
+ 	.calendar{
+        width: 315px;
+    }
+ }
+  @media only screen and (max-width: 1000px) {
+    .rendezvous-datepicker-calendar-day{
+    	height: 25px;
+    	line-height: 25px;
+    }
+  }

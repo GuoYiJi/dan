@@ -1,0 +1,21 @@
+.perfect-main { overflow: hidden; position: relative; width: 530px; margin: 0 auto; margin-top: 30px; padding-top: 30px; }
+.perfect-main .perfect-small { position: absolute; top: 0; left: 0; font-size: 12px; color: #4c89f9; }
+
+#perfectForm { width: 100%; overflow: hidden; }
+#perfectForm .perfectDiv { width: 100%; overflow: hidden; margin-top: 20px; }
+#perfectForm .perfectDiv label { float: left; width: 95px; line-height: 24px; position: absolute; left: 0; }
+#perfectForm .perfectDiv input { float: left; width: 400px; height: 24px; border: 1px solid #ccc; padding-left: 10px; margin-left: 95px; }
+#perfectForm .perfectinput input { margin-bottom: 10px; }
+#perfectForm .perfectuser { overflow: hidden; clear: both; height: 50px; }
+#perfectForm .perfectuser .perfectDiv { width: auto; float: left; overflow: visible; position: relative; }
+#perfectForm .perfectuser .perfectDiv input { width: 255px; }
+#perfectForm .perfectuser .perfectDiv-logo { width: 167px; float: right; padding-right: 70px; }
+#perfectForm .perfectuser .perfectDiv-logo .perfectfile { width: 37px; height: 37px; border: 1px solid #ccc; position: absolute; top: -8px; right: 35px; opacity: 0; z-index: 999; }
+#perfectForm .perfectuser .perfectDiv-logo i.perfectfile { opacity: 1; background: url(../img/filelogo.png) center no-repeat; z-index: 0; }
+
+.perfectSubmit { width: 100%; text-align: center; border-top: 1px solid #ccc; padding-top: 10px; margin-top: 15px; overflow: hidden; }
+.perfectSubmit input { width: 66px; height: 24px; background: #64bbfa; border-radius: 3px; color: #fff; border: none; cursor: pointer; text-align: center; margin: 10px; }
+
+/*# sourceMappingURL=perfect.css.map */
+
+/*# sourceMappingURL=perfect.css.map */
