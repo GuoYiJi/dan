@@ -153,6 +153,77 @@ $(function(){
 
 });
 
+$(function (){
+	// 删除
+	$('.not-add').on('click', function (){
+		if (!$('.J_checkboxs:checked').length) {
+			alert('还没有选择哦！');
+			return false;
+		}
+		$('.J_checkboxs').each(function (){
+			if ($(this).prop('checked')) {
+				$(this).parent('td').parent('tr').remove();
+			}
+		});
+		if (!$('.J_checkboxs').length) {
+			$('.J_parentCheck').prop('checked', false);
+		}
+	});
+
+	// 全选，反选
+	
+	$('.J_parentCheck').on('click', function (){
+		if ($(this).prop('checked')) {
+			$('.J_checkboxs').prop('checked', true);
+		} else {
+			$('.J_checkboxs').prop('checked', false);
+		}
+		
+	});
+	$('.J_checkboxs').on('click', function (){
+		$('.J_checkboxs').each(function (){
+			$('.J_checkboxs').each(function (){
+				if (!$(this).prop('checked')) {
+					$('.J_parentCheck').prop('checked', false);
+					return false;
+				}
+				$('.J_parentCheck').prop('checked', true);
+				
+			})
+		});
+	});
+
+	// 票数倒序
+	$('.J_sort').on('click', function (){
+		var _arr, _sortIndex;
+		_arr = [];
+		$('[data-toggle="sort"]').each(function (){
+			_arr.push($(this));
+		});
+		if ($(this).prop('checked')) {
+			_sortIndex = -1;
+		} else {
+			_sortIndex = 1;
+		}
+		_arr.sort(function (a, b){
+			var _price1, _price2;
+			_price1 = a.find('td').eq(6).text();
+			_price2 = b.find('td').eq(6).text();
+			if (_price1 > _price2) {
+				return _sortIndex;
+			} else if (_price1 < _price2) {
+				return -_sortIndex;
+			} else {
+				return 0;
+			}
+		})
+		$('[data-toggle="sort"]').remove();
+		$(_arr).each(function (){
+			$('.J_parentSort').append($(this));
+		})
+	});
+});
+
 
 
 

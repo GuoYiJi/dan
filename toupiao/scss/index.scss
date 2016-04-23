@@ -3,10 +3,8 @@
 @import
     "./base/_vars",
     "./base/_mixins";
- body {
- 	width: 750px / $ppr;
- }
-.a {
-	background: red;
-	width: (750px / $ppr);
+
+
+.tabs {
+	margin-top: 30px / $ppr;
 }

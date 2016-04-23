@@ -162,6 +162,9 @@ em, s, i {
 .icon-oval47611:before {
   content: ""; }
 
+.icon-to:before {
+  content: ""; }
+
 .text-gray {
   color: #8d8d8d !important; }
 
@@ -419,6 +422,32 @@ em, s, i {
 
 .M-btns {
   padding: 0.21333rem; }
+
+.M-to {
+  position: fixed;
+  right: 0.85333rem;
+  bottom: 0.42667rem;
+  width: 1.28rem;
+  height: 1.28rem;
+  line-height: 1.28rem;
+  text-align: center;
+  color: #fff; }
+  .M-to .to-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.28rem;
+    height: 1.28rem;
+    border-radius: 50%;
+    background-color: #80cac6; }
+  .M-to > i {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    font-size: 0.68267rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .banner-img {
   display: block;

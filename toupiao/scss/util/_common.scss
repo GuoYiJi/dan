@@ -121,6 +121,34 @@
 	& > a {
 	}
 }
+$mask-size: 60px / $ppr;
+.M-to {
+	position: fixed;
+	right: 40px / $ppr;
+	bottom: 20px / $ppr;
+	width: $mask-size;
+	height: $mask-size;
+	line-height: $mask-size;
+	text-align: center;
+	color: #fff;
+	.to-mask {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: $mask-size;
+		height: $mask-size;
+		border-radius: 50%;
+		background-color: $color-primary;
+	}
+	& > i {
+		position: absolute;
+		z-index: 10;
+		left: 50%;
+		top: 50%;
+		font-size: 32px / $ppr;
+		@include translate(-50%, -50%);
+	}
+}
 
 .banner-img {
 	display: block;
@@ -130,6 +158,7 @@
 
 
 $search-color: #8ac0af;
+
 .search {
 	padding: 30px / $ppr 0;
 	form {
