@@ -1,4 +1,4 @@
-.header { background-color: #4c89f9; position: fixed; top: 0; z-index: 999999; }
+.header { background-color: #009900; position: fixed; top: 0; z-index: 999999; }
 
 .top { height: 50px; line-height: 50px; color: #fff; }
 
@@ -28,7 +28,7 @@
 .nav-show .nav-ul { float: left; }
 .nav-show .nav-li { float: left; padding: 0 10px; text-align: center; cursor: pointer; color: #000; font-size: 14px; }
 .nav-show .nav-li a { padding: 0 10px; height: 30px; line-height: 28px; display: inline-block; }
-.nav-show .active a { border-bottom: 2px solid #4c89f9; }
+.nav-show .active a { border-bottom: 2px solid #009900; }
 .nav-show .nav-add { display: block; float: left; width: 20px; height: 30px; background: url(../img/add.png) center no-repeat; cursor: pointer; margin-left: 20px; }
 
 .main { padding-top: 10px; }
