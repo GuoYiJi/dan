@@ -81,7 +81,7 @@
         </li>
         <li>
           <div class="content-title">Conversions</div>
-          <div class="content-main">4,857</div>
+          <div class="content-main content-gruee">4,857</div>
         </li>
         <li>
           <div class="content-title">Conversions</div>
@@ -97,57 +97,60 @@
         </li>
       </ul>
     </div>
-  <div id="hero-graph" style="width: 610px;"></div>
+    <div class="container hero">
+      <div class="hero-title">Overview</div>
+      <div id="hero-graph" style="width: 100%;"></div>
+    </div>
 	
-	<script type="text/javascript">
-		var tax_data = [{
-		  period: "2016-4-30",
-		  licensed: 3407,
-		  sorned: 660
-		}, {
-		  period: "2011 Q2",
-		  licensed: 3351,
-		  sorned: 629
-		}, {
-		  period: "2011 Q1",
-		  licensed: 3269,
-		  sorned: 618
-		}, {
-		  period: "2010 Q4",
-		  licensed: 3246,
-		  sorned: 661
-		}, {
-		  period: "2009 Q4",
-		  licensed: 3171,
-		  sorned: 676
-		}, {
-		  period: "2008 Q4",
-		  licensed: 3155,
-		  sorned: 681
-		}, {
-		  period: "2007 Q4",
-		  licensed: 3226,
-		  sorned: 620
-		}, {
-		  period: "2016-4-30",
-		  licensed: 3245,
-		  sorned: null
-		}, {
-		  period: "2005 Q4",
-		  licensed: 3289,
-		  sorned: null
-		}
-		];
-		if ($('#hero-graph').length) {
-		Morris.Line({
-		  element: "hero-graph",
-		  data: tax_data,
-		  xkey: "period",
-		  ykeys: ["licensed", "sorned"],
-		  labels: ["Licensed", "Off the road"],
-		  lineColors: ["#5bc0de", "#60c560"]
-		});
-		}
-	</script>
+  	<script type="text/javascript">
+  		var tax_data = [{
+  		  period: "2016-4-30",
+  		  licensed: 3407,
+  		  sorned: 660
+  		}, {
+  		  period: "2011 Q2",
+  		  licensed: 3351,
+  		  sorned: 629
+  		}, {
+  		  period: "2011 Q1",
+  		  licensed: 3269,
+  		  sorned: 618
+  		}, {
+  		  period: "2010 Q4",
+  		  licensed: 3246,
+  		  sorned: 661
+  		}, {
+  		  period: "2009 Q4",
+  		  licensed: 3171,
+  		  sorned: 676
+  		}, {
+  		  period: "2008 Q4",
+  		  licensed: 3155,
+  		  sorned: 681
+  		}, {
+  		  period: "2007 Q4",
+  		  licensed: 3226,
+  		  sorned: 620
+  		}, {
+  		  period: "2016-4-30",
+  		  licensed: 3245,
+  		  sorned: null
+  		}, {
+  		  period: "2005 Q4",
+  		  licensed: 3289,
+  		  sorned: null
+  		}
+  		];
+  		if ($('#hero-graph').length) {
+  		Morris.Line({
+  		  element: "hero-graph",
+  		  data: tax_data,
+  		  xkey: "period",
+  		  ykeys: ["licensed", "sorned"],
+  		  labels: ["Licensed", "Off the road"],
+  		  lineColors: ["#5bc0de", "#60c560"]
+  		});
+  		}
+  	</script>
   </body>
 </html>

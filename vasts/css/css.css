@@ -1,5 +1,6 @@
 li,ul{ list-style-type: none; padding: 0; margin: 0;}
 i{ font-style: normal;}
+body{ background-color: #fafafa;}
 .navbar-right{
 	color: #fff;
 }
@@ -55,13 +56,20 @@ i{ font-style: normal;}
 	font-size: 24px;
 	font-weight: bold;
 	text-align: center;
-	background-color: #f8f8f8;
+	background-color: #e5e5e5;
 }
+.content-gruee{ color: #19af56;}
 .content-main i{
-	vertical-align:super;
-	font-size: 14px;
-	padding: 0 5px;
-	color: #cacaca;
+	vertical-align: top;
+    font-size: 14px;
+    padding: 0 5px;
+    color: #cacaca;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.hero-title{
+	text-align: center;
 }
 
 
@@ -74,19 +82,14 @@ i{ font-style: normal;}
 
 
 
-
-
-/* 小屏幕（平板，大于等于 768px） */
-@media (min-width: @screen-sm-min) {
+/* 小屏幕（平板，小于等于 768px） */
+@media (max-width: 768px) {
 	.navbar-right{ display: none;}
+	.hero{ display: none;}
+	.content li{ width: 100%; margin-bottom: 10px;}
 }
 
-/* 中等屏幕（桌面显示器，大于等于 992px） */
-@media (min-width: @screen-md-min) {
-
-}
-
-/* 大屏幕（大桌面显示器，大于等于 1200px） */
-@media (min-width: @screen-lg-min) {
+/* 中等屏幕（桌面显示器，小于等于 992px） */
+@media (max-width: 992px) {
 
 }
