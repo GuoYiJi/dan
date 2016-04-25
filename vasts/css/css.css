@@ -1,0 +1,92 @@
+li,ul{ list-style-type: none; padding: 0; margin: 0;}
+i{ font-style: normal;}
+.navbar-right{
+	color: #fff;
+}
+.navbar-right span{
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	float: left;
+}
+.new-campaign{
+	background-color: #5281eb;
+}
+.username{
+	width: 120px;
+	height: 50px;
+	float: left;
+	font-size: 18px;
+	background: none;
+	border: none;
+	text-align: center;
+	outline: none;
+	padding-left: 10px;
+	margin-left: 20px;
+}
+.username option{ color: #000;}
+
+.content{ margin-top: 50px;}
+.content ul{
+	display: flex;
+	display: -weblit-flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 20px;
+}
+.content li{
+	width: 20%;
+	padding: 0 5px;
+	margin-bottom: 35px;
+}
+.content-title{
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 20px;
+	background-color: #5781e5;
+}
+.content-main{
+	height: 60px;
+	line-height: 60px;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	background-color: #f8f8f8;
+}
+.content-main i{
+	vertical-align:super;
+	font-size: 14px;
+	padding: 0 5px;
+	color: #cacaca;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: @screen-sm-min) {
+	.navbar-right{ display: none;}
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: @screen-md-min) {
+
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: @screen-lg-min) {
+
+}
