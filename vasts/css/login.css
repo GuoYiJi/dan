@@ -310,9 +310,9 @@ textarea.form-control {
   border-radius: 6px;
   background: rgba(45, 45, 45, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 0 0 2px 0 #608fbf inset;
-  -moz-box-shadow: 0 0 2px 0 #608fbf inset;
-  box-shadow: 0 0 2px 0 #608fbf inset;
+  -webkit-box-shadow: 0 0 1px 0 rgba(96, 143, 191, 0.8) inset;
+  -moz-box-shadow: 0 0 1px 0 rgba(96, 143, 191, 0.8) inset;
+  box-shadow: 0 0 1px 0 rgba(96, 143, 191, 0.8) inset;
   -webkit-transition: all 300ms linear;
   -moz-transition: all 300ms linear;
   -o-transition: all 300ms linear;
@@ -437,8 +437,7 @@ textarea.form-control {
   color: #fff; }
 
 .btn-bordred.btn-custom {
-  background-color: #4c89f9;
-  border-bottom: 2px solid #4fa4f8 !important; }
+  background-color: #4c89f9; }
 
 .btn-bordred.btn-custom:hover {
   color: #fff;
@@ -468,3 +467,7 @@ textarea.form-control {
 .row {
   margin-right: -10px;
   margin-left: -10px; }
+
+@media (max-width: 767px) {
+  .wrapper-page {
+    width: 90%; } }

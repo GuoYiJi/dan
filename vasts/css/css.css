@@ -31,46 +31,6 @@ body{ background-color: #fafafa;}
 .username option{ color: #000;}
 
 .content{ margin-top: 50px;}
-.content ul{
-	display: flex;
-	display: -weblit-flex;
-	flex-wrap: wrap;
-	width: 100%;
-	margin-top: 20px;
-}
-.content li{
-	width: 20%;
-	padding: 0 5px;
-	margin-bottom: 35px;
-}
-.content-title{
-	color: #fff;
-	height: 30px;
-	line-height: 30px;
-	padding-left: 20px;
-	background-color: #5781e5;
-}
-.content-main{
-	height: 60px;
-	line-height: 60px;
-	font-size: 24px;
-	font-weight: bold;
-	text-align: center;
-	background-color: #e5e5e5;
-}
-.content-gruee{ color: #19af56;}
-.content-main i{
-	vertical-align: top;
-    font-size: 14px;
-    padding: 0 5px;
-    color: #cacaca;
-    display: inline-block;
-    line-height: 50px;
-}
-
-.hero-title{
-	text-align: center;
-}
 
 
 

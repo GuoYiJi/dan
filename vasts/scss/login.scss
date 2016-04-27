@@ -303,7 +303,7 @@ a:focus {
 textarea.form-control {
   min-height: 90px;
 }
-$shadow: 0 0 2px 0 rgba(96,143,191,1) inset;
+$shadow: 0 0 1px 0 rgba(96,143,191,0.8) inset;
 $transition: 300ms;
 .form-control {
   color: #fff;
@@ -450,7 +450,6 @@ $transition: 300ms;
 }
 .btn-bordred.btn-custom {
   background-color: #4c89f9;
-  border-bottom: 2px solid #4fa4f8 !important;
 }
 .btn-bordred.btn-custom:hover{
   color: #fff;
@@ -486,6 +485,11 @@ $transition: 300ms;
 }
 
 
+@media (max-width: 767px){
+  .wrapper-page {
+      width: 90%;
+  }
+}
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
 @import url(https://fonts.googleapis.com/css?family=Karla:400,700);

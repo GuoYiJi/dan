@@ -32,3 +32,61 @@
     .hot-menu .dropdown-menu a:hover {
       color: #ced5de;
       background-color: #5d6b7a; }
+
+.container-block {
+  width: 20%;
+  padding: 0 10px; }
+  .container-block .card-box {
+    padding: 10px;
+    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-clip: padding-box;
+    margin-bottom: 20px;
+    background-color: #ffffff; }
+  .container-block .progress {
+    -webkit-box-shadow: none !important;
+    background-color: #ebeff2;
+    box-shadow: none !important;
+    height: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    background-color: rgba(16, 196, 105, 0.2); }
+    .container-block .progress .progress-bar {
+      float: left;
+      width: 0;
+      height: 100%;
+      font-size: 8px;
+      line-height: 5px;
+      color: #fff;
+      text-align: center;
+      background-color: #337ab7;
+      -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+      -webkit-transition: width .6s ease;
+      -o-transition: width .6s ease;
+      transition: width .6s ease; }
+    .container-block .progress .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0; }
+
+.widget-detail-2 i {
+  vertical-align: top;
+  font-size: 14px;
+  padding: 0 5px;
+  color: #cacaca;
+  display: inline-block;
+  line-height: 20px; }
+
+.i-green {
+  color: green; }
+
+.i-red {
+  color: red; }
