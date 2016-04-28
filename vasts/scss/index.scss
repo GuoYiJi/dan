@@ -21,6 +21,9 @@
 	}
 }
 @media (max-width: $screen-md-min) {
+	body {
+		background-color: #eff3f8;
+	}
 	.page-header {
 		.header-top {
 			height: auto;
@@ -38,15 +41,20 @@
 		.header-menu {
 			padding-top: 20px;
 			display: -none;
+			height: auto;
 			background-color: #eff3f8;
+		}
+		.hot-menu {
+
 		}
 		.search-form {
 			margin-top: 0;
+			margin-bottom: 10px;
 			float: none;
 			width: 100%;
 			
 			@at-root #{&}.open {
-				width: auto;
+				width: 100%;
 			}
 			.input-group {
 				background-color: #fff !important;
@@ -68,6 +76,99 @@
 					color: #fff;
 				}
 			}
+		}
+		.header-menu {
+
+			.navbar-nav {
+				margin: 0;
+				float: none;
+				& > li {
+					float: none;
+					border-bottom: 1px solid #F0F0F0;
+					& > a {
+						background-color: #fff;
+						color: #000;
+						&:hover {
+							color: #337ab7;
+							background-color: #fff;
+						}
+					}
+					.dropdown-menu {
+						position: static;
+						display: none;
+					}
+					.dropdown-menu {
+						margin-top: 1px;
+						max-width: auto;
+						width: auto;
+						position: static;
+						box-shadow: none;
+						float: none!important;
+						background-color: #fff;
+						border: none;
+						a {
+							width: auto;
+							color: #000;
+						}
+						& > li {
+							float: none;
+							&:hover {
+								& > a {
+
+									color: #337ab7;
+									background-color: #fff;
+								}
+							}
+						}
+					}
+					.dropdown-submenu {
+						& > .dropdown-menu {
+							padding-left: 20px;
+						}
+					}
+					.mega-menu-submenu {
+						li {
+							&:hover {
+								a {
+									color: #337ab7;
+									background-color: #fff;
+								}
+							}
+						}
+						h3 {
+							color: #000;
+						}
+						a {
+							color: #666;
+						}
+					}
+					.open {
+						display: block;
+						width: 100%!important;
+					}
+				}
+				li.current {
+					& > a {
+						background-color: #337ab7;
+						color: #fff;
+					}
+					&:hover {
+						& > a {
+
+							background-color: #337ab7;
+							color: #fff;
+						}
+					}
+				}
+				.menu-dropdown {
+
+					.glyphicon {
+						float: right;
+						color: #fff;
+					}
+				}
+			}
+
 		}
 	}
 }
@@ -360,12 +461,6 @@
 }
 
 .hot-menu {
-	.nav .current {
-		& > a {
-			color: #f1f1f1;
-			background-color: #4E5966;
-		}
-	}
 	.menu-dropdown {
 		li {
 			position: relative;
@@ -383,6 +478,12 @@
 		}
 		&:hover > .dropdown-menu {
 			display: block;
+		}
+	}
+	.current {
+		& > a {
+			color: #f1f1f1;
+			background-color: #4E5966;
 		}
 	}
 	.dropdown-menu {
@@ -426,8 +527,6 @@
 }
 
 .container-block{
-	width: 20%;
-	padding: 0 10px;
 	.card-box {
 	    padding: 10px;
 	    box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);
