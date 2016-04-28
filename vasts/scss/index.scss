@@ -34,6 +34,9 @@
 		background-color: #eff3f8;
 	}
 	.page-header {
+		position: static;
+		left: auto;
+		top: auto;
 		.header-top {
 			height: auto;
 			.page-logo {
@@ -179,6 +182,10 @@
 			}
 
 		}
+	}
+	.content {
+		margin-top: 50px;
+		padding-top: 0;
 	}
 }
 .header-menu {
