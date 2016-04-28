@@ -1,5 +1,76 @@
 @charset "utf-8";
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+.page-header {
+	padding: 0;
+	margin: 0;
+	.header-top {
+		.navbar-nav {
+			& > li.dropdown {
+				float: left;
+			}
+		}
+		.navbar-toggle {
+			margin-top: 10px;
+			margin-right: 0;
+			.icon-bar {
+				background-color: #337ab7;
+			}
+		}
+	}
+}
+@media (max-width: $screen-md-min) {
+	.page-header {
+		.header-top {
+			height: auto;
+			.page-logo {
 
+			}
+			.top-menu {
+				.navbar-nav {
+					margin-top: 0;
+					margin-right: 0;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		.header-menu {
+			padding-top: 20px;
+			display: -none;
+			background-color: #eff3f8;
+		}
+		.search-form {
+			margin-top: 0;
+			float: none;
+			width: 100%;
+			
+			@at-root #{&}.open {
+				width: auto;
+			}
+			.input-group {
+				background-color: #fff !important;
+				width: 100%;
+			}
+			.form-control {
+				background-color: #fff !important;
+				box-shadow: none!important;
+				-webkit-box-shadow: none!important;
+			}
+			.input-group-btn {
+				width: 60px;
+				background-color: #337ab7;
+				text-align: center;
+			}
+			.submit {
+				right: 0;
+				& > span {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
 .header-menu {
 	width: 100%;
 	height: 51px;
@@ -288,9 +359,6 @@
 	height: 75px;
 }
 
-.top-menu {
-	float: right;	
-}
 .hot-menu {
 	.nav .current {
 		& > a {
