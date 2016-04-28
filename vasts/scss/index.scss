@@ -584,8 +584,8 @@
 	    line-height: 20px;
 	}
 }
-.i-green{ color: green;}
-.i-red{ color: red;}
+.i-green{ color: green !important;}
+.i-red{ color: red !important;}
 
 .mega-menu-content {
 	padding: 15px;
@@ -674,4 +674,24 @@
 .hero {
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+.campaigns-tab{
+	width: 100%;
+	overflow: auto;
+	position: relative;
+	border: #cdcdcd 1px solid;
+	border-right: 0;
+	border-bottom: 0;
+	.tablesorter-blue{
+		margin: 0;
+		border: 0;
+		min-width: 1300px
+	}
+}
+.select_class{
+	width: 200px;
+	height: 24px;
+	border: 1px solid #ccc;
+	margin: 20px 0;
 }
