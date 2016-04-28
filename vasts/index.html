@@ -8,14 +8,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/morris.css" rel="stylesheet">
     <link href="css/css.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/raphael.min.js"></script>
-    <script src="js/morris.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,34 +20,6 @@
         
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" style="display: none;">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">VASTS</a>
-        </div>
-        <div class="navbar-right pull-right">
-          <span class="new-campaign">New Campaign</span>
-          <select class="username">
-            <option>Usernane</option>
-            <option>Usernane</option>
-          </select>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">menu1</a></li>
-            <li><a href="#about">menu2</a></li>
-            <li><a href="#contact">menu3</a></li>
-            <li><a href="#contact">menu4</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
     <div class="header-top">
       <div class="container">
         <div class="page-logo">
@@ -314,9 +280,9 @@
             <li class="menu-dropdown current">
               <a href="javascript:;">menu1</a>
               <ul class="dropdown-menu pull-left">
-                <li class="current"><a href="javascript:;">Default <span class="badge badge-success">1</span></a></li>
-                <li><a href="javascript:;">Default </a></li>
-                <li><a href="javascript:;">Default </a></li>
+                <li class="current"><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="badge badge-success">1</span></a></li>
+                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default2 <span class="badge badge-success">1</span></a></li>
+                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default3 <span class="badge badge-default">1</span></a></li>
               </ul>
             </li>
             <li class="menu-dropdown">
@@ -552,13 +518,48 @@
                         </div>
                     </div>
                 </li>
-            </ul>
+              </ul>
+            </li>
+            <li class="menu-dropdown">
+              <a href="javascript:;">More</a>
+              <ul class="dropdown-menu pull-left">
+                <li class="dropdown-submenu">
+                  <a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="arrow glyphicon glyphicon-menu-right"></a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown-submenu">
+                      <a href="javascript:;">menu_2_1<span class="arrow glyphicon glyphicon-menu-right"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                        <li><a href="javascript:;">menu_2_3_1</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="javascript:;">menu_2_2<span class="arrow glyphicon glyphicon-menu-right"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                        <li><a href="javascript:;">menu_2_3_2</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="javascript:;">menu_2_3</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
-        <form class="search-form" action="page_general_search.html" method="GET">
+        <form class="search-form J_search" action="page_general_search.html" method="GET">
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search" name="query">
+                <input type="text" class="form-control J_formControl" placeholder="Search" name="query">
                 <span class="input-group-btn">
                     <a href="javascript:;" class="btn submit">
                         <span class="glyphicon glyphicon-search"></span>
@@ -781,59 +782,28 @@
       </div>
     </div>
     <div class="container hero">
-      <div class="hero-title">Overview</div>
-      <div id="hero-graph" style="width: 100%;"></div>
+
+      <div id="combine-chart">
+          <div id="combine-chart-container" class="flot-chart" style="height: 320px;">
+          </div>
+      </div>
     </div>
 	
-  	<script type="text/javascript">
-  		var tax_data = [{
-  		  period: "2016-4-30",
-  		  licensed: 3407,
-  		  sorned: 660
-  		}, {
-  		  period: "2011 Q2",
-  		  licensed: 3351,
-  		  sorned: 629
-  		}, {
-  		  period: "2011 Q1",
-  		  licensed: 3269,
-  		  sorned: 618
-  		}, {
-  		  period: "2010 Q4",
-  		  licensed: 3246,
-  		  sorned: 661
-  		}, {
-  		  period: "2009 Q4",
-  		  licensed: 3171,
-  		  sorned: 676
-  		}, {
-  		  period: "2008 Q4",
-  		  licensed: 3155,
-  		  sorned: 681
-  		}, {
-  		  period: "2007 Q4",
-  		  licensed: 3226,
-  		  sorned: 620
-  		}, {
-  		  period: "2016-4-30",
-  		  licensed: 3245,
-  		  sorned: null
-  		}, {
-  		  period: "2005 Q4",
-  		  licensed: 3289,
-  		  sorned: null
-  		}
-  		];
-  		if ($('#hero-graph').length) {
-  		Morris.Line({
-  		  element: "hero-graph",
-  		  data: tax_data,
-  		  xkey: "period",
-  		  ykeys: ["licensed", "sorned"],
-  		  labels: ["Licensed", "Off the road"],
-  		  lineColors: ["#5bc0de", "#60c560"]
-  		});
-  		}
-  	</script>
+
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/jquery.flot.js"></script>
+  <script src="js/jquery.flot.init.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    $(function (){
+      var $search = $('.J_search');
+      $('.J_formControl').on('focus', function (){
+        $search.addClass('open');
+      }).on('blur', function (){
+        $search.removeClass('open');
+      });
+    });
+  </script>
   </body>
 </html>
