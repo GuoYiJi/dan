@@ -1,0 +1,55 @@
+li,ul{ list-style-type: none; padding: 0; margin: 0;}
+i{ font-style: normal;}
+body{ background-color: #fafafa;}
+.navbar-right{
+	color: #fff;
+}
+.navbar-right span{
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	margin-top: 10px;
+	float: left;
+}
+.new-campaign{
+	background-color: #5281eb;
+}
+.username{
+	width: 120px;
+	height: 50px;
+	float: left;
+	font-size: 18px;
+	background: none;
+	border: none;
+	text-align: center;
+	outline: none;
+	padding-left: 10px;
+	margin-left: 20px;
+}
+.username option{ color: #000;}
+
+.content{ margin-top: 50px;}
+
+
+
+
+
+
+
+
+
+
+
+/* 小屏幕（平板，小于等于 768px） */
+@media (max-width: 768px) {
+	.navbar-right{ display: none;}
+	.hero{ display: none;}
+	.content li{ width: 100%; margin-bottom: 10px;}
+}
+
+/* 中等屏幕（桌面显示器，小于等于 992px） */
+@media (max-width: 992px) {
+
+}
