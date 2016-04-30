@@ -18,7 +18,7 @@
 			name: "",
 			offsetX: 2,
 			offsetY: 2,
-			textLimit: 6,
+			textLimit: 15,
 			beforeShow: $.noop,
 			afterShow: $.noop
 		};
@@ -32,9 +32,6 @@
 									'<ul class="'+ clKey +'ul">';
 									
 				$.each(dataMenu, function(i, arr) {
-					if (i) {
-						htmlMenu = htmlMenu + '<li class="'+ clKey +'li_separate">&nbsp;</li>';	
-					}
 					if ($.isArray(arr)) {
 						$.each(arr, function(j, obj) {
 							var text = obj.text, htmlMenuLi = "", strTitle = "", rand = Math.random().toString().replace(".", "");

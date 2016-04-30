@@ -30,9 +30,70 @@
     <link class="theme dropbox" rel="stylesheet" href="css/tablesoter/theme.dropbox.css">
     <link class="theme metro-dark" rel="stylesheet" href="css/tablesoter/theme.metro-dark.css">
 
+    <style id="css">/*** custom css only popup ***/
+	    .columnSelectorWrapper {
+	      position: relative;
+	      margin: 10px 0;
+	      display: inline-block;
+	    }
+	    .columnSelector, .hidden {
+	      display: none;
+	    }
+	    .columnSelectorButton {
+	      background: #99bfe6;
+	      border: #888 1px solid;
+	      color: #111;
+	      border-radius: 5px;
+	      padding: 5px;
+	    }
+	    #colSelect1:checked + label {
+	      background: #5797d7;
+	      border-color: #555;
+	    }
+	    #colSelect1:checked ~ #columnSelector {
+	      display: block;
+	    }
+	    .columnSelector {
+	      width: 120px;
+	      position: absolute;
+	      top: 30px;
+	      padding: 10px;
+	      background: #fff;
+	      border: #99bfe6 1px solid;
+	      border-radius: 5px;
+	    }
+	    .columnSelector label {
+	      display: block;
+	    }
+	    .columnSelector label:nth-child(1) {
+	      border-bottom: #99bfe6 solid 1px;
+	      margin-bottom: 5px;
+	    }
+	    .columnSelector input {
+	      margin-right: 5px;
+	    }
+	    .columnSelector .disabled {
+	      color: #ddd;
+	    }
+
+	    /*** Bootstrap popover ***/
+	    #popover-target label {
+	      margin: 0 5px;
+	      display: block;
+	    }
+	    #popover-target input {
+	      margin-right: 5px;
+	    }
+	    #popover-target .disabled {
+	      color: #ddd;
+	    }
+    </style>
+
     <script src="js/tablesoter/jquery-latest.min.js"></script>
     <script src="js/tablesoter/jquery.tablesorter.js"></script>
     <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
+    <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
+    <script src="js/tablesoter/jquery.columnSelector.js"></script>
     
     <script id="js">
       $(function(){
@@ -42,10 +103,15 @@
           showProcessing: true,
           headerTemplate : '{content} {icon}', // Add icon for various themes
 
-          widgets: [ 'zebra', 'stickyHeaders', 'filter' ],
+          widgets: [ 'zebra', 'columnSelector', 'stickyHeaders', 'filter' ],
 
           widgetOptions: {
-
+            columnSelector_container: $('#columnSelector'),
+            columnSelector_columns: {
+              0: 'disable'
+            },
+            columnSelector_saveColumns: true,
+            columnSelector_layout: '<label><input type="checkbox">{name}</label>',
             // extra class name added to the sticky header row
             stickyHeaders : '',
             // number or jquery selector targeting the position:fixed element
@@ -682,9 +748,16 @@
     </div>
 
 
-    <div id="main" class="container">
-      <select class="select_class"></select>
-      <select class="select_class table1_th"></select>
+    <div id="main" class="container" style="margin-top: 150px;">
+      <div class="columnSelectorWrapper">
+        <input id="colSelect1" type="checkbox" class="hidden">
+        <label class="columnSelectorButton" for="colSelect1">Column</label>
+        <div id="columnSelector" class="columnSelector"></div>
+      </div>
+      <div>
+        <select class="select_class"></select>
+        <select class="select_class table1_th"></select>
+      </div>
       <div class="campaigns-tab">
         <table id="table1" class="tablesorter">
           <thead>
@@ -703,7 +776,7 @@
               <th>Revenue</th>
               <th>Profit</th>
               <th>ROI</th>
-              <th>Cloak</th>      
+              <th data-column="6">Cloak</th>      
             </tr>
           </thead>
           <tbody>
@@ -797,7 +870,7 @@
               <td>TEST-CPA-Postback-Percent </td>
               <td>Ref</td>
               <td>0</td>
-              <td>0</td>
+              <td>1</td>
               <td>0</td>
               <td>0</td>
               <td>0</td>
@@ -819,57 +892,52 @@
     <link rel="stylesheet" href="js/smartMenu/smartMenu.css">
   
     <script>
-    var imageMenuData = [
-      [{
-        text: "Edit Campaign",  //修改
-        func: function() {
-            
-        }
-      }],
-      [{
-        text: "Report",  //看报表
-        func: function() {
-           
-        }
-      }],
-      [{
-        text: "Clone Campaign",  //复制
-        func: function() {
-           
-        }
-      }],
-      [{
-        text: "Copy Url",  //复制Url
-        func: function() {
-        }
-      }],
-      [{
-        text: "Preview",  //预览
-        func: function() {
-           
-        }
-      }],
-      [{
-        text: "Delete",  //删除
-        func: function() {
-            var r=confirm("确认删除吗？");   
-            if(r==true){
-              $(this).remove();
-            }else{
-              return false;   
-            }
-        }
-      }],
-    ];
+	    var imageMenuData = [
+	      [{
+	        text: "Edit Campaign",  //修改
+	        func: function() {
+	            
+	        }
+	      }],
+	      [{
+	        text: "Report",  //看报表
+	        func: function() {
+	           
+	        }
+	      }],
+	      [{
+	        text: "Clone Campaign",  //复制
+	        func: function() {
+	           
+	        }
+	      }],
+	      [{
+	        text: "Copy Url",  //复制Url
+	        func: function() {
+	        }
+	      }],
+	      [{
+	        text: "Preview",  //预览
+	        func: function() {
+	           
+	        }
+	      }],
+	      [{
+	        text: "Delete",  //删除
+	        func: function() {
+	            var r=confirm("确认删除吗？");   
+	            if(r==true){
+	              $(this).remove();
+	            }else{
+	              return false;   
+	            }
+	        }
+	      }],
+	    ];
 
-    var bodyMenuData = [[{ text: "页面空白处点击是否冲突测试" }]];
-    $("#table1 tr").smartMenu(imageMenuData, {
-        name: "tr"    
-    });
-
-
-
-
+	    $("#table1 tr:not(':first')").smartMenu(imageMenuData, {
+	        name: "tr"    
+	    });
 
     </script>
 	
