@@ -243,6 +243,8 @@
 	}
 }
 @media (max-width: $screen-md-min) {
+	.container{ margin-top: 0 !important;}
+	#main{ margin-bottom: 100px;}
 	.hot-menu {
 		.navbar-nav {
 			margin: 0;
@@ -749,12 +751,10 @@
 	overflow: auto;
 	position: relative;
 	border: #cdcdcd 1px solid;
-	border-right: 0;
-	border-bottom: 0;
 	.tablesorter-blue{
 		margin: 0;
 		border: 0;
-		min-width: 1300px
+		min-width: 1100px
 	}
 }
 .select_class{

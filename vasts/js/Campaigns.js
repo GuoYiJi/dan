@@ -129,6 +129,6 @@ $(function (){
 
 	var bodyMenuData = [[{ text: "页面空白处点击是否冲突测试" }]];
 	$("#table1 td").smartMenu(imageMenuData, {
-	    name: "td"    
+	    name: "td"
 	});
 });

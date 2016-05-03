@@ -1,0 +1,53 @@
+
+.status-left{
+	padding: 0;
+	max-height: 560px;
+	padding-bottom: 50px;
+	overflow-y: auto;
+	background-color: #444d58;
+	li{    
+	    line-height: 25px;
+	    padding-left: 5px;
+	    background-color: #444d58;
+		a{
+	    	color: #f1f1f1;
+	    	display: block;
+	    	width: 100%;
+	    	height: 100%;
+		    color: #f1f1f1;
+			display: block;
+		    white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+		a:hover{ text-decoration: none;}
+	}
+	li:hover,li.active{
+	    background-color: #4E5966;
+	}
+}
+
+.status-left::-webkit-scrollbar {  
+  width: 14px;  
+  height: 14px;  
+}  
+  
+.status-left::-webkit-scrollbar-track,  
+.status-left::-webkit-scrollbar-thumb {  
+  border-radius: 999px;  
+  border: 5px solid transparent;  
+}  
+  
+.status-left::-webkit-scrollbar-track {  
+  box-shadow: 1px 1px 5px rgba(255,255,255,.2) inset;  
+}  
+  
+.status-left::-webkit-scrollbar-thumb {  
+  min-height: 20px;  
+  background-clip: content-box;  
+  box-shadow: 0 0 0 5px rgba(255,255,255,.2) inset;  
+}  
+  
+.status-left::-webkit-scrollbar-corner {  
+  background: transparent;  
+}  
