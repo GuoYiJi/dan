@@ -95,7 +95,7 @@
     var toStr = Object.prototype.toString;
     var tpl =''+
     '<% if(layout == "normal"){ %>'+
-    '<div class="modal<% if(customClass){%> <%= customClass %><% } %>">'+ 
+    '<div class="modal<% if(customClass){%> <%= customClass %><% } %>">'+
     '    <div class="modal-backdrop"></div>'+
     '    <div class="modal-dialog">'+
     '        <% if(title){ %>'+
@@ -126,19 +126,19 @@
     '   <div class="actionsheet-dialog">'+
     '       <div class="actionsheet-menu">'+
     '           <% if(content){ %>'+
-    '           <div class="actionsheet-desc"><%= content %></div>'+    
+    '           <div class="actionsheet-desc"><%= content %></div>'+
     '           <% } %>'+
     '           <% for(var i=0, len=buttons.length-1; i<len; i++){ %>'+
-    '           <div class="actionsheet-cell <% if(buttons[i].type){ %><%= "cell-"+buttons[i].type %><% } %>" data-role="button"><%= buttons[i].text %></div>'+    
+    '           <div class="actionsheet-cell <% if(buttons[i].type){ %><%= "cell-"+buttons[i].type %><% } %>" data-role="button"><%= buttons[i].text %></div>'+
     '           <% } %>'+
     '       </div>'+
     '       <div class="actionsheet-cancel">'+
-    '           <% if(buttons.length){ %><div class="actionsheet-cell" data-role="button"><%= buttons[buttons.length-1].text %></div><% } %>'+    
+    '           <% if(buttons.length){ %><div class="actionsheet-cell" data-role="button"><%= buttons[buttons.length-1].text %></div><% } %>'+
     '       </div>'+
     '   </div>'+
     '</div>'+
     '<% } else if(layout == "blank"){ %>'+
-    '<div class="modal<% if(customClass){%> <%= customClass %><% } %>">'+ 
+    '<div class="modal<% if(customClass){%> <%= customClass %><% } %>">'+
     '   <div class="modal-backdrop"></div>'+
     '   <%= html %>'+
     '   </div>'+
@@ -158,14 +158,14 @@
             var $btn = me.element.find('[data-role="button"]');
 
             if(me.options.backdropClose){
-                me.element.children(".modal-backdrop").on("tap", function(e){
+                me.element.children(".modal-backdrop").on("click", function(e){
                     me.hide();
-                    e.preventDefault(); 
+                    e.preventDefault();
                 });
             }
 
-            $btn.on('tap', function(e){
-                var index = $btn.index(this); 
+            $btn.on('click', function(e){
+                var index = $btn.index(this);
                 var event=$.Event('modal:action');
 
                 event.index=index;
@@ -203,7 +203,7 @@
     }
 
     function buildBtn(btns){
-        var arr = [];   
+        var arr = [];
         for(var i=0, len=btns.length; i<len; i++){
             if(toStr.call(btns[i]) === '[object String]'){
                 arr[i] = {text: btns[i]};
@@ -223,8 +223,8 @@
     $.alert = function(options){
         var type = options === null || options === undefined ? null : Array.prototype.toString.call(options);
         if( type === '[object String]' ){
-            return $.modal({subtitle: options});    
-        } 
+            return $.modal({subtitle: options});
+        }
         return $.modal(options);
     };
 
@@ -243,7 +243,7 @@
         //content: '努力加载中...',
         show: true,
         type: 'modeless'
-    }; 
+    };
 
     var tpl = ''+
     '<% if(type === "modal"){ %>'+
@@ -368,15 +368,15 @@
     $.toast = function(options){
         var type = options === null || options === undefined ? null : Array.prototype.toString.call(options);
         if( type === '[object String]' ){
-            return Plugin({content: options});    
-        } 
+            return Plugin({content: options});
+        }
         return Plugin(options);
     };
 }(window.jQuery);
 
 // 省市区选择
 !function($){
-    
+
     var defaults = {
         value: '',
         show: true,
@@ -440,7 +440,7 @@
 
             this.element.children(".area-backdrop").on("touchend", function(e){
                 me.hide();
-                e.preventDefault(); 
+                e.preventDefault();
             });
 
 
@@ -453,7 +453,7 @@
                 me._renderCounty([]);
                 e.preventDefault();
             });
-            
+
             //点击市级，显示区级
             this.city.on("tap", "li", function(e){
                 var $this = $(this),
@@ -529,7 +529,7 @@
         e.preventDefault();
         return false;
     }
-    
+
     $.fn.district = $.district = function(options){
         return $.adaptObject(this, defaults, options, tpl, District, 'district');
     };
