@@ -146,7 +146,7 @@ $(function() {
 					return false;
 				}
 			}
-		}],
+		}]
 	];
 
 	var bodyMenuData = [
