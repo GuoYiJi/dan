@@ -22,6 +22,7 @@
     <link href="css/Campaigns.css" rel="stylesheet">
     <link href="css/status.css" rel="stylesheet">
     <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,6 +37,7 @@
     <script src="js/tablesoter/jquery.columnSelector.js"></script>
     <script src="js/jquery.util.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/select2.min.js"></script>
 
     <script src="http://login.vasts.co/static/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="js/moment.min.js" type="text/javascript"></script>
@@ -781,6 +783,8 @@
     </div>
     <script src="js/smartMenu/jquery-smartMenu.js"></script>
     <script type="text/javascript">
+
+    $('.select2').select2();
     $('#table1').tablesorter({
         widthFixed: true,
         showProcessing: true,
