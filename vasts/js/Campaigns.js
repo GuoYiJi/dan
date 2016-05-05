@@ -47,41 +47,6 @@ $(function() {
 			content: $('#popover-target')
 		});
 
-
-	window.includeCaption = true;
-	// removed jQuery UI theme because of the accordion!
-	$('link.theme').each(function() {
-		this.disabled = true;
-	});
-
-	var themes = 'blue default green grey ice black-ice dark dropbox metro-dark',
-		i, o = '',
-		t = themes.split(' ');
-	for (i = 0; i < t.length; i++) {
-		o += '<option value="' + t[i] + '">' + t[i] + '</option>';
-	}
-
-	$('select:first')
-		.append(o)
-		.change(function() {
-			var theme = $(this).val().toLowerCase(),
-				// ui-theme is added by the themeswitcher
-				files = $('link.theme').each(function() {
-					this.disabled = true;
-				})
-			files.filter('.' + theme).each(function() {
-				this.disabled = false;
-			});
-			$('table')
-				.removeClass('tablesorter-' + t.join(' tablesorter-'))
-				.addClass('tablesorter-' + (theme === 'black-ice' ? 'blackice' : theme));
-		}).change();
-
-	var _font = '';
-	$('#table1 th').each(function() {
-		_font += '<option value="' + $(this).text() + '">' + $(this).text() + '</option>';
-		$('.table1_th').html(_font);
-	});
 	var imageMenuData = [
 		[{
 			text: "Edit Campaign", //修改

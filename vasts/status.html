@@ -1,806 +1,1130 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>satus</title>
-  <link class="theme default" rel="stylesheet" href="css/tablesoter/theme.default.css">
-  <link class="theme blue" rel="stylesheet" href="css/tablesoter/theme.blue.css">
-  <link class="theme green" rel="stylesheet" href="css/tablesoter/theme.green.css">
-  <link class="theme grey" rel="stylesheet" href="css/tablesoter/theme.grey.css">
-  <link class="theme ice" rel="stylesheet" href="css/tablesoter/theme.ice.css">
-  <link class="theme black-ice" rel="stylesheet" href="css/tablesoter/theme.black-ice.css">
-  <link class="theme dark" rel="stylesheet" href="css/tablesoter/theme.dark.css">
-  <link class="theme dropbox" rel="stylesheet" href="css/tablesoter/theme.dropbox.css">
-  <link class="theme metro-dark" rel="stylesheet" href="css/tablesoter/theme.metro-dark.css">
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.css" rel="stylesheet">
-  <link href="css/css.css" rel="stylesheet">
-  <link href="css/index.css" rel="stylesheet">
-  <link href="css/Campaigns.css" rel="stylesheet">
-  <link href="css/status.css" rel="stylesheet">
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>satus</title>
+    <link class="theme default" rel="stylesheet" href="css/tablesoter/theme.default.css">
+    <link class="theme blue" rel="stylesheet" href="css/tablesoter/theme.blue.css">
+    <link class="theme green" rel="stylesheet" href="css/tablesoter/theme.green.css">
+    <link class="theme grey" rel="stylesheet" href="css/tablesoter/theme.grey.css">
+    <link class="theme ice" rel="stylesheet" href="css/tablesoter/theme.ice.css">
+    <link class="theme black-ice" rel="stylesheet" href="css/tablesoter/theme.black-ice.css">
+    <link class="theme dark" rel="stylesheet" href="css/tablesoter/theme.dark.css">
+    <link class="theme dropbox" rel="stylesheet" href="css/tablesoter/theme.dropbox.css">
+    <link class="theme metro-dark" rel="stylesheet" href="css/tablesoter/theme.metro-dark.css">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/Campaigns.css" rel="stylesheet">
+    <link href="css/status.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
   <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
   <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
-  <script src="js/jquery-2.1.4.min.js"></script>
-  <script src="js/tablesoter/jquery-latest.min.js"></script>
-  <script src="js/tablesoter/jquery.tablesorter.js"></script>
-  <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
-  <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
-  <script src="js/tablesoter/jquery.columnSelector.js"></script>
-  
-  <script src="js/jquery.util.js" type="text/javascript"></script>
-  <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/tablesoter/jquery-latest.min.js"></script>
+    <script src="js/tablesoter/jquery.tablesorter.js"></script>
+    <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
+    <script src="js/tablesoter/jquery.tablesorter.widgets.js"></script>
+    <script src="js/tablesoter/jquery.columnSelector.js"></script>
+    <script src="js/jquery.util.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
 
-      
+    <script src="http://login.vasts.co/static/js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="js/moment.min.js" type="text/javascript"></script>
+    <script src="js/daterangepicker.js" type="text/javascript"></script>
 </head>
+
 <body>
-  <div class="page-header">
-    
-    <div class="header-top">
-      <div class="container">
-        <div class="page-logo">
-          <a class="navbar-brand" href="#">VASTS</a>
-        </div>
-        <div class="top-menu">
-          <ul class="nav navbar-nav pull-right">
-            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark">
-              <a class="dropdown-toggle" href="javascript:;">
-                <span class="glyphicon glyphicon-bell"></span>
-                <em class="badge badge-default">7</em>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="external">
-                  <h3>You have<strong>12 pending</strong> tasks</h3>
-                  <a href="javascript:;">view all</a>
-                </li>
-                <li>
-                  <div class="slimScrollDiv">
-                    <ul class="dropdown-menu-list scroller">
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="javascript:;">
-                          <span class="time">just now</span>
-                          <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered. 
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-extended dropdown-notification dropdown-dark">
-              <a class="dropdown-toggle" href="javascript:;">
-                <span class="glyphicon glyphicon-calendar"></span>
-                <em class="badge badge-default">7</em>
-              </a>
-              <ul class="dropdown-menu">
-                <li class="external">
-                  <h3>You have<strong>12 pending</strong> tasks</h3>
-                  <a href="javascript:;">view all</a>
-                </li>
-                <li>
-                  <div class="slimScrollDiv">
-                    <ul class="dropdown-menu-list scroller">
-                      <li>
-                          <a href="javascript:;">
-                              <span class="task">
+    <div class="page-header">
+        <div class="header-top">
+            <div class="container">
+                <div class="page-logo">
+                    <a class="navbar-brand" href="#">VASTS</a>
+                </div>
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark">
+                            <a class="dropdown-toggle" href="javascript:;">
+                                <span class="glyphicon glyphicon-bell"></span>
+                                <em class="badge badge-default">7</em>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <h3>You have<strong>12 pending</strong> tasks</h3>
+                                    <a href="javascript:;">view all</a>
+                                </li>
+                                <li>
+                                    <div class="slimScrollDiv">
+                                        <ul class="dropdown-menu-list scroller">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="time">just now</span>
+                                                    <span class="details">
+                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-extended dropdown-notification dropdown-dark">
+                            <a class="dropdown-toggle" href="javascript:;">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                <em class="badge badge-default">7</em>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <h3>You have<strong>12 pending</strong> tasks</h3>
+                                    <a href="javascript:;">view all</a>
+                                </li>
+                                <li>
+                                    <div class="slimScrollDiv">
+                                        <ul class="dropdown-menu-list scroller">
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="task">
                                   <span class="desc">New release v1.2 </span>
-                                  <span class="percent">30%</span>
-                              </span>
-                              <span class="progress">
+                                                    <span class="percent">30%</span>
+                                                    </span>
+                                                    <span class="progress">
                                   <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                       <span class="sr-only">40% Complete</span>
-                                  </span>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="javascript:;">
-                              <span class="task">
+                                                    </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="task">
                                   <span class="desc">New release v1.2 </span>
-                                  <span class="percent">30%</span>
-                              </span>
-                              <span class="progress">
+                                                    <span class="percent">30%</span>
+                                                    </span>
+                                                    <span class="progress">
                                   <span style="width: 40%;" class="progress-bar progress-bar-hot" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                       <span class="sr-only">40% Complete</span>
-                                  </span>
-                              </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="javascript:;">
-                              <span class="task">
+                                                    </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">
+                                                    <span class="task">
                                   <span class="desc">New release v1.2 </span>
-                                  <span class="percent">30%</span>
-                              </span>
-                              <span class="progress">
+                                                    <span class="percent">30%</span>
+                                                    </span>
+                                                    <span class="progress">
                                   <span style="width: 40%;" class="progress-bar progress-bar-warn" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
                                       <span class="sr-only">40% Complete</span>
-                                  </span>
-                              </span>
-                          </a>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="droddown dropdown-separator">
-              <span class="separator"></span>
-            </li>
-            <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark">
-              <a class="dropdown-toggle" href="javascript:;">
-                <span class="circle">3</span>
-                <span class="corner"></span>
-              </a>
-
-              <ul class="dropdown-menu">
-                <li class="external">
-                  <h3>You have<strong>12 pending</strong> tasks</h3>
-                  <a href="javascript:;">view all</a>
-                </li>
-                <li>
-                  <div class="slimScrollDiv">
-                    <ul class="dropdown-menu-list scroller">
-                      <li>
-                          <a href="#">
-                              <span class="photo">
+                                                    </span>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="droddown dropdown-separator">
+                            <span class="separator"></span>
+                        </li>
+                        <li class="dropdown dropdown-extended dropdown-inbox dropdown-dark">
+                            <a class="dropdown-toggle" href="javascript:;">
+                                <span class="circle">3</span>
+                                <span class="corner"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="external">
+                                    <h3>You have<strong>12 pending</strong> tasks</h3>
+                                    <a href="javascript:;">view all</a>
+                                </li>
+                                <li>
+                                    <div class="slimScrollDiv">
+                                        <ul class="dropdown-menu-list scroller">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
                                   <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
-                              <span class="subject">
+                                                    <span class="subject">
                                   <span class="from"> Lisa Wong </span>
-                                  <span class="time">Just Now </span>
-                              </span>
-                              <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                          </a>
-                      </li>
-                      <li>
-                          <a href="#">
-                              <span class="photo">
+                                                    <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
                                   <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
-                              <span class="subject">
+                                                    <span class="subject">
                                   <span class="from"> Lisa Wong </span>
-                                  <span class="time">Just Now </span>
-                              </span>
-                              <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
-                          </a>
-                      </li>
+                                                    <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-extended dropdown-user dropdown-dark">
+                            <a class="dropdown-toggle" href="javascript:;">
+                                <img alt="" class="img-circle" src="images/avatar2.jpg">
+                                <span class="username-hide-mobile">Nick</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                                <li class="divider"> </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown dropdown-extended quick-sidebar-toggler">
+                            <span class="glyphicon glyphicon-log-out"></span>
+                        </li>
+                        <li class="dropdown">
+                            <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </li>
                     </ul>
-                  </div>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-extended dropdown-user dropdown-dark">
-              <a class="dropdown-toggle" href="javascript:;">
-                <img alt="" class="img-circle" src="images/avatar2.jpg">
-                <span class="username-hide-mobile">Nick</span>
-              </a>
-
-              <ul class="dropdown-menu dropdown-menu-default">
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile 
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile 
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile 
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
-                    </a>
-                </li>
-                <li class="divider"> </li>
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                      <span class="glyphicon glyphicon-user"></span> My Profile <span class="badge badge-success"> 7 </span>
-                    </a>
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown dropdown-extended quick-sidebar-toggler">
-              <span class="glyphicon glyphicon-log-out"></span>
-            </li>
-            <li class="dropdown">
-              <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-            </li>
-          </ul>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="header-menu">
-      <div class="container">
-        <form class="search-form J_search" action="page_general_search.html" method="GET">
-            <div class="input-group">
-                <input type="text" class="form-control J_formControl" placeholder="Search" name="query">
-                <span class="input-group-btn">
+        <div class="header-menu">
+            <div class="container">
+                <form class="search-form J_search" action="page_general_search.html" method="GET">
+                    <div class="input-group">
+                        <input type="text" class="form-control J_formControl" placeholder="Search" name="query">
+                        <span class="input-group-btn">
                     <a href="javascript:;" class="btn submit">
                         <span class="glyphicon glyphicon-search"></span>
-                    </a>
-                </span>
-            </div>
-        </form>
-        <div class="hot-menu">
-          <ul class="nav navbar-nav">
-            <li class="menu-dropdown current">
-              <a href="javascript:;">menu1&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
-              <ul class="dropdown-menu pull-left">
-                <li class="current"><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="badge badge-success">1</span></a></li>
-                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default2 <span class="badge badge-success">1</span></a></li>
-                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default3 <span class="badge badge-default">1</span></a></li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <a href="javascript:;">menu2</a>
-              <ul class="dropdown-menu pull-left" style="width: 740px;">
-                <li>
-                  <div class="mega-menu-content">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <ul class="mega-menu-submenu">
-                                <li>
-                                    <a href="ui_colors.html"> Color Library </a>
-                                </li>
-                                <li>
-                                    <a href="ui_general.html"> General Components </a>
-                                </li>
-                                <li>
-                                    <a href="ui_buttons.html"> Buttons </a>
-                                </li>
-                                <li>
-                                    <a href="ui_buttons_spinner.html"> Spinner Buttons </a>
-                                </li>
-                                <li>
-                                    <a href="ui_confirmations.html"> Popover Confirmations </a>
-                                </li>
-                                <li>
-                                    <a href="ui_icons.html"> Font Icons </a>
-                                </li>
-                                <li>
-                                    <a href="ui_socicons.html"> Social Icons </a>
-                                </li>
-                                <li>
-                                    <a href="ui_typography.html"> Typography </a>
-                                </li>
-                                <li>
-                                    <a href="ui_tabs_accordions_navs.html"> Tabs, Accordions &amp; Navs </a>
-                                </li>
-                                <li>
-                                    <a href="ui_tree.html"> Tree View </a>
-                                </li>
-                                <li>
-                                    <a href="maps_google.html"> Google Maps </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="mega-menu-submenu">
-                                <li>
-                                    <a href="maps_vector.html"> Vector Maps </a>
-                                </li>
-                                <li>
-                                    <a href="ui_timeline.html"> Timeline 1 </a>
-                                </li>
-                                <li>
-                                    <a href="ui_timeline_2.html"> Timeline 2 </a>
-                                </li>
-                                <li>
-                                    <a href="ui_timeline_horizontal.html"> Horizontal Timeline </a>
-                                </li>
-                                <li>
-                                    <a href="ui_page_progress_style_1.html"> Page Progress Bar - Flash </a>
-                                </li>
-                                <li>
-                                    <a href="ui_page_progress_style_2.html"> Page Progress Bar - Big Counter </a>
-                                </li>
-                                <li>
-                                    <a href="ui_blockui.html"> Block UI </a>
-                                </li>
-                                <li>
-                                    <a href="ui_bootstrap_growl.html"> Bootstrap Growl Notifications </a>
-                                </li>
-                                <li>
-                                    <a href="ui_notific8.html"> Notific8 Notifications </a>
-                                </li>
-                                <li>
-                                    <a href="ui_toastr.html"> Toastr Notifications </a>
-                                </li>
-                                <li>
-                                    <a href="ui_bootbox.html"> Bootbox Dialogs </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4">
-                            <ul class="mega-menu-submenu">
-                                <li>
-                                    <a href="ui_alerts_api.html"> Metronic Alerts API </a>
-                                </li>
-                                <li>
-                                    <a href="ui_session_timeout.html"> Session Timeout </a>
-                                </li>
-                                <li>
-                                    <a href="ui_idle_timeout.html"> User Idle Timeout </a>
-                                </li>
-                                <li>
-                                    <a href="ui_modals.html"> Modals </a>
-                                </li>
-                                <li>
-                                    <a href="ui_extended_modals.html"> Extended Modals </a>
-                                </li>
-                                <li>
-                                    <a href="ui_tiles.html"> Tiles </a>
-                                </li>
-                                <li>
-                                    <a href="ui_datepaginator.html"> Date Paginator </a>
-                                </li>
-                                <li>
-                                    <a href="ui_nestable.html"> Nestable List </a>
-                                </li>
-                            </ul>
-                        </div>
+                        </a>
+                        </span>
                     </div>
+                </form>
+                <div class="hot-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="menu-dropdown current">
+                            <a href="javascript:;">menu1&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
+                            <ul class="dropdown-menu pull-left">
+                                <li class="current"><a href="default.html"><span class="glyphicon glyphicon-cloud icon-left"></span>Default1 <span class="badge badge-success">1</span></a></li>
+                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default2 <span class="badge badge-success">1</span></a></li>
+                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default3 <span class="badge badge-default">1</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="javascript:;">menu2&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
+                            <ul class="dropdown-menu pull-left" style="width: 740px;">
+                                <li>
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <a href="ui_colors.html"> Color Library </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_general.html"> General Components </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_buttons.html"> Buttons </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_buttons_spinner.html"> Spinner Buttons </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_confirmations.html"> Popover Confirmations </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_icons.html"> Font Icons </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_socicons.html"> Social Icons </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_typography.html"> Typography </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_tabs_accordions_navs.html"> Tabs, Accordions &amp; Navs </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_tree.html"> Tree View </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="maps_google.html"> Google Maps </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <a href="maps_vector.html"> Vector Maps </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_timeline.html"> Timeline 1 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_timeline_2.html"> Timeline 2 </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_timeline_horizontal.html"> Horizontal Timeline </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_page_progress_style_1.html"> Page Progress Bar - Flash </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_page_progress_style_2.html"> Page Progress Bar - Big Counter </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_blockui.html"> Block UI </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_bootstrap_growl.html"> Bootstrap Growl Notifications </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_notific8.html"> Notific8 Notifications </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_toastr.html"> Toastr Notifications </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_bootbox.html"> Bootbox Dialogs </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <a href="ui_alerts_api.html"> Metronic Alerts API </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_session_timeout.html"> Session Timeout </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_idle_timeout.html"> User Idle Timeout </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_modals.html"> Modals </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_extended_modals.html"> Extended Modals </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_tiles.html"> Tiles </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_datepaginator.html"> Date Paginator </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="ui_nestable.html"> Nestable List </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="javascript:;">menu3&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
+                            <ul class="dropdown-menu pull-left">
+                                <li class=" ">
+                                    <a href="layout_mega_menu_light.html" class="nav-link  "> Light Mega Menu </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_top_bar_light.html" class="nav-link  "> Light Top Bar Dropdowns </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_fluid_page.html" class="nav-link  "> Fluid Page </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_top_bar_fixed.html" class="nav-link  "> Fixed Top Bar </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_mega_menu_fixed.html" class="nav-link  "> Fixed Mega Menu </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_disabled_menu.html" class="nav-link  "> Disabled Menu Links </a>
+                                </li>
+                                <li class=" ">
+                                    <a href="layout_blank_page.html" class="nav-link  "> Blank Page </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown mega-menu-dropdown mega-menu-full">
+                            <a href="javascript:;">menu4&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>Components 1</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_date_time_pickers.html"> Date &amp; Time Pickers </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_color_pickers.html"> Color Pickers </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_select2.html"> Select2 Dropdowns </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_select.html"> Bootstrap Select </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_multi_select.html"> Multi Select </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>Components 2</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_select_splitter.html"> Select Splitter </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_typeahead.html"> Typeahead Autocomplete </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_tagsinput.html"> Bootstrap Tagsinput </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_switch.html"> Bootstrap Switch </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_maxlength.html"> Bootstrap Maxlength </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>Components 3</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_fileinput.html"> Bootstrap File Input </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_bootstrap_touchspin.html"> Bootstrap Touchspin </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_form_tools.html"> Form Widgets &amp; Tools </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_context_menu.html"> Context Menu </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_editors.html"> Markdown &amp; WYSIWYG Editors </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <ul class="mega-menu-submenu">
+                                                    <li>
+                                                        <h3>Components 4</h3>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_code_editors.html"> Code Editors </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_ion_sliders.html"> Ion Range Sliders </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_noui_sliders.html"> NoUI Range Sliders </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="components_knob_dials.html"> Knob Circle Dials </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="menu-dropdown">
+                            <a href="javascript:;">More</a>
+                            <ul class="dropdown-menu pull-left">
+                                <li class="dropdown-submenu">
+                                    <a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default1 <span class="arrow glyphicon"></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a href="javascript:;">menu_2_1<span class="arrow glyphicon"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                                <li><a href="javascript:;">menu_2_3_1</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="javascript:;">menu_2_2<span class="arrow glyphicon"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                                <li><a href="javascript:;">menu_2_3_2</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-submenu">
+                                            <a href="javascript:;">menu_2_3</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <a href="javascript:;">menu3</a>
-              <ul class="dropdown-menu pull-left">
-                <li class=" ">
-                    <a href="layout_mega_menu_light.html" class="nav-link  "> Light Mega Menu </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_top_bar_light.html" class="nav-link  "> Light Top Bar Dropdowns </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_fluid_page.html" class="nav-link  "> Fluid Page </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_top_bar_fixed.html" class="nav-link  "> Fixed Top Bar </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_mega_menu_fixed.html" class="nav-link  "> Fixed Mega Menu </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_disabled_menu.html" class="nav-link  "> Disabled Menu Links </a>
-                </li>
-                <li class=" ">
-                    <a href="layout_blank_page.html" class="nav-link  "> Blank Page </a>
-                </li>
-            </ul>
-            </li>
-            <li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-              <a href="javascript:;">menu4</a>
-              <ul class="dropdown-menu">
-                <li>
-                    <div class="mega-menu-content">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <ul class="mega-menu-submenu">
-                                    <li>
-                                        <h3>Components 1</h3>
-                                    </li>
-                                    <li>
-                                        <a href="components_date_time_pickers.html"> Date &amp; Time Pickers </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_color_pickers.html"> Color Pickers </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_select2.html"> Select2 Dropdowns </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_select.html"> Bootstrap Select </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_multi_select.html"> Multi Select </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <ul class="mega-menu-submenu">
-                                    <li>
-                                        <h3>Components 2</h3>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_select_splitter.html"> Select Splitter </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_typeahead.html"> Typeahead Autocomplete </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_tagsinput.html"> Bootstrap Tagsinput </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_switch.html"> Bootstrap Switch </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_maxlength.html"> Bootstrap Maxlength </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <ul class="mega-menu-submenu">
-                                    <li>
-                                        <h3>Components 3</h3>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_fileinput.html"> Bootstrap File Input </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_bootstrap_touchspin.html"> Bootstrap Touchspin </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_form_tools.html"> Form Widgets &amp; Tools </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_context_menu.html"> Context Menu </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_editors.html"> Markdown &amp; WYSIWYG Editors </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3">
-                                <ul class="mega-menu-submenu">
-                                    <li>
-                                        <h3>Components 4</h3>
-                                    </li>
-                                    <li>
-                                        <a href="components_code_editors.html"> Code Editors </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_ion_sliders.html"> Ion Range Sliders </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_noui_sliders.html"> NoUI Range Sliders </a>
-                                    </li>
-                                    <li>
-                                        <a href="components_knob_dials.html"> Knob Circle Dials </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-dropdown">
-              <a href="javascript:;">More</a>
-              <ul class="dropdown-menu pull-left open">
-                <li class="dropdown-submenu">
-                  <a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="arrow glyphicon glyphicon-menu-right"></a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown-submenu">
-                      <a href="javascript:;">menu_2_1<span class="arrow glyphicon glyphicon-menu-right"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                        <li><a href="javascript:;">menu_2_3_1</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a href="javascript:;">menu_2_2<span class="arrow glyphicon glyphicon-menu-right"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                        <li><a href="javascript:;">menu_2_3_2</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-submenu">
-                      <a href="javascript:;">menu_2_3</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div id="main" class="container" style="margin-top: 150px;">
-    <div class="edit-bg">
-      <div class="clearfix">
-        <h4 class="page-title pull-left">Gallery</h4>
-        <button id="popover" type="button" class="btn btn-default pull-right" style="margin-top: 10px;">
-          Select Column
-        </button>
-      </div>
-      <div class="status-left col-sm-2">
-        <ul class="" role="menu">
-          <li><a href="javascript:;">Download</a></li>
-          <li><a href="javascript:;">Download2</a></li>
-          <li><a href="javascript:;">Campaigns</a></li>
-          <li><a href="javascript:;">Campaigns Days</a></li>
-          <li><a href="javascript:;">Campaigns Hours</a></li>
-          <li><a href="javascript:;">Days</a></li>
-          <li><a href="javascript:;">Hours</a></li>
-          <li><a href="javascript:;">Campaigns Date</a></li>
-          <li><a href="javascript:;">Paths</a></li>
-          <li><a href="javascript:;">LandingPages</a></li>
-          <li><a href="javascript:;">LandingPages2</a></li>
-          <li><a href="javascript:;">Offers</a></li>
-          <li><a href="javascript:;">Offers2</a></li>
-          <li><a href="javascript:;">AffiliateNetwork</a></li>
-          <li><a href="javascript:;">Cap Offers</a></li>
-          <li><a href="javascript:;">Convert</a></li>
-          <li><a href="javascript:;">TrafficSource</a></li>
-          <li><a href="javascript:;">TrafficSource2</a></li>
-          <li><a href="javascript:;">Countrys</a></li>
-          <li><a href="javascript:;">All Countrys</a></li>
-          <li><a href="javascript:;">Browsers</a></li>
-          <li><a href="javascript:;">OS</a></li>
-          <li><a href="javascript:;">Devices</a></li>
-          <li><a href="javascript:;">Domains</a></li>
-          <li><a href="javascript:;">Referers</a></li>
-          <li><a href="javascript:;">C1-C10</a></li>
-          <li><a href="javascript:;">C1-C10_2</a></li>
-        </ul>
-      </div>
-      <div class="status-right col-sm-10">
-        <div class="hidden">
-          <div id="popover-target"></div>
-        </div>
+    <div id="main" class="container" style="margin-top: 150px;">
+        <div class="edit-bg">
+            <div class="clearfix">
+                <h4 class="page-title pull-left">Gallery</h4>
 
-        <div>
-          <select class="select_class hide"></select>
+                <button id="popover" type="button" class="btn btn-default pull-right" style="margin-top: 10px;">
+                    Select Column
+                </button>
+                <input type="text" id="demo" name="date" class="col-md-3 pull-right input-time">
+                <div class="pull-right" style="margin-top: 10px; margin-right: 10px;width: 400px;">
+                    <select class="form-control select2 select2-offscreen">
+                        <option>Select</option>
+                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                        </optgroup>
+                        <optgroup label="Pacific Time Zone">
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                        </optgroup>
+                        <optgroup label="Mountain Time Zone">
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                        </optgroup>
+                        <optgroup label="Central Time Zone">
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="WI">Wisconsin</option>
+                        </optgroup>
+                        <optgroup label="Eastern Time Zone">
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="IN">Indiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="OH">Ohio</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WV">West Virginia</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="status-left col-sm-2">
+                <ul class="" role="menu">
+                    <li><a href="javascript:;">Download</a></li>
+                    <li><a href="javascript:;">Download2</a></li>
+                    <li><a href="javascript:;">Campaigns</a></li>
+                    <li><a href="javascript:;">Campaigns Days</a></li>
+                    <li><a href="javascript:;">Campaigns Hours</a></li>
+                    <li><a href="javascript:;">Days</a></li>
+                    <li><a href="javascript:;">Hours</a></li>
+                    <li><a href="javascript:;">Campaigns Date</a></li>
+                    <li><a href="javascript:;">Paths</a></li>
+                    <li><a href="javascript:;">LandingPages</a></li>
+                    <li><a href="javascript:;">LandingPages2</a></li>
+                    <li><a href="javascript:;">Offers</a></li>
+                    <li><a href="javascript:;">Offers2</a></li>
+                    <li><a href="javascript:;">AffiliateNetwork</a></li>
+                    <li><a href="javascript:;">Cap Offers</a></li>
+                    <li><a href="javascript:;">Convert</a></li>
+                    <li><a href="javascript:;">TrafficSource</a></li>
+                    <li><a href="javascript:;">TrafficSource2</a></li>
+                    <li><a href="javascript:;">Countrys</a></li>
+                    <li><a href="javascript:;">All Countrys</a></li>
+                    <li><a href="javascript:;">Browsers</a></li>
+                    <li><a href="javascript:;">OS</a></li>
+                    <li><a href="javascript:;">Devices</a></li>
+                    <li><a href="javascript:;">Domains</a></li>
+                    <li><a href="javascript:;">Referers</a></li>
+                    <li><a href="javascript:;">C1-C10</a></li>
+                    <li><a href="javascript:;">C1-C10_2</a></li>
+                </ul>
+            </div>
+            <div class="status-right col-sm-10">
+                <div class="hidden">
+                    <div id="popover-target"></div>
+                </div>
+                <div>
+                    <select class="select_class hide"></select>
+                </div>
+                <div class="campaigns-tab">
+                    <table id="table1" class="tablesorter tablesorter-blue">
+                        <thead>
+                            <tr>
+                                <th>Cam Name</th>
+                                <th>Requests</th>
+                                <th>Cloak</th>
+                                <th>Visit</th>
+                                <th>Click</th>
+                                <th>Convs</th>
+                                <th>Profit</th>
+                                <th>Revenue</th>
+                                <th>Cost</th>
+                                <th>CPV</th>
+                                <th>CTR</th>
+                                <th>CR</th>
+                                <th>ROI</th>
+                                <th>EPV</th>
+                                <th>EPC</th>
+                                <th>ECPM</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2016-05-02</td>
+                                <td>15</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td>66.67%</td>
+                                <td>0%</td>
+                                <td>0%</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                            <tr>
+                                <td>2016-05-02</td>
+                                <td>15</td>
+                                <td>0</td>
+                                <td>3</td>
+                                <td>2</td>
+                                <td>0</td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td>$0.00</td>
+                                <td class="i-green">$0.00</td>
+                                <td>66.67%</td>
+                                <td>0%</td>
+                                <td>0%</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="side-bar"></div>
+            </div>
         </div>
-        <div class="campaigns-tab">
-          <table id="table1" class="tablesorter">
-            <thead>
-              <tr>
-                <th>Cam Name</th>
-                <th>Requests</th>
-                <th>Cloak</th>
-                <th>Visit</th>
-                <th>Click</th>
-                <th>Convs</th>
-                <th>Profit</th>
-                <th>Revenue</th>
-                <th>Cost</th>
-                <th>CPV</th>
-                <th>CTR</th>
-                <th>CR</th>
-                <th>ROI</th>
-                <th>EPV</th>
-                <th>EPC</th>
-                <th>ECPM</th>    
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2016-05-02</td>
-                <td>15</td>
-                <td>0</td>
-                <td>3</td>
-                <td>2</td>
-                <td>0</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-                <td>66.67%</td>
-                <td>0%</td>
-                <td>0%</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>  
-              </tr>
-              <tr>
-                <td>2016-05-02</td>
-                <td>15</td>
-                <td>0</td>
-                <td>3</td>
-                <td>2</td>
-                <td>0</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-                <td>$0.00</td>
-                <td class="i-green">$0.00</td>
-                <td>66.67%</td>
-                <td>0%</td>
-                <td>0%</td>
-                <td>0.00</td>
-                <td>0.00</td>
-                <td>0.00</td>  
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="side-bar"></div>
-      </div>
     </div>
-  </div>
+    <script src="js/smartMenu/jquery-smartMenu.js"></script>
+    <script type="text/javascript">
+    $('#table1').tablesorter({
+        widthFixed: true,
+        showProcessing: true,
+        headerTemplate: '{content} {icon}', // Add icon for various themes
 
-  <script src="js/smartMenu/jquery-smartMenu.js"></script>
-  
-  <script type="text/javascript">
-      
-      $('#table1').tablesorter({
-          widthFixed: true,
-          showProcessing: true,
-          headerTemplate: '{content} {icon}', // Add icon for various themes
+        widgets: ['zebra', 'columnSelector', 'stickyHeaders', 'filter'],
 
-          widgets: ['zebra', 'columnSelector', 'stickyHeaders', 'filter'],
+        widgetOptions: {
+            // extra class name added to the sticky header row
+            stickyHeaders: '',
+            // number or jquery selector targeting the position:fixed element
+            stickyHeaders_offset: 0,
+            // added to table ID, if it exists
+            stickyHeaders_cloneId: '-sticky',
+            // trigger "resize" event on headers
+            stickyHeaders_addResizeEvent: true,
+            // if false and a caption exist, it won't be included in the sticky header
+            stickyHeaders_includeCaption: true,
+            // The zIndex of the stickyHeaders, allows the user to adjust this to their needs
+            stickyHeaders_zIndex: 2,
+            // jQuery selector or object to attach sticky header to
+            stickyHeaders_attachTo: null,
+            // jQuery selector or object to monitor horizontal scroll position (defaults: xScroll > attachTo > window)
+            stickyHeaders_xScroll: null,
+            // jQuery selector or object to monitor vertical scroll position (defaults: yScroll > attachTo > window)
+            stickyHeaders_yScroll: null,
 
-          widgetOptions: {
-              // extra class name added to the sticky header row
-              stickyHeaders: '',
-              // number or jquery selector targeting the position:fixed element
-              stickyHeaders_offset: 0,
-              // added to table ID, if it exists
-              stickyHeaders_cloneId: '-sticky',
-              // trigger "resize" event on headers
-              stickyHeaders_addResizeEvent: true,
-              // if false and a caption exist, it won't be included in the sticky header
-              stickyHeaders_includeCaption: true,
-              // The zIndex of the stickyHeaders, allows the user to adjust this to their needs
-              stickyHeaders_zIndex: 2,
-              // jQuery selector or object to attach sticky header to
-              stickyHeaders_attachTo: null,
-              // jQuery selector or object to monitor horizontal scroll position (defaults: xScroll > attachTo > window)
-              stickyHeaders_xScroll: null,
-              // jQuery selector or object to monitor vertical scroll position (defaults: yScroll > attachTo > window)
-              stickyHeaders_yScroll: null,
+            // scroll table top into view after filtering
+            stickyHeaders_filteredToTop: true
 
-              // scroll table top into view after filtering
-              stickyHeaders_filteredToTop: true
-
-              // *** REMOVED jQuery UI theme due to adding an accordion on this demo page ***
-              // adding zebra striping, using content and default styles - the ui css removes the background from default
-              // even and odd class names included for this demo to allow switching themes
-              // , zebra   : ["ui-widget-content even", "ui-state-default odd"]
-              // use uitheme widget to apply defauly jquery ui (jui) class names
-              // see the uitheme demo for more details on how to change the class names
-              // , uitheme : 'jui'
-          }
-      });
-      $.tablesorter.columnSelector.attachTo($('#table1'), '#popover-target');
-      $('#popover')
-          .popover({
-              placement: 'left',
-              html: true, // required if content has HTML
-              content: $('#popover-target')
-          });
-
-      window.includeCaption = true;
-      // removed jQuery UI theme because of the accordion!
-      $('link.theme').each(function() {
-          this.disabled = true;
-      });
+            // *** REMOVED jQuery UI theme due to adding an accordion on this demo page ***
+            // adding zebra striping, using content and default styles - the ui css removes the background from default
+            // even and odd class names included for this demo to allow switching themes
+            // , zebra   : ["ui-widget-content even", "ui-state-default odd"]
+            // use uitheme widget to apply defauly jquery ui (jui) class names
+            // see the uitheme demo for more details on how to change the class names
+            // , uitheme : 'jui'
+        }
+    });
+    $.tablesorter.columnSelector.attachTo($('#table1'), '#popover-target');
+    $('#popover')
+        .popover({
+            placement: 'left',
+            html: true, // required if content has HTML
+            content: $('#popover-target')
+        });
 
 
-      var themes = 'blue default green grey ice black-ice dark dropbox metro-dark',
-          i, o = '',
-          t = themes.split(' ');
-      for (i = 0; i < t.length; i++) {
-          o += '<option value="' + t[i] + '">' + t[i] + '</option>';
-      }
+    var dataparams = {
 
-      $('select:first')
-          .append(o)
-          .change(function() {
-              var theme = $(this).val().toLowerCase(),
-                  // ui-theme is added by the themeswitcher
-                  files = $('link.theme').each(function() {
-                      this.disabled = true;
-                  })
-              files.filter('.' + theme).each(function() {
-                  this.disabled = false;
-              });
-              $('table')
-                  .removeClass('tablesorter-' + t.join(' tablesorter-'))
-                  .addClass('tablesorter-' + (theme === 'black-ice' ? 'blackice' : theme));
-          }).change();
+        "bInfo": false, //页脚信息  
+        "bPaginate": true, //自动宽度 
+        "bPaginate": false,
+        "deferRender": true,
+        "processing": true,
+        "serverSide": true,
+        "searching": false,
+        "ordering": false,
+        "ajax": {
+            "url": "./?m=cam&a=ajaxdata",
+            "type": "POST",
+            "data": {
+                "start": moment().startOf("day").format("X"),
+                "end": moment().endOf('day').format("X")
+            }
+        },
+        "columns": [{
+            "data": null,
+            "defaultContent": "",
+            "class": "opr details-control"
+        }, {
+            "data": null,
+            "defaultContent": "",
+            "class": "opr"
+        }, {
+            "data": "name",
+            "defaultContent": "",
+            "class": "name_ajax opr"
+        }, {
+            "data": null
+        }, {
+            "data": "gvisit"
+        }, {
+            "data": "visit"
+        }, {
+            "data": "click"
+        }, {
+            "data": "cvr"
+        }, {
+            "data": "cpv"
+        }, {
+            "data": "CTR"
+        }, {
+            "data": "CR"
+        }, {
+            "data": "cost"
+        }, {
+            "data": "cvr_amt"
+        }, {
+            "data": "Profit"
+        }, {
+            "data": "ROI"
+        }, {
+            "data": null
+        }, {
+            "data": "EPV"
+        }, {
+            "data": "EPC"
+        }, {
+            "data": "ECPM"
+        }, ],
+        "columnDefs": [{
+                "render": function(data, type, row) {
+                    return "<div class='source_id_" + data.source_id + "'>" + data.source + "</div>"
+                },
+                "targets": 3
+            }, {
+                "render": function(data, type, row) {
+                    var info = "";
 
-      var _font = '';
-      $('#table1 th').each(function() {
-          _font += '<option value="' + $(this).text() + '">' + $(this).text() + '</option>';
-          $('.table1_th').html(_font);
-      });
-  </script>
-  <link rel="stylesheet" href="js/smartMenu/smartMenu.css">
+                    return "<div class='" + info + "'>" + data + "%</div>"
+                },
+                "targets": 9
+            }, {
+                "render": function(data, type, row) {
+                    var info = "";
+
+                    return "<div class='" + info + "'>" + data + "%</div>"
+                },
+                "targets": 10
+            }, {
+                "render": function(data, type, row) {
+                    var info = "";
+
+                    return "<div class='" + info + "'>$" + changeTwoDecimal_f(data) + "</div>"
+                },
+                "targets": 11
+            }, {
+                "render": function(data, type, row) {
+                    var info = "";
+
+                    return "<div class='" + info + "'>$" + changeTwoDecimal_f(data) + "</div>"
+                },
+                "targets": 12
+            }, {
+                "render": function(data, type, row) {
+                    var info = "";
+                    if (data < 0) {
+                        info = "danger";
+                    } else if (data == 0) {
+                        info = ""
+                    } else {
+                        info = "success";
+                    }
+                    return "<div class='" + info + "'>$" + data + "</div>"
+                },
+                "targets": 13
+            }, {
+                "render": function(data, type, row) {
+                    return "<a class='btn-default copyurl' href='" + data.camurl + "'>Copy#" + data._id + "</a>";
+                },
+                "targets": 1
+            }, {
+                "render": function(data, type, row) {
+                    return changeTwoDecimal_f(data) + "%";
+                },
+                "targets": 14
+            },
+
+            {
+                "render": function(data, type, row) {
+                    return data.cloak + ' <div style="z-index:999;position:absolute;display:none;" id="show_men_' + data.id + '" class="btn-group show_men_" role="group" aria-label="Basic example">' +
+
+                        '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=cam&a=edit&id=' + data.id + '\')">Edit</button></span>' +
+
+                        '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Status</button>' +
+
+                        '<ul class="dropdown-menu" role="menu">' +
+                        '<li><a target="_blank" href="/?m=report&a=download&cid=' + data.id + '">Download</a></li>' +
+                        '<li><a target="_blank" href="/?m=report&a=download2">Download2</a></li>' +
+                        '<li class=""><a  target="_blank" href="/?m=report&a=campaigns&cid=' + data.id + '">Campaigns</a></li>' +
+                        '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_days&cid=' + data.id + '">Campaigns Days</a></li>' +
+                        '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_hours&cid=' + data.id + '">Campaigns Hours</a></li>' +
+                        '<li class=""><a  target="_blank" href="/?m=report&a=days&cid=' + data.id + '">Days</a></li>' +
+                        '<li class=""><a  target="_blank" href="/?m=report&a=hours&cid=' + data.id + '">Hours</a></li>' +
+                        '<li><a target="_blank" href="/?m=report&a=campaigns_date&cid=' + data.id + '">Campaigns Date</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=paths&cid=' + data.id + '">Paths</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=landingpages&cid=' + data.id + '">LandingPages</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=landingpages2&cid=' + data.id + '">LandingPages2</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=offers&cid=' + data.id + '">Offers</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=offers2&cid=' + data.id + '">Offers2</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=network&cid=' + data.id + '">AffiliateNetwork</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=cap_offer">Cap Offers</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=convert&cid=' + data.id + '">Convert</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=trafficsource&cid=' + data.id + '">TrafficSource</a></li>' +
+                        '<li><a target="_blank" href="/?m=report&a=trafficsource2&cid=' + data.id + '">TrafficSource2</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=countrys&cid=' + data.id + '">Countrys</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=countrys2&cid=' + data.id + '">All Countrys</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=browsers&cid=' + data.id + '">Browsers</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=os&cid=' + data.id + '">OS</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=devices&cid=' + data.id + '">Devices</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=domains&cid=' + data.id + '">Domains</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=referers&cid=' + data.id + '">Referers</a></li>' +
+                        '<li><a  target="_blank" href="/?m=report&a=cc110&cid=' + data.id + '">C1-C10</a></li>' +
+                        '<li><a target="_blank" href="/?m=report&a=cc1102&cid=' + data.id + '">C1-C10_2</a></li>' +
+                        '</ul></span>' +
+                        '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download</button>' +
+
+                        '<ul class="dropdown-menu" role="menu">' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Today\')">c1 Today</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Yesterday\')">c1 Yesterday</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 3 Days\')">c1 Last 3 Days</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 7 Days\')">c1 Last 7 Days</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 30 Days\')">c1 Last 30 Days</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 180 Days\')">c1 Last 180 Days</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'This Month\')">c1 This Month</a></li>' +
+                        '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last Month\')">c1 Last Month</a></li>' +
+
+                        '</ul></span>' +
+                        '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=monitor&cid=' + data.id + '\');">Monitor</button></span>' +
+                        '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=copy&id=' + data.id + '" onclick="copy(this,\'' + data.name + '\',\'?m=cam\')">Clone</button></span>' +
+                        '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=del&id=' + data.id + '" onclick="del(this)">Delete</button></span>' +
+
+                        '</div>';
+                },
+                "targets": 15
+            },
+            //{ "visible": false,  "targets": [ 0 ] }
+        ],
+        "footerCallback": function(row, data, start, end, display) {
+            var api = this.api(),
+                data;
+            showrequest(api);
+            var ttr = function(e) {
+                $(".show_men_").hide(function() {
+                    document.body.onselectstart = document.body.oncontextmenu = function() {
+                        return true;
+                    }
+                });
+                if (e.which == 3) {
+                    $(".show_men_").hide();
+                    var tr = $(this).closest('tr');
+                    var row = api.row(tr);
+                    var data = row.data();
+
+                    var relativeX = e.pageX;
+                    var relativeY = e.pageY;
+
+                    $("#show_men_" + data.id).css("left", relativeX + "px");
+                    $("#show_men_" + data.id).css("top", relativeY + "px");
+                    $("#show_men_" + data.id).show();
+                    $("#show_men_" + data.id).insertAfter($("#content"));
+                }
+
+                document.body.onselectstart = document.body.oncontextmenu = function() {
+                    return false;
+                }
+                return false;
+            };
+            var enter = function(e) {
+                var tr = $(this).closest('tr');
+                var row = api.row(tr);
+                var data = row.data();
+                $(this).html('<input type="hidden" name="id" id="text_' + data.id + '_id" value="' + data.id + '"><input type="text" name="name" id="text_' + data.id + '_text" value="' + data.name + '"><input type="button" value="Enter" id="text_' + data.id + '"><input type="button" value="Cancel" id="c_text_' + data.id + '">');
+                $(this).unbind("click");
+                $(this).unbind("mousedown");
+                var ttis = $(this);
+                //$("#text_"+data.id).focus(function(e){
+                // });blur
+                $("#text_" + data.id).click(function(e) {
+                    if ($("#" + $("#text_" + data.id).attr("id") + "_text").val() != data.name) {
+                        ajaxpost("/?m=cam&a=save", {
+                            "action": "ajax_rename",
+                            "name": $("#" + $(this).attr("id") + "_text").val(),
+                            "id": $("#" + $(this).attr("id") + "_id").val()
+                        }, function() {
+                            $("#text_" + data.id).unbind("click");
+                            ttis.html($("#" + $("#text_" + data.id).attr("id") + "_text").val());
+                            ttis.bind("mousedown", ttr);
+                            ttis.bind("click", enter);
+
+                        });
+                    }
+                });
+                $("#c_text_" + data.id).click(function(e) {
+                    $("#text_" + data.id).unbind("click");
+                    ttis.html(data.name);
+                    ttis.bind("mousedown", ttr);
+                    setTimeout(function() {
+                        ttis.bind("click", enter);
+                    }, 1000);
+
+                });
+
+            };
+            api.$(".name_ajax").click(enter);
+            api.$("td[class!=' opr']").mousedown(ttr);
+            $(".show_men_").click(function() {
+                document.body.onselectstart = document.body.oncontextmenu = function() {
+                    return true;
+                }
+                $(this).hide();
+            });
+
+        },
+    };
+    ssParams = {
+        "timePicker24Hour": true,
+        "timePicker": true,
+        "timePickerIncrement": 1,
+        ranges: {
+            'Today': [moment().startOf("day"), moment().endOf('day')],
+            'Yesterday': [moment().subtract('days', 1).startOf("day"), moment().subtract('days', 1).endOf('day')],
+            'Last 7 Days': [moment().subtract('days', 6).startOf("day"), moment().endOf('day')],
+            'Last 30 Days': [moment().subtract('days', 29).startOf("day"), moment().endOf('day')],
+            'Last 180 Days': [moment().subtract('days', 179).startOf("day"), moment().endOf('day')],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+        },
+        "locale": {
+            "format": "MM/DD/YYYY HH:mm",
+        },
+        "startDate": ssDate,
+        "endDate": moment().endOf('day'),
+        "opens": "left",
+        "drops": "down",
+        "buttonClasses": "btn btn-sm",
+        "applyClass": "btn-success",
+        "cancelClass": "btn-default"
+    };
+    var dt = $("#example1").dataTable(dataparams);
+    var ssDate = moment().format('MM/DD/YYYY 00:00');
+    $('#demo').daterangepicker(ssParams, function(start, end, label) {
+        dt.api().clear();
+        dt.api().destroy();
+        //dataparams["ajax"]["data"]["cam_id"]=$("#cam_id").val();
+        dataparams["ajax"]["data"]["start"] = start.format("X");
+        dataparams["ajax"]["data"]["end"] = end.format("X");
+
+        $("#example1").dataTable(dataparams);
+
+    });
+    </script>
+    <link rel="stylesheet" href="js/smartMenu/smartMenu.css">
 </body>
+
 </html>

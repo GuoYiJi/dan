@@ -20,6 +20,7 @@
     <link href="css/css.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/quick-full.css" rel="stylesheet">
+    <link href="css/edit.css" rel="stylesheet">
     <link href="css/Campaigns.css" rel="stylesheet">
     <link href="css/daterangepicker.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -36,12 +37,15 @@
     <script src="js/tablesoter/jquery.columnSelector.js"></script>
     <script src="js/jquery.util.js" type="text/javascript"></script>
     <script src="js/ui.js" type="text/javascript"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/multiselect/jquery.multi-select.js"></script>
     <script src="http://login.vasts.co/static/js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script src="js/ZeroClipboard.js" type="text/javascript"></script>
     <script src="js/moment.min.js" type="text/javascript"></script>
     <script src="js/daterangepicker.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
 </head>
+
 <body>
     <div class="page-header">
         <div class="header-top">
@@ -68,7 +72,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -76,7 +80,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -84,7 +88,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -92,7 +96,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -100,7 +104,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -108,7 +112,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -116,7 +120,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -124,7 +128,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -132,7 +136,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -140,7 +144,7 @@
                                                 <a href="javascript:;">
                                                     <span class="time">just now</span>
                                                     <span class="details">
-                            <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
+                              <span class="label label-sm label-icon label-success"><span class="glyphicon glyphicon-plus"></span></span> New user registered.
                                                     </span>
                                                 </a>
                                             </li>
@@ -165,12 +169,12 @@
                                             <li>
                                                 <a href="javascript:;">
                                                     <span class="task">
-                                  <span class="desc">New release v1.2 </span>
+                                    <span class="desc">New release v1.2 </span>
                                                     <span class="percent">30%</span>
                                                     </span>
                                                     <span class="progress">
-                                  <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                      <span class="sr-only">40% Complete</span>
+                                    <span style="width: 40%;" class="progress-bar progress-bar-success" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">40% Complete</span>
                                                     </span>
                                                     </span>
                                                 </a>
@@ -178,12 +182,12 @@
                                             <li>
                                                 <a href="javascript:;">
                                                     <span class="task">
-                                  <span class="desc">New release v1.2 </span>
+                                    <span class="desc">New release v1.2 </span>
                                                     <span class="percent">30%</span>
                                                     </span>
                                                     <span class="progress">
-                                  <span style="width: 40%;" class="progress-bar progress-bar-hot" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                      <span class="sr-only">40% Complete</span>
+                                    <span style="width: 40%;" class="progress-bar progress-bar-hot" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">40% Complete</span>
                                                     </span>
                                                     </span>
                                                 </a>
@@ -191,12 +195,12 @@
                                             <li>
                                                 <a href="javascript:;">
                                                     <span class="task">
-                                  <span class="desc">New release v1.2 </span>
+                                    <span class="desc">New release v1.2 </span>
                                                     <span class="percent">30%</span>
                                                     </span>
                                                     <span class="progress">
-                                  <span style="width: 40%;" class="progress-bar progress-bar-warn" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                      <span class="sr-only">40% Complete</span>
+                                    <span style="width: 40%;" class="progress-bar progress-bar-warn" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                        <span class="sr-only">40% Complete</span>
                                                     </span>
                                                     </span>
                                                 </a>
@@ -225,9 +229,9 @@
                                             <li>
                                                 <a href="#">
                                                     <span class="photo">
-                                  <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
+                                    <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
                                                     <span class="subject">
-                                  <span class="from"> Lisa Wong </span>
+                                    <span class="from"> Lisa Wong </span>
                                                     <span class="time">Just Now </span>
                                                     </span>
                                                     <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
@@ -236,9 +240,9 @@
                                             <li>
                                                 <a href="#">
                                                     <span class="photo">
-                                  <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
+                                    <img src="images/avatar2.jpg" class="img-circle" alt=""> </span>
                                                     <span class="subject">
-                                  <span class="from"> Lisa Wong </span>
+                                    <span class="from"> Lisa Wong </span>
                                                     <span class="time">Just Now </span>
                                                     </span>
                                                     <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
@@ -309,8 +313,8 @@
                     <div class="input-group">
                         <input type="text" class="form-control J_formControl" placeholder="Search" name="query">
                         <span class="input-group-btn">
-                    <a href="javascript:;" class="btn submit">
-                        <span class="glyphicon glyphicon-search"></span>
+                      <a href="javascript:;" class="btn submit">
+                          <span class="glyphicon glyphicon-search"></span>
                         </a>
                         </span>
                     </div>
@@ -318,15 +322,15 @@
                 <div class="hot-menu">
                     <ul class="nav navbar-nav">
                         <li class="menu-dropdown current">
-                            <a href="javascript:;">menu1&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-menu-down"></span></a>
+                            <a href="javascript:;">menu1&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
                             <ul class="dropdown-menu pull-left">
-                                <li class="current"><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="badge badge-success">1</span></a></li>
-                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default2 <span class="badge badge-success">1</span></a></li>
-                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default3 <span class="badge badge-default">1</span></a></li>
+                                <li class="current"><a href="default.html"><span class="glyphicon glyphicon-cloud icon-left"></span>Default1 <span class="badge badge-success">1</span></a></li>
+                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default2 <span class="badge badge-success">1</span></a></li>
+                                <li><a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default3 <span class="badge badge-default">1</span></a></li>
                             </ul>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="javascript:;">menu2</a>
+                            <a href="javascript:;">menu2&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
                             <ul class="dropdown-menu pull-left" style="width: 740px;">
                                 <li>
                                     <div class="mega-menu-content">
@@ -439,7 +443,7 @@
                             </ul>
                         </li>
                         <li class="menu-dropdown">
-                            <a href="javascript:;">menu3</a>
+                            <a href="javascript:;">menu3&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
                             <ul class="dropdown-menu pull-left">
                                 <li class=" ">
                                     <a href="layout_mega_menu_light.html" class="nav-link  "> Light Mega Menu </a>
@@ -465,7 +469,7 @@
                             </ul>
                         </li>
                         <li class="menu-dropdown mega-menu-dropdown mega-menu-full">
-                            <a href="javascript:;">menu4</a>
+                            <a href="javascript:;">menu4&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon arrow"></span></a>
                             <ul class="dropdown-menu">
                                 <li>
                                     <div class="mega-menu-content">
@@ -562,12 +566,12 @@
                         </li>
                         <li class="menu-dropdown">
                             <a href="javascript:;">More</a>
-                            <ul class="dropdown-menu pull-left open">
+                            <ul class="dropdown-menu pull-left">
                                 <li class="dropdown-submenu">
-                                    <a href="javascript:;"><span class="glyphicon glyphicon-cloud"></span>Default1 <span class="arrow glyphicon glyphicon-menu-right"></a>
+                                    <a href="javascript:;"><span class="glyphicon glyphicon-cloud icon-left"></span>Default1 <span class="arrow glyphicon"></a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu">
-                                            <a href="javascript:;">menu_2_1<span class="arrow glyphicon glyphicon-menu-right"></span></a>
+                                            <a href="javascript:;">menu_2_1<span class="arrow glyphicon"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="javascript:;">menu_2_3_1</a></li>
                                                 <li><a href="javascript:;">menu_2_3_1</a></li>
@@ -578,7 +582,7 @@
                                             </ul>
                                         </li>
                                         <li class="dropdown-submenu">
-                                            <a href="javascript:;">menu_2_2<span class="arrow glyphicon glyphicon-menu-right"></span></a>
+                                            <a href="javascript:;">menu_2_2<span class="arrow glyphicon"></span></a>
                                             <ul class="dropdown-menu">
                                                 <li><a href="javascript:;">menu_2_3_2</a></li>
                                                 <li><a href="javascript:;">menu_2_3_2</a></li>
@@ -604,13 +608,76 @@
         <div class="edit-bg">
             <div class="clearfix">
                 <h4 class="page-title pull-left">Gallery</h4>
-
                 <button id="popover" type="button" class="btn btn-default pull-right" style="margin-top: 10px;">
                     Select Column
                 </button>
                 <input type="text" id="demo" name="date" class="col-md-3 pull-right input-time">
+                <div class="pull-right" style="margin-top: 10px; margin-right: 10px;width: 400px;">
+                    <select class="form-control select2 select2-offscreen">
+                        <option>Select</option>
+                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                        </optgroup>
+                        <optgroup label="Pacific Time Zone">
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                        </optgroup>
+                        <optgroup label="Mountain Time Zone">
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                        </optgroup>
+                        <optgroup label="Central Time Zone">
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="WI">Wisconsin</option>
+                        </optgroup>
+                        <optgroup label="Eastern Time Zone">
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="IN">Indiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="OH">Ohio</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WV">West Virginia</option>
+                        </optgroup>
+                    </select>
+                </div>
             </div>
-            
             <div class="hidden">
                 <div id="popover-target"></div>
             </div>
@@ -618,7 +685,7 @@
                 <select class="select_class hide"></select>
             </div>
             <div class="campaigns-tab">
-                <table id="table1" class="tablesorter">
+                <table id="table1" class="tablesorter tablesorter-blue">
                     <thead>
                         <tr>
                             <th>#ID</th>
@@ -668,36 +735,41 @@
     <script src="js/Campaigns.js"></script>
     <link rel="stylesheet" href="js/smartMenu/smartMenu.css">
     <script type="text/javascript">
-    function download(url,cid,typeid){
-         var typedata={
-             'Today': [moment().startOf("day"), moment().endOf('day')],
-             'Yesterday': [moment().subtract('days', 1).startOf("day"), moment().subtract('days', 1).endOf('day')],
-             'Last 3 Days': [moment().subtract('days', 2).startOf("day"), moment().endOf('day')],
-             'Last 7 Days': [moment().subtract('days', 6).startOf("day"), moment().endOf('day')],
-             'Last 30 Days': [moment().subtract('days', 29).startOf("day"), moment().endOf('day')],
-             'Last 180 Days': [moment().subtract('days', 179).startOf("day"), moment().endOf('day')],
-             'This Month': [moment().startOf('month'), moment().endOf('month')],
+    $('.select2').select2();
+
+    function download(url, cid, typeid) {
+        var typedata = {
+            'Today': [moment().startOf("day"), moment().endOf('day')],
+            'Yesterday': [moment().subtract('days', 1).startOf("day"), moment().subtract('days', 1).endOf('day')],
+            'Last 3 Days': [moment().subtract('days', 2).startOf("day"), moment().endOf('day')],
+            'Last 7 Days': [moment().subtract('days', 6).startOf("day"), moment().endOf('day')],
+            'Last 30 Days': [moment().subtract('days', 29).startOf("day"), moment().endOf('day')],
+            'Last 180 Days': [moment().subtract('days', 179).startOf("day"), moment().endOf('day')],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
             'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')],
-            };
-        $('#test').attr('action',url);
-                $('#test').attr('target',"_blank");
-                $('#test').prepend("<div id='test_id'></div>");
-                $('#test_id').prepend("<input type='hidden' name='type' value='download'>");
-                $('#test_id').prepend("<input type='hidden' name='cam_id' value='"+cid+"'>");
-                $('#test_id').prepend("<input type='hidden' name='cc' value='c1'>");
-                $('#test_id').prepend("<input type='hidden' name='start' value='"+typedata[typeid][0].format("X")+"'>");
-                $('#test_id').prepend("<input type='hidden' name='end' value='"+typedata[typeid][1].format("X")+"'>");
-                $('#test').submit();
-                $('#test_id').remove();
-           
+        };
+        $('#test').attr('action', url);
+        $('#test').attr('target', "_blank");
+        $('#test').prepend("<div id='test_id'></div>");
+        $('#test_id').prepend("<input type='hidden' name='type' value='download'>");
+        $('#test_id').prepend("<input type='hidden' name='cam_id' value='" + cid + "'>");
+        $('#test_id').prepend("<input type='hidden' name='cc' value='c1'>");
+        $('#test_id').prepend("<input type='hidden' name='start' value='" + typedata[typeid][0].format("X") + "'>");
+        $('#test_id').prepend("<input type='hidden' name='end' value='" + typedata[typeid][1].format("X") + "'>");
+        $('#test').submit();
+        $('#test_id').remove();
+
     }
-    function clicklink(arrr){ 
-        ajaxpost($(arrr).attr("href"),$(this).closest('form').serialize(),function(){
-                if(datainfo.status == 'scuess'){
-                   
-                }
-            });}
-    function format ( d ) {
+
+    function clicklink(arrr) {
+        ajaxpost($(arrr).attr("href"), $(this).closest('form').serialize(), function() {
+            if (datainfo.status == 'scuess') {
+
+            }
+        });
+    }
+
+    function format(d) {
         /*
      '<tr>'+
                 '<td>Paths:</td>'+
@@ -705,280 +777,346 @@
             '</tr>'+   
         */
         // `d` is the original data object for the row
-        return '<table class="form-group" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
-            '<tr>'+
-                '<td>Group:</td>'+
-                '<td>'+d.group+'</td>'+
-            '</tr>'+     
-            '<tr>'+
-                '<td>Geo:</td>'+
-                '<td>'+d.geolp+'</td>'+
-            '</tr>'+
-          
-                '<td>Cloak:</td>'+
-                '<td>'+d.cloakbool+'</td>'+
-            '</tr>'+      
-            '<tr>'+
-                '<td>Swap:</td>'+
-                '<td><a target="_blank" href="/?m=swap&a=muedit&id='+d.swap_id+'">'+d.swap+'</a></td>'+
-            '</tr>'+  
-             '<tr>'+
-                '<td>Referral Cloak:</td>'+
-                '<td>'+d.cloakpath+'</td>'+
-            '</tr>'+
-            '<tr>'+
-                '<td>Traffic Source Cloak:</td>'+
-                '<td>'+d.cloakpath2+'</td>'+
-            '</tr>'+  
-             '<tr>'+
-                '<td>Querys Rules:</td>'+
-                '<td>'+d.query+'</td>'+
-            '</tr>'+
-            '<tr>'+
-                '<td>LocationType:</td>'+
-                '<td>'+d.locationtype+'</td>'+
-            '</tr>'+                           
-        '</table>';
+        return '<table class="form-group" cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<tr>' +
+            '<td>Group:</td>' +
+            '<td>' + d.group + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Geo:</td>' +
+            '<td>' + d.geolp + '</td>' +
+            '</tr>' +
+
+            '<td>Cloak:</td>' +
+            '<td>' + d.cloakbool + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Swap:</td>' +
+            '<td><a target="_blank" href="/?m=swap&a=muedit&id=' + d.swap_id + '">' + d.swap + '</a></td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Referral Cloak:</td>' +
+            '<td>' + d.cloakpath + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Traffic Source Cloak:</td>' +
+            '<td>' + d.cloakpath2 + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>Querys Rules:</td>' +
+            '<td>' + d.query + '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td>LocationType:</td>' +
+            '<td>' + d.locationtype + '</td>' +
+            '</tr>' +
+            '</table>';
     }
-    function showrequest(api){
+
+    function showrequest(api) {
         $("#t_request").html(api.column(4).data().sum());
         $("#t_visit").html(api.column(5).data().sum());
         $("#t_click").html(api.column(6).data().sum());
-        $("#t_cost").html("$"+changeTwoDecimal_f(api.column(11).data().sum()));
-        profitnum=function(){
+        $("#t_cost").html("$" + changeTwoDecimal_f(api.column(11).data().sum()));
+        profitnum = function() {
             data = api.column(13).data().sum();
-            var  info ="";
-            if (data <0){  info = "danger"; }else if(data ==0){  info="" }else{  info="success";   }
-                return "<div class='"+info+"'>$"+changeTwoDecimal_f(data)+"</div>"
+            var info = "";
+            if (data < 0) {
+                info = "danger";
+            } else if (data == 0) {
+                info = ""
+            } else {
+                info = "success";
+            }
+            return "<div class='" + info + "'>$" + changeTwoDecimal_f(data) + "</div>"
         }
-        $("#t_profit").html(profitnum);   
+        $("#t_profit").html(profitnum);
     }
 
     $(document).ready(function() {
 
-        var dataparams={
+        var dataparams = {
 
-            "bInfo": false,//页脚信息  
-    "bPaginate": true,//自动宽度 
-    "bPaginate":false,
-    "deferRender": true,
-                       "processing": true,
-                       "serverSide": true,
-                       "searching":false,
-                       "ordering": false,
-                       "ajax":{"url": "./?m=cam&a=ajaxdata","type":"POST","data":{"start":moment().startOf("day").format("X"),"end":moment().endOf('day').format("X")}},
-                        "columns": [
-                           {"data": null,"defaultContent": "", "class":"opr details-control"},
-                            {"data": null,"defaultContent": "","class":"opr" },
-                            { "data": "name" ,"defaultContent": "","class":"name_ajax opr"},
-                             { "data": null },
-                             {"data": "gvisit"},
-                            {"data": "visit"},
-                            {"data": "click"},
-                            {"data": "cvr"},
-                            {"data":"cpv"},
-                            {"data": "CTR"},
-                            {"data": "CR"},
-                            {"data": "cost"},
-                            {"data": "cvr_amt"},
-                            {"data": "Profit"},
-                            {"data": "ROI"},
-                            {"data": null},
-                            {"data": "EPV"},
-                            {"data": "EPC"},
-                            {"data": "ECPM"},
-                        ],
-                        "columnDefs": [
-                            {"render":function(data, type, row){
-                                            return "<div class='source_id_"+data.source_id+"'>"+data.source+"</div>"
-                                        },"targets": 3},
-                            {"render":function(data, type, row){
-                                        var  info ="";
-                                        
-                                            return "<div class='"+info+"'>"+data+"%</div>"
-                                        },"targets": 9},
-                            {"render":function(data, type, row){
-                                        var  info ="";
-                                        
-                                            return "<div class='"+info+"'>"+data+"%</div>"
-                                        },"targets": 10},
-                            {"render":function(data, type, row){
-                                        var  info ="";
-                                        
-                                            return "<div class='"+info+"'>$"+changeTwoDecimal_f(data)+"</div>"
-                                        },"targets": 11},                                                    
-                             {"render":function(data, type, row){
-                                        var  info ="";
-                                       
-                                            return "<div class='"+info+"'>$"+changeTwoDecimal_f(data)+"</div>"
-                                        },"targets": 12},
-                            {"render":function(data, type, row){
-                                        var  info ="";
-                                        if (data <0){
-                                            info = "danger";
-                                        }else if(data ==0){
-                                            info=""
-                                        }else{
-                                            info="success";
-                                        }
-                                            return "<div class='"+info+"'>$"+data+"</div>"
-                                        },"targets": 13},                                    
-                                 {  "render":function(data, type, row){
-                                            return "<a class='btn-default copyurl' href='"+data.camurl+"'>Copy#"+data._id+"</a>";
-                                        },"targets": 1},
-                                {  "render":function(data, type, row){
-                                            return changeTwoDecimal_f(data)+"%";
-                                        },"targets": 14},
-                                        
-                                    {
-                                        "render": function ( data, type, row ) {
-                                            return data.cloak+' <div style="z-index:999;position:absolute;display:none;" id="show_men_'+data.id+'" class="btn-group show_men_" role="group" aria-label="Basic example">'+
-                       
-                        '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=cam&a=edit&id='+data.id+'\')">Edit</button></span>'+
-                        
-                       '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Status</button>'+ 
-                       
-                            '<ul class="dropdown-menu" role="menu">'+
-                            '<li><a target="_blank" href="/?m=report&a=download&cid='+data.id+'">Download</a></li>'+
-                            '<li><a target="_blank" href="/?m=report&a=download2">Download2</a></li>'+
-                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns&cid='+data.id+'">Campaigns</a></li>'+
-                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_days&cid='+data.id+'">Campaigns Days</a></li>'+
-                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_hours&cid='+data.id+'">Campaigns Hours</a></li>'+
-                            '<li class=""><a  target="_blank" href="/?m=report&a=days&cid='+data.id+'">Days</a></li>'+
-                            '<li class=""><a  target="_blank" href="/?m=report&a=hours&cid='+data.id+'">Hours</a></li>'+
-                            '<li><a target="_blank" href="/?m=report&a=campaigns_date&cid='+data.id+'">Campaigns Date</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=paths&cid='+data.id+'">Paths</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=landingpages&cid='+data.id+'">LandingPages</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=landingpages2&cid='+data.id+'">LandingPages2</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=offers&cid='+data.id+'">Offers</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=offers2&cid='+data.id+'">Offers2</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=network&cid='+data.id+'">AffiliateNetwork</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=cap_offer">Cap Offers</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=convert&cid='+data.id+'">Convert</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=trafficsource&cid='+data.id+'">TrafficSource</a></li>'+
-                            '<li><a target="_blank" href="/?m=report&a=trafficsource2&cid='+data.id+'">TrafficSource2</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=countrys&cid='+data.id+'">Countrys</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=countrys2&cid='+data.id+'">All Countrys</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=browsers&cid='+data.id+'">Browsers</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=os&cid='+data.id+'">OS</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=devices&cid='+data.id+'">Devices</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=domains&cid='+data.id+'">Domains</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=referers&cid='+data.id+'">Referers</a></li>'+
-                            '<li><a  target="_blank" href="/?m=report&a=cc110&cid='+data.id+'">C1-C10</a></li>'+
-                            '<li><a target="_blank" href="/?m=report&a=cc1102&cid='+data.id+'">C1-C10_2</a></li>'+
-                            '</ul></span>'+
-                        '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download</button>'+ 
-                      
-                            '<ul class="dropdown-menu" role="menu">'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Today\')">c1 Today</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Yesterday\')">c1 Yesterday</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Last 3 Days\')">c1 Last 3 Days</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Last 7 Days\')">c1 Last 7 Days</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Last 30 Days\')">c1 Last 30 Days</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Last 180 Days\')">c1 Last 180 Days</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'This Month\')">c1 This Month</a></li>'+
-                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\','+data.id+',\'Last Month\')">c1 Last Month</a></li>'+
-                            
-                            '</ul></span>'+    
-                        '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=monitor&cid='+data.id+'\');">Monitor</button></span>'+ 
-                        '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=copy&id='+data.id+'" onclick="copy(this,\''+data.name+'\',\'?m=cam\')">Clone</button></span>'+
-                        '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=del&id='+data.id+'" onclick="del(this)">Delete</button></span>'+
-                         
-                    '</div>';     
-                                        },
-                                        "targets": 15
-                                    },
-                                    //{ "visible": false,  "targets": [ 0 ] }
-                                ],
-                                "footerCallback": function ( row, data, start, end, display ) {
-                                        var api = this.api(), data;
-                                        showrequest(api);
-                                        var ttr=function (e) {
-                                            $(".show_men_").hide(function(){
-                                                document.body.onselectstart=document.body.oncontextmenu=function(){ return true;} 
-                                                });
-                                            if(e.which==3){
-                                                $(".show_men_").hide();
-                                                 var tr = $(this).closest('tr');
-                                                 var row = api.row( tr );
-                                                 var data = row.data();
-                                                
-                                                 var relativeX =  e.pageX ;
-                                                 var relativeY =  e.pageY ;
-                                                
-                                                 $("#show_men_"+data.id).css("left", relativeX+"px");
-                                                 $("#show_men_"+data.id).css("top", relativeY+"px");
-                                                 $("#show_men_"+data.id).show();
-                                                 $("#show_men_"+data.id).insertAfter($("#content"));
-                                            }
-                                               
-                                                document.body.onselectstart=document.body.oncontextmenu=function(){ return false;} 
-                                                 return false;
-                                        };
-                                        var enter=function(e){
-                                            var tr = $(this).closest('tr');
-                                            var row = api.row( tr );
-                                            var data = row.data();
-                                            $(this).html('<input type="hidden" name="id" id="text_'+data.id+'_id" value="'+data.id+'"><input type="text" name="name" id="text_'+data.id+'_text" value="'+data.name+'"><input type="button" value="Enter" id="text_'+data.id+'"><input type="button" value="Cancel" id="c_text_'+data.id+'">');
-                                            $(this).unbind("click");
-                                            $(this).unbind("mousedown");
-                                            var ttis= $(this);
-                                            //$("#text_"+data.id).focus(function(e){
-                                            // });blur
-                                            $("#text_"+data.id).click(function(e){
-                                                    if ($("#"+$("#text_"+data.id).attr("id")+"_text").val() !=data.name){
-                                                        ajaxpost("/?m=cam&a=save",{"action":"ajax_rename","name":$("#"+$(this).attr("id")+"_text").val(),"id":$("#"+$(this).attr("id")+"_id").val()},function(){
-                                                            $("#text_"+data.id).unbind("click");
-                                                            ttis.html($("#"+$("#text_"+data.id).attr("id")+"_text").val());
-                                                            ttis.bind("mousedown",ttr);
-                                                            ttis.bind("click",enter);
-                                                           
-                                                        });
-                                                    }
-                                            });
-                                            $("#c_text_"+data.id).click(function(e){
-                                                    $("#text_"+data.id).unbind("click");
-                                                    ttis.html(data.name);
-                                                    ttis.bind("mousedown",ttr);
-                                                    setTimeout(function(){
-                                                        ttis.bind("click",enter);
-                                                    },1000);
-                                                    
-                                            });
-                                           
-                                        };
-                                        api.$(".name_ajax").click(enter);
-                                        api.$("td[class!=' opr']").mousedown(ttr);
-                                        $(".show_men_").click(function(){
-                                            document.body.onselectstart=document.body.oncontextmenu=function(){ return true;} 
-                                            $(this).hide();
-                                        });
+            "bInfo": false, //页脚信息  
+            "bPaginate": true, //自动宽度 
+            "bPaginate": false,
+            "deferRender": true,
+            "processing": true,
+            "serverSide": true,
+            "searching": false,
+            "ordering": false,
+            "ajax": {
+                "url": "./?m=cam&a=ajaxdata",
+                "type": "POST",
+                "data": {
+                    "start": moment().startOf("day").format("X"),
+                    "end": moment().endOf('day').format("X")
+                }
+            },
+            "columns": [{
+                "data": null,
+                "defaultContent": "",
+                "class": "opr details-control"
+            }, {
+                "data": null,
+                "defaultContent": "",
+                "class": "opr"
+            }, {
+                "data": "name",
+                "defaultContent": "",
+                "class": "name_ajax opr"
+            }, {
+                "data": null
+            }, {
+                "data": "gvisit"
+            }, {
+                "data": "visit"
+            }, {
+                "data": "click"
+            }, {
+                "data": "cvr"
+            }, {
+                "data": "cpv"
+            }, {
+                "data": "CTR"
+            }, {
+                "data": "CR"
+            }, {
+                "data": "cost"
+            }, {
+                "data": "cvr_amt"
+            }, {
+                "data": "Profit"
+            }, {
+                "data": "ROI"
+            }, {
+                "data": null
+            }, {
+                "data": "EPV"
+            }, {
+                "data": "EPC"
+            }, {
+                "data": "ECPM"
+            }, ],
+            "columnDefs": [{
+                    "render": function(data, type, row) {
+                        return "<div class='source_id_" + data.source_id + "'>" + data.source + "</div>"
+                    },
+                    "targets": 3
+                }, {
+                    "render": function(data, type, row) {
+                        var info = "";
 
-                                },
+                        return "<div class='" + info + "'>" + data + "%</div>"
+                    },
+                    "targets": 9
+                }, {
+                    "render": function(data, type, row) {
+                        var info = "";
+
+                        return "<div class='" + info + "'>" + data + "%</div>"
+                    },
+                    "targets": 10
+                }, {
+                    "render": function(data, type, row) {
+                        var info = "";
+
+                        return "<div class='" + info + "'>$" + changeTwoDecimal_f(data) + "</div>"
+                    },
+                    "targets": 11
+                }, {
+                    "render": function(data, type, row) {
+                        var info = "";
+
+                        return "<div class='" + info + "'>$" + changeTwoDecimal_f(data) + "</div>"
+                    },
+                    "targets": 12
+                }, {
+                    "render": function(data, type, row) {
+                        var info = "";
+                        if (data < 0) {
+                            info = "danger";
+                        } else if (data == 0) {
+                            info = ""
+                        } else {
+                            info = "success";
+                        }
+                        return "<div class='" + info + "'>$" + data + "</div>"
+                    },
+                    "targets": 13
+                }, {
+                    "render": function(data, type, row) {
+                        return "<a class='btn-default copyurl' href='" + data.camurl + "'>Copy#" + data._id + "</a>";
+                    },
+                    "targets": 1
+                }, {
+                    "render": function(data, type, row) {
+                        return changeTwoDecimal_f(data) + "%";
+                    },
+                    "targets": 14
+                },
+
+                {
+                    "render": function(data, type, row) {
+                        return data.cloak + ' <div style="z-index:999;position:absolute;display:none;" id="show_men_' + data.id + '" class="btn-group show_men_" role="group" aria-label="Basic example">' +
+
+                            '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=cam&a=edit&id=' + data.id + '\')">Edit</button></span>' +
+
+                            '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Status</button>' +
+
+                            '<ul class="dropdown-menu" role="menu">' +
+                            '<li><a target="_blank" href="/?m=report&a=download&cid=' + data.id + '">Download</a></li>' +
+                            '<li><a target="_blank" href="/?m=report&a=download2">Download2</a></li>' +
+                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns&cid=' + data.id + '">Campaigns</a></li>' +
+                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_days&cid=' + data.id + '">Campaigns Days</a></li>' +
+                            '<li class=""><a  target="_blank" href="/?m=report&a=campaigns_hours&cid=' + data.id + '">Campaigns Hours</a></li>' +
+                            '<li class=""><a  target="_blank" href="/?m=report&a=days&cid=' + data.id + '">Days</a></li>' +
+                            '<li class=""><a  target="_blank" href="/?m=report&a=hours&cid=' + data.id + '">Hours</a></li>' +
+                            '<li><a target="_blank" href="/?m=report&a=campaigns_date&cid=' + data.id + '">Campaigns Date</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=paths&cid=' + data.id + '">Paths</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=landingpages&cid=' + data.id + '">LandingPages</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=landingpages2&cid=' + data.id + '">LandingPages2</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=offers&cid=' + data.id + '">Offers</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=offers2&cid=' + data.id + '">Offers2</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=network&cid=' + data.id + '">AffiliateNetwork</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=cap_offer">Cap Offers</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=convert&cid=' + data.id + '">Convert</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=trafficsource&cid=' + data.id + '">TrafficSource</a></li>' +
+                            '<li><a target="_blank" href="/?m=report&a=trafficsource2&cid=' + data.id + '">TrafficSource2</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=countrys&cid=' + data.id + '">Countrys</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=countrys2&cid=' + data.id + '">All Countrys</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=browsers&cid=' + data.id + '">Browsers</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=os&cid=' + data.id + '">OS</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=devices&cid=' + data.id + '">Devices</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=domains&cid=' + data.id + '">Domains</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=referers&cid=' + data.id + '">Referers</a></li>' +
+                            '<li><a  target="_blank" href="/?m=report&a=cc110&cid=' + data.id + '">C1-C10</a></li>' +
+                            '<li><a target="_blank" href="/?m=report&a=cc1102&cid=' + data.id + '">C1-C10_2</a></li>' +
+                            '</ul></span>' +
+                            '<span><button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Download</button>' +
+
+                            '<ul class="dropdown-menu" role="menu">' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Today\')">c1 Today</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Yesterday\')">c1 Yesterday</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 3 Days\')">c1 Last 3 Days</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 7 Days\')">c1 Last 7 Days</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 30 Days\')">c1 Last 30 Days</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last 180 Days\')">c1 Last 180 Days</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'This Month\')">c1 This Month</a></li>' +
+                            '<li><a target="_blank" href="javascript:download(\'/?m=report&a=cc110\',' + data.id + ',\'Last Month\')">c1 Last Month</a></li>' +
+
+                            '</ul></span>' +
+                            '<span><button type="button" class="btn btn-primary" onclick="window.open(\'/?m=monitor&cid=' + data.id + '\');">Monitor</button></span>' +
+                            '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=copy&id=' + data.id + '" onclick="copy(this,\'' + data.name + '\',\'?m=cam\')">Clone</button></span>' +
+                            '<span><button type="button" class="btn btn-primary" href="/?m=cam&a=del&id=' + data.id + '" onclick="del(this)">Delete</button></span>' +
+
+                            '</div>';
+                    },
+                    "targets": 15
+                },
+                //{ "visible": false,  "targets": [ 0 ] }
+            ],
+            "footerCallback": function(row, data, start, end, display) {
+                var api = this.api(),
+                    data;
+                showrequest(api);
+                var ttr = function(e) {
+                    $(".show_men_").hide(function() {
+                        document.body.onselectstart = document.body.oncontextmenu = function() {
+                            return true;
+                        }
+                    });
+                    if (e.which == 3) {
+                        $(".show_men_").hide();
+                        var tr = $(this).closest('tr');
+                        var row = api.row(tr);
+                        var data = row.data();
+
+                        var relativeX = e.pageX;
+                        var relativeY = e.pageY;
+
+                        $("#show_men_" + data.id).css("left", relativeX + "px");
+                        $("#show_men_" + data.id).css("top", relativeY + "px");
+                        $("#show_men_" + data.id).show();
+                        $("#show_men_" + data.id).insertAfter($("#content"));
+                    }
+
+                    document.body.onselectstart = document.body.oncontextmenu = function() {
+                        return false;
+                    }
+                    return false;
+                };
+                var enter = function(e) {
+                    var tr = $(this).closest('tr');
+                    var row = api.row(tr);
+                    var data = row.data();
+                    $(this).html('<input type="hidden" name="id" id="text_' + data.id + '_id" value="' + data.id + '"><input type="text" name="name" id="text_' + data.id + '_text" value="' + data.name + '"><input type="button" value="Enter" id="text_' + data.id + '"><input type="button" value="Cancel" id="c_text_' + data.id + '">');
+                    $(this).unbind("click");
+                    $(this).unbind("mousedown");
+                    var ttis = $(this);
+                    //$("#text_"+data.id).focus(function(e){
+                    // });blur
+                    $("#text_" + data.id).click(function(e) {
+                        if ($("#" + $("#text_" + data.id).attr("id") + "_text").val() != data.name) {
+                            ajaxpost("/?m=cam&a=save", {
+                                "action": "ajax_rename",
+                                "name": $("#" + $(this).attr("id") + "_text").val(),
+                                "id": $("#" + $(this).attr("id") + "_id").val()
+                            }, function() {
+                                $("#text_" + data.id).unbind("click");
+                                ttis.html($("#" + $("#text_" + data.id).attr("id") + "_text").val());
+                                ttis.bind("mousedown", ttr);
+                                ttis.bind("click", enter);
+
+                            });
+                        }
+                    });
+                    $("#c_text_" + data.id).click(function(e) {
+                        $("#text_" + data.id).unbind("click");
+                        ttis.html(data.name);
+                        ttis.bind("mousedown", ttr);
+                        setTimeout(function() {
+                            ttis.bind("click", enter);
+                        }, 1000);
+
+                    });
+
+                };
+                api.$(".name_ajax").click(enter);
+                api.$("td[class!=' opr']").mousedown(ttr);
+                $(".show_men_").click(function() {
+                    document.body.onselectstart = document.body.oncontextmenu = function() {
+                        return true;
+                    }
+                    $(this).hide();
+                });
+
+            },
         };
         ssParams = {
-                "timePicker24Hour": true,
-                 "timePicker": true,
-                "timePickerIncrement": 1,
-              ranges: {
-                           'Today': [moment().startOf("day"), moment().endOf('day')],
-                           'Yesterday': [moment().subtract('days', 1).startOf("day"), moment().subtract('days', 1).endOf('day')],
-                           'Last 7 Days': [moment().subtract('days', 6).startOf("day"), moment().endOf('day')],
-                           'Last 30 Days': [moment().subtract('days', 29).startOf("day"), moment().endOf('day')],
-                            'Last 180 Days': [moment().subtract('days', 179).startOf("day"), moment().endOf('day')],
-                           'This Month': [moment().startOf('month'), moment().endOf('month')],
-                           'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
-                        },
-                          "locale": {
-                "format": "MM/DD/YYYY HH:mm",},
-                "startDate": ssDate,
-                "endDate": moment().endOf('day'),
-                "opens": "left",
-                "drops": "down",
-                "buttonClasses": "btn btn-sm",
-                "applyClass": "btn-success",
-                "cancelClass": "btn-default"
-            };
+            "timePicker24Hour": true,
+            "timePicker": true,
+            "timePickerIncrement": 1,
+            ranges: {
+                'Today': [moment().startOf("day"), moment().endOf('day')],
+                'Yesterday': [moment().subtract('days', 1).startOf("day"), moment().subtract('days', 1).endOf('day')],
+                'Last 7 Days': [moment().subtract('days', 6).startOf("day"), moment().endOf('day')],
+                'Last 30 Days': [moment().subtract('days', 29).startOf("day"), moment().endOf('day')],
+                'Last 180 Days': [moment().subtract('days', 179).startOf("day"), moment().endOf('day')],
+                'This Month': [moment().startOf('month'), moment().endOf('month')],
+                'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+            },
+            "locale": {
+                "format": "MM/DD/YYYY HH:mm",
+            },
+            "startDate": ssDate,
+            "endDate": moment().endOf('day'),
+            "opens": "left",
+            "drops": "down",
+            "buttonClasses": "btn btn-sm",
+            "applyClass": "btn-success",
+            "cancelClass": "btn-default"
+        };
         var dt = $("#example1").dataTable(dataparams);
         /*
          $('#example1 tbody').on( 'contextmenu', 'tr', function (event) {
@@ -994,54 +1132,53 @@
             return false;
         } );
         */
-       
-    $(".showall").click(function(){
-        $("#example1").find("tbody tr").show();
-        showrequest(dt.api());
-    });
 
-    $(".sourceidshow").click(function(){
-        $("#example1").find("tbody tr").hide();
-        id=$(this).attr("sourceid")
-        $("."+id).closest("tr").show();
-        showrequest(dt.api());
-    });
-        $('#source_id').change(function(){ 
-                source_id= $(this).children('option:selected').val(); 
-                dt.api().clear();
-                dt.api().destroy();
-                //dataparams["ajax"]["data"]["cam_id"]=$("#cam_id").val();
-                dataparams["ajax"]["data"]["source_id"]=source_id;
-                $("#example1").dataTable(dataparams);
-         });
-       
-        
-        $('#example1 tbody').on('click', 'td.details-control', function () {
+        $(".showall").click(function() {
+            $("#example1").find("tbody tr").show();
+            showrequest(dt.api());
+        });
+
+        $(".sourceidshow").click(function() {
+            $("#example1").find("tbody tr").hide();
+            id = $(this).attr("sourceid")
+            $("." + id).closest("tr").show();
+            showrequest(dt.api());
+        });
+        $('#source_id').change(function() {
+            source_id = $(this).children('option:selected').val();
+            dt.api().clear();
+            dt.api().destroy();
+            //dataparams["ajax"]["data"]["cam_id"]=$("#cam_id").val();
+            dataparams["ajax"]["data"]["source_id"] = source_id;
+            $("#example1").dataTable(dataparams);
+        });
+
+
+        $('#example1 tbody').on('click', 'td.details-control', function() {
             var tr = $(this).closest('tr');
-            var row = dt.api().row( tr );
-            if ( row.child.isShown() ) {
+            var row = dt.api().row(tr);
+            if (row.child.isShown()) {
                 // This row is already open - close it
                 row.child.hide();
                 tr.removeClass('shown');
-            }
-            else {
+            } else {
                 // Open this row
-                row.child( format(row.data()) ).show();
+                row.child(format(row.data())).show();
                 tr.addClass('shown');
             }
-        } );
-             var ssDate = moment().format('MM/DD/YYYY 00:00');
-            $('#demo').daterangepicker(ssParams,function(start, end, label) {
-                dt.api().clear();
-                dt.api().destroy();
-                //dataparams["ajax"]["data"]["cam_id"]=$("#cam_id").val();
-                dataparams["ajax"]["data"]["start"]=start.format("X");
-                dataparams["ajax"]["data"]["end"]=end.format("X");
-                
-               $("#example1").dataTable(dataparams);
-               
-            });  
-               
+        });
+        var ssDate = moment().format('MM/DD/YYYY 00:00');
+        $('#demo').daterangepicker(ssParams, function(start, end, label) {
+            dt.api().clear();
+            dt.api().destroy();
+            //dataparams["ajax"]["data"]["cam_id"]=$("#cam_id").val();
+            dataparams["ajax"]["data"]["start"] = start.format("X");
+            dataparams["ajax"]["data"]["end"] = end.format("X");
+
+            $("#example1").dataTable(dataparams);
+
+        });
+
     });
     </script>
 </body>
