@@ -98,7 +98,13 @@ $(function (){
 	       var _clone, _$parent, name;
 	       _$parent = $(this).parent();
 	       _clone = _$parent.clone();
-	       name = prompt('Please enter name', '');
+	       $.modal({
+	       		type:"html",
+	       		title:"输入优惠码",
+	       		content:'<div class="form-line"><div class="form-control"><input type="text" value="" placeholder="文本"><div class="form-error">这是错误信息</div></div></div>'
+	       	}).on('modal:action', function (e){
+	       		console.log(e)
+	       	});
 	       _clone.find('td:eq(1)').text(name);
 	       _clone.insertBefore(_$parent.parent().find('tr:first'));
 	    }
