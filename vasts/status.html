@@ -602,117 +602,205 @@
   </div>
   <div id="main" class="container" style="margin-top: 150px;">
     <div class="edit-bg">
-		<h4 class="page-title">Gallery</h4>
-		<div class="status-left col-sm-2">
-			<ul class="" role="menu">
-			  <li><a href="javascript:;">Download</a></li>
-			  <li><a href="javascript:;">Download2</a></li>
-			  <li><a href="javascript:;">Campaigns</a></li>
-			  <li><a href="javascript:;">Campaigns Days</a></li>
-			  <li><a href="javascript:;">Campaigns Hours</a></li>
-			  <li><a href="javascript:;">Days</a></li>
-			  <li><a href="javascript:;">Hours</a></li>
-			  <li><a href="javascript:;">Campaigns Date</a></li>
-			  <li><a href="javascript:;">Paths</a></li>
-			  <li><a href="javascript:;">LandingPages</a></li>
-			  <li><a href="javascript:;">LandingPages2</a></li>
-			  <li><a href="javascript:;">Offers</a></li>
-			  <li><a href="javascript:;">Offers2</a></li>
-			  <li><a href="javascript:;">AffiliateNetwork</a></li>
-			  <li><a href="javascript:;">Cap Offers</a></li>
-			  <li><a href="javascript:;">Convert</a></li>
-			  <li><a href="javascript:;">TrafficSource</a></li>
-			  <li><a href="javascript:;">TrafficSource2</a></li>
-			  <li><a href="javascript:;">Countrys</a></li>
-			  <li><a href="javascript:;">All Countrys</a></li>
-			  <li><a href="javascript:;">Browsers</a></li>
-			  <li><a href="javascript:;">OS</a></li>
-			  <li><a href="javascript:;">Devices</a></li>
-			  <li><a href="javascript:;">Domains</a></li>
-			  <li><a href="javascript:;">Referers</a></li>
-			  <li><a href="javascript:;">C1-C10</a></li>
-			  <li><a href="javascript:;">C1-C10_2</a></li>
-			</ul>
-		</div>
-		<div class="status-right col-sm-10">
-			<div class="hidden">
-			  <div id="popover-target"></div>
-			</div>
-			<div>
-				<select class="select_class"></select>
-				<button id="popover" type="button" class="btn btn-default">
-				  Select Column
-				</button>
-			</div>
-			<div class="campaigns-tab">
-			  <table id="table1" class="tablesorter">
-			    <thead>
-			      <tr>
-			        <th>Cam Name</th>
-			        <th>Requests</th>
-			        <th>Cloak</th>
-			        <th>Visit</th>
-			        <th>Click</th>
-			        <th>Convs</th>
-			        <th>Profit</th>
-			        <th>Revenue</th>
-			        <th>Cost</th>
-			        <th>CPV</th>
-			        <th>CTR</th>
-			        <th>CR</th>
-			        <th>ROI</th>
-			        <th>EPV</th>
-			        <th>EPC</th>
-			        <th>ECPM</th>    
-			      </tr>
-			    </thead>
-			    <tbody>
-			      <tr>
-			        <td>2016-05-02</td>
-			        <td>15</td>
-			        <td>0</td>
-			        <td>3</td>
-			        <td>2</td>
-			        <td>0</td>
-			        <td>$0.00</td>
-			        <td>$0.00</td>
-			        <td>$0.00</td>
-			        <td>$0.00</td>
-			        <td>66.67%</td>
-			        <td>0%</td>
-			        <td>0%</td>
-			        <td>0.00</td>
-			        <td>0.00</td>
-			        <td>0.00</td>  
-			      </tr>
-			      <tr>
-			        <td>2016-05-02</td>
-			        <td>15</td>
-			        <td>0</td>
-			        <td>3</td>
-			        <td>2</td>
-			        <td>0</td>
-			        <td>$0.00</td>
-			        <td>$0.00</td>
-			        <td>$0.00</td>
-			        <td class="i-green">$0.00</td>
-			        <td>66.67%</td>
-			        <td>0%</td>
-			        <td>0%</td>
-			        <td>0.00</td>
-			        <td>0.00</td>
-			        <td>0.00</td>  
-			      </tr>
-			    </tbody>
-			  </table>
-			</div>
-			<div class="side-bar"></div>
-		</div>
+      <div class="clearfix">
+        <h4 class="page-title pull-left">Gallery</h4>
+        <button id="popover" type="button" class="btn btn-default pull-right" style="margin-top: 10px;">
+          Select Column
+        </button>
+      </div>
+      <div class="status-left col-sm-2">
+        <ul class="" role="menu">
+          <li><a href="javascript:;">Download</a></li>
+          <li><a href="javascript:;">Download2</a></li>
+          <li><a href="javascript:;">Campaigns</a></li>
+          <li><a href="javascript:;">Campaigns Days</a></li>
+          <li><a href="javascript:;">Campaigns Hours</a></li>
+          <li><a href="javascript:;">Days</a></li>
+          <li><a href="javascript:;">Hours</a></li>
+          <li><a href="javascript:;">Campaigns Date</a></li>
+          <li><a href="javascript:;">Paths</a></li>
+          <li><a href="javascript:;">LandingPages</a></li>
+          <li><a href="javascript:;">LandingPages2</a></li>
+          <li><a href="javascript:;">Offers</a></li>
+          <li><a href="javascript:;">Offers2</a></li>
+          <li><a href="javascript:;">AffiliateNetwork</a></li>
+          <li><a href="javascript:;">Cap Offers</a></li>
+          <li><a href="javascript:;">Convert</a></li>
+          <li><a href="javascript:;">TrafficSource</a></li>
+          <li><a href="javascript:;">TrafficSource2</a></li>
+          <li><a href="javascript:;">Countrys</a></li>
+          <li><a href="javascript:;">All Countrys</a></li>
+          <li><a href="javascript:;">Browsers</a></li>
+          <li><a href="javascript:;">OS</a></li>
+          <li><a href="javascript:;">Devices</a></li>
+          <li><a href="javascript:;">Domains</a></li>
+          <li><a href="javascript:;">Referers</a></li>
+          <li><a href="javascript:;">C1-C10</a></li>
+          <li><a href="javascript:;">C1-C10_2</a></li>
+        </ul>
+      </div>
+      <div class="status-right col-sm-10">
+        <div class="hidden">
+          <div id="popover-target"></div>
+        </div>
+
+        <div>
+          <select class="select_class hide"></select>
+        </div>
+        <div class="campaigns-tab">
+          <table id="table1" class="tablesorter">
+            <thead>
+              <tr>
+                <th>Cam Name</th>
+                <th>Requests</th>
+                <th>Cloak</th>
+                <th>Visit</th>
+                <th>Click</th>
+                <th>Convs</th>
+                <th>Profit</th>
+                <th>Revenue</th>
+                <th>Cost</th>
+                <th>CPV</th>
+                <th>CTR</th>
+                <th>CR</th>
+                <th>ROI</th>
+                <th>EPV</th>
+                <th>EPC</th>
+                <th>ECPM</th>    
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2016-05-02</td>
+                <td>15</td>
+                <td>0</td>
+                <td>3</td>
+                <td>2</td>
+                <td>0</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>66.67%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>  
+              </tr>
+              <tr>
+                <td>2016-05-02</td>
+                <td>15</td>
+                <td>0</td>
+                <td>3</td>
+                <td>2</td>
+                <td>0</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td>$0.00</td>
+                <td class="i-green">$0.00</td>
+                <td>66.67%</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>  
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="side-bar"></div>
+      </div>
     </div>
   </div>
 
   <script src="js/smartMenu/jquery-smartMenu.js"></script>
-  <script src="js/Campaigns.js"></script>
+  
+  <script type="text/javascript">
+      
+      $('#table1').tablesorter({
+          widthFixed: true,
+          showProcessing: true,
+          headerTemplate: '{content} {icon}', // Add icon for various themes
+
+          widgets: ['zebra', 'columnSelector', 'stickyHeaders', 'filter'],
+
+          widgetOptions: {
+              // extra class name added to the sticky header row
+              stickyHeaders: '',
+              // number or jquery selector targeting the position:fixed element
+              stickyHeaders_offset: 0,
+              // added to table ID, if it exists
+              stickyHeaders_cloneId: '-sticky',
+              // trigger "resize" event on headers
+              stickyHeaders_addResizeEvent: true,
+              // if false and a caption exist, it won't be included in the sticky header
+              stickyHeaders_includeCaption: true,
+              // The zIndex of the stickyHeaders, allows the user to adjust this to their needs
+              stickyHeaders_zIndex: 2,
+              // jQuery selector or object to attach sticky header to
+              stickyHeaders_attachTo: null,
+              // jQuery selector or object to monitor horizontal scroll position (defaults: xScroll > attachTo > window)
+              stickyHeaders_xScroll: null,
+              // jQuery selector or object to monitor vertical scroll position (defaults: yScroll > attachTo > window)
+              stickyHeaders_yScroll: null,
+
+              // scroll table top into view after filtering
+              stickyHeaders_filteredToTop: true
+
+              // *** REMOVED jQuery UI theme due to adding an accordion on this demo page ***
+              // adding zebra striping, using content and default styles - the ui css removes the background from default
+              // even and odd class names included for this demo to allow switching themes
+              // , zebra   : ["ui-widget-content even", "ui-state-default odd"]
+              // use uitheme widget to apply defauly jquery ui (jui) class names
+              // see the uitheme demo for more details on how to change the class names
+              // , uitheme : 'jui'
+          }
+      });
+      $.tablesorter.columnSelector.attachTo($('#table1'), '#popover-target');
+      $('#popover')
+          .popover({
+              placement: 'left',
+              html: true, // required if content has HTML
+              content: $('#popover-target')
+          });
+
+      window.includeCaption = true;
+      // removed jQuery UI theme because of the accordion!
+      $('link.theme').each(function() {
+          this.disabled = true;
+      });
+
+
+      var themes = 'blue default green grey ice black-ice dark dropbox metro-dark',
+          i, o = '',
+          t = themes.split(' ');
+      for (i = 0; i < t.length; i++) {
+          o += '<option value="' + t[i] + '">' + t[i] + '</option>';
+      }
+
+      $('select:first')
+          .append(o)
+          .change(function() {
+              var theme = $(this).val().toLowerCase(),
+                  // ui-theme is added by the themeswitcher
+                  files = $('link.theme').each(function() {
+                      this.disabled = true;
+                  })
+              files.filter('.' + theme).each(function() {
+                  this.disabled = false;
+              });
+              $('table')
+                  .removeClass('tablesorter-' + t.join(' tablesorter-'))
+                  .addClass('tablesorter-' + (theme === 'black-ice' ? 'blackice' : theme));
+          }).change();
+
+      var _font = '';
+      $('#table1 th').each(function() {
+          _font += '<option value="' + $(this).text() + '">' + $(this).text() + '</option>';
+          $('.table1_th').html(_font);
+      });
+  </script>
   <link rel="stylesheet" href="js/smartMenu/smartMenu.css">
 </body>
 </html>
