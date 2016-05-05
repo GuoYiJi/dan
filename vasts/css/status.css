@@ -1,13 +1,13 @@
 .status-left {
   padding: 0;
-  max-height: 560px;
+  max-height: 600px;
   padding-bottom: 50px;
-  overflow-y: auto;
-  background-color: #444d58; }
+  overflow-y: auto; }
   .status-left li {
-    line-height: 25px;
-    padding-left: 5px;
-    background-color: #444d58; }
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 6px 10px;
+    background-color: #188ae2; }
     .status-left li a {
       color: #f1f1f1;
       display: block;
@@ -21,7 +21,7 @@
     .status-left li a:hover {
       text-decoration: none; }
   .status-left li:hover, .status-left li.active {
-    background-color: #4E5966; }
+    background-color: #5b69bc; }
 
 .status-left::-webkit-scrollbar {
   width: 14px;

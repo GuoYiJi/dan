@@ -5,17 +5,16 @@
 
 .control-label {
   padding-top: 7px;
-  text-align: right;
+  text-align: left;
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
   font-weight: 700;
-  float: left;
-  padding-left: 15px; }
+  float: left; }
 
 .ms-container {
-  width: 370px;
-  background: transparent url("../images/multiple-arrow.png") no-repeat 50% 50%; }
+  background: transparent url("../images/multiple-arrow.png") no-repeat 50% 50%;
+  padding: 0; }
 
 .ms-container:after {
   content: ".";
@@ -32,7 +31,8 @@
   background: #fff;
   color: #555555;
   float: left;
-  width: 45%; }
+  width: 45%;
+  padding: 0; }
 
 .ms-container .ms-selection {
   float: right; }
@@ -51,7 +51,7 @@
   -moz-border-radius: 3px;
   border-radius: 3px;
   position: relative;
-  height: 200px;
+  height: 300px;
   padding: 0;
   overflow-y: auto; }
 

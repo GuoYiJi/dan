@@ -20,9 +20,9 @@
   var MultiSelect = function (element, options) {
     this.options = options;
     this.$element = $(element);
-    this.$container = $('<div/>', { 'class': "ms-container" });
-    this.$selectableContainer = $('<div/>', { 'class': 'ms-selectable' });
-    this.$selectionContainer = $('<div/>', { 'class': 'ms-selection' });
+    this.$container = $('<div/>', { 'class': "ms-container col-sm-7" });
+    this.$selectableContainer = $('<div/>', { 'class': 'ms-selectable col-sm-5' });
+    this.$selectionContainer = $('<div/>', { 'class': 'ms-selection  col-sm-5' });
     this.$selectableUl = $('<ul/>', { 'class': "ms-list", 'tabindex' : '-1' });
     this.$selectionUl = $('<ul/>', { 'class': "ms-list", 'tabindex' : '-1' });
     this.scrollTo = 0;

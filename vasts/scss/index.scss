@@ -38,7 +38,6 @@
   -moz-border-radius: 5px;
   background-clip: padding-box;
   background-color: #ffffff;
-  overflow: hidden;
   min-height: 700px;
 }
 .page-title {
@@ -188,7 +187,7 @@
 		& > .menu-dropdown {
 			&:hover > a {
 				color: #f1f1f1;
-				background-color: #185f9c;
+				background-color: #188ae2;
 			}
 			&:hover > .dropdown-menu {
 
@@ -204,7 +203,7 @@
 			color: #fff;
 			&:hover {
 				color: #f1f1f1;
-				background-color: #185f9c;
+				background-color: #188ae2;
 			}
 		}
 		.arrow {
@@ -221,19 +220,19 @@
 	.current {
 		& > a {
 			color: #fff;
-			background-color: #185f9c;
+			background-color: #188ae2;
 		}
 	}
 	.dropdown-menu {
 		padding: 0;
 		margin-top: 0;
 		box-shadow: 5px 5px rgba(85,97,111,.2);
-		background-color: #185f9c;
+		background-color: #188ae2;
 		border-radius: 0;
 		.current {
 			a {
 				color: #ced5de;
-				background-color: #185f9c;
+				background-color: #188ae2;
 			}
 		}
 		a {
@@ -263,7 +262,8 @@
 	}
 }
 @media (max-width: $screen-md-min) {
-	.container{ margin-top: 0 !important;}
+	.container{ margin-top: 20px !important;}
+	.edit-bg{ margin: 0 0 50px;}
 	#main{ margin-bottom: 100px;}
 	.hot-menu {
 		.navbar-nav {
