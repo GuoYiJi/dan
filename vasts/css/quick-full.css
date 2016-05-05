@@ -308,7 +308,7 @@
 .form-line select,
 .form-line input[type=text],
 .form-line input[type=password] {
-  height: 50px;
+  /*height: 50px;*/
 }
 
 .form-line.has-error .form-error {
@@ -362,8 +362,8 @@
   border-style: none;
   outline: none;
   font-size: 14px;
-  padding: 10px 3px 10px 0;
-  line-height: 30px;
+  /*padding: 10px 3px 10px 0;
+  line-height: 30px;*/
   background-color: transparent;
 }
 
@@ -1352,10 +1352,11 @@
   color: #80cac6;
   width: 1%;
   -moz-box-flex: 1;
-  /* Firefox */
   -webkit-box-flex: 1;
-  /* Safari 和 Chrome */
   flex: 1;
+  margin: 0;
+  background: #fff;
+  border: 0;
 }
 
 .modal-footer button:after {
@@ -1376,14 +1377,14 @@
   background-color: #F7F7F7;
 }
 
-.modal-footer button:first-child {
+/*.modal-footer button:first-child {
   border-bottom-left-radius: 6px;
 }
 
 .modal-footer button:last-child {
   border-bottom-right-radius: 6px;
 }
-
+*/
 .modal-footer button:last-child:after {
   border: none;
 }

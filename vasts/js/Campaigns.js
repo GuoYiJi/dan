@@ -108,8 +108,8 @@ $(function() {
 				_clone = _$parent.clone();
 				$.modal({
 					type: "html",
-					title: "兑换优惠码",
-					buttons: ["兑换", "取消"],
+					title: "Clone Campaign",
+					buttons: ["confirm", "cancel"],
 					content: '<div class="form-line"><div class="form-control"><input class="jsName" type="text" value="" placeholder="请输入优惠码"><div class="form-error"></div></div></div>'
 				}).on('modal:action', function(e) {
 					if (!e.index) {
