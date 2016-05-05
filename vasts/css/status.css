@@ -42,3 +42,6 @@
 
 .status-left::-webkit-scrollbar-corner {
   background: transparent; }
+
+.status-right {
+  margin-top: 10px; }

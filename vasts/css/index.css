@@ -210,7 +210,9 @@
     .hot-menu .navbar-nav .open > a {
       background-color: #fff; }
       .hot-menu .navbar-nav .open > a .arrow:after {
-        content: "\e259"; } }
+        content: "\e259"; }
+  .input-time {
+    margin-right: 0 !important; } }
 
 .header-menu {
   width: 100%;
