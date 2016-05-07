@@ -805,8 +805,9 @@
             <div class="form-group-block">
                 <textarea class="form-control" rows="10" style="width: 700px;"></textarea>
             </div>
+            <div id="addpath"></div>
             <div class="form-group-block">
-                <button type="button" class="btn btn-default">Create Path</button>
+                <button type="button" class="btn btn-default" id="addpath_btn">Create Path</button>
                 <button type="submit" class="btn btn-default">Create</button>
             </div>
         </div>
@@ -855,6 +856,107 @@
             }
         });
     })
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var irow = 0;
+        $('#addpath_btn').click(function(){
+            irow ++;
+            var body =
+            '<div class="row" id="path_id_'+irow+'_row">'+
+                '<div class="col-md-10">'+
+                        '<div class="form-group">'+
+                             '<label>path_'+irow+'</label>'+
+                             '<button type="button" class="btn btn-default" id="path_id_'+irow+'">Delete Path</button>'+
+                        '</div>'+
+                    '</div>'+
+            '<div class="col-md-6">'+
+                        '<div class="form-group">'+
+                             '<label>Lps</label>'+
+                             '<select  name="lps_id_'+irow+'" multiple class="form-control lps_id">'+
+
+                                '<option value="289">Direct Link</option>'+
+
+                                '<option value="290">Iraq-1</option>'+
+
+                                '<option value="291">Iraq-2</option>'+
+
+                                '<option value="292">Iraq-3</option>'+
+
+                                '<option value="296">VN-Antivirus-1</option>'+
+
+                                '<option value="297">VN-Antivirus-2</option>'+
+
+                                '<option value="298">VN-Antivirus-3</option>'+
+
+                                '<option value="299">US-Youtube</option>'+
+
+                                '<option value="300">TAG</option>'+
+
+                                '<option value="553"></option>'+
+
+                            '</select>'+
+                        '</div>'+
+
+                         '<div class="form-group">'+
+                             '<label>Offers</label>'+
+                             '<select name="offers_id_'+irow+'" multiple class="form-control offers_id">'+
+
+                                '<option value="280">Win the new IPhone 6S - Iraq </option>'+
+
+                                '<option value="281">Test Offer</option>'+
+
+                                '<option value="284">Mobusi</option>'+
+
+                                '<option value="290">VN-Antivirus</option>'+
+
+                                '<option value="291">VN-Antivirus-Black</option>'+
+
+                                '<option value="292">Win an iPhone 6S - SOI - US</option>'+
+
+                                '<option value="303">Appflood-1046</option>'+
+
+                                '<option value="304">(35998) [WEB/WAP] Win an iPhone 6S - SOI - US </option>'+
+
+                                '<option value="305">[WAP] iPhone 6 - Promotionalsurveys - SOI - US</option>'+
+
+                                '<option value="307">Myplex-Video-IN-Airtel</option>'+
+
+                                '<option value="308">Glamourtv – Sexy Video - IN</option>'+
+
+                                '<option value="313">CreativeClick_</option>'+
+
+                                '<option value="314">MY-Instagram-3.5</option>'+
+
+                                '<option value="315">MY-Antivirus-3.5</option>'+
+
+                                '<option value="316">PL-Antivirus</option>'+
+
+                                '<option value="354">CatchIP</option>'+
+
+                                '<option value="474">BigBangAds-TEST</option>'+
+
+                                '<option value="846">Offer-BR</option>'+
+
+                                '<option value="847">GEO-US</option>'+
+
+                                '<option value="848">Offer-All</option>'+
+
+                                '<option value="1971">TEST</option>'+
+
+                        '</select>'+
+                        '</div>'+
+                    '</div>'+
+                    '</div>';
+            $("#addpath").append(body);
+            $(".offers_id").select2();
+            $(".lps_id").select2();
+            $('#path_id_'+irow).click(function(){
+                $("#"+$(this).attr("id")+"_row").remove();
+            });
+            return false;
+        });
+    });
     </script>
 </body>
 

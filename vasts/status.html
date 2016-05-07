@@ -1133,7 +1133,8 @@
         })
         .tablesorterPager({
             container: $('pager'),
-            size: 10
+            size: 10,
+            output: 'showing: {startRow} to {endRow} ({filteredRows})'
         });
     $.tablesorter.columnSelector.attachTo($('#table1'), '#popover-target');
     $('#popover')
