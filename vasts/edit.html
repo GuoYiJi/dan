@@ -858,6 +858,7 @@
     })
     </script>
     <script type="text/javascript">
+
     $(document).ready(function() {
         var irow = 0;
         $('#addpath_btn').click(function(){
@@ -949,13 +950,14 @@
                     '</div>'+
                     '</div>';
             $("#addpath").append(body);
-            $(".offers_id").select2();
-            $(".lps_id").select2();
+            $('#path_id_' + irow + '_row').find('.offers_id, .lps_id').select2();
             $('#path_id_'+irow).click(function(){
                 $("#"+$(this).attr("id")+"_row").remove();
             });
             return false;
         });
+
+
     });
     </script>
 </body>
