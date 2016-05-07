@@ -45,3 +45,19 @@
 
 .status-right {
   margin-top: 10px; }
+
+.pager .prev, .pager .next, .pagecount {
+  cursor: pointer; }
+
+.pager a {
+  text-decoration: none;
+  color: black; }
+
+.pager a.current {
+  color: #0080ff; }
+
+.tablesorter-pager .disabled {
+  /* visibility: hidden */
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  cursor: default; }

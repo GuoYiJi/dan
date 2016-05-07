@@ -1,3 +1,9 @@
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
 .page-header {
   position: fixed;
   z-index: 10;
@@ -140,6 +146,9 @@
 .hot-menu .current > a {
   color: #fff;
   background-color: #188ae2; }
+
+.hot-menu .current > a:focus {
+  background-color: #188ae2 !important; }
 
 .hot-menu .dropdown-menu {
   padding: 0;
