@@ -189,7 +189,7 @@
 		& > .menu-dropdown {
 			&:hover > a {
 				color: #f1f1f1;
-				background-color: #188ae2;
+				background-color: #3c85c3;
 			}
 			&:hover > .dropdown-menu {
 
@@ -205,7 +205,7 @@
 			color: #fff;
 			&:hover {
 				color: #f1f1f1;
-				background-color: #188ae2;
+				background-color: #3c85c3;
 			}
 		}
 		.arrow {
@@ -222,22 +222,22 @@
 	.current {
 		& > a {
 			color: #fff;
-			background-color: #188ae2 ;
+			background-color: #3c85c3 ;
 		}
 		& > a:focus{
-			background-color: #188ae2 !important;
+			background-color: #3c85c3 !important;
 		}
 	}
 	.dropdown-menu {
 		padding: 0;
 		margin-top: 0;
 		box-shadow: 5px 5px rgba(85,97,111,.2);
-		background-color: #188ae2;
+		background-color: #3c85c3;
 		border-radius: 0;
 		.current {
 			a {
 				color: #ced5de;
-				background-color: #188ae2;
+				background-color: #3c85c3;
 			}
 		}
 		a {
