@@ -81,7 +81,7 @@
 			margin-bottom: 10px;
 			float: none;
 			width: 100%;
-			
+
 			@at-root #{&}.open {
 				width: 100%;
 			}
@@ -244,7 +244,7 @@
 			display: block;
 			padding: 10px 12px;
 			font-weight: 300;
-			width: 195px;
+			min-width: 195px;
 			&:hover {
 				color: #ced5de;
 				background-color: #4586be;
@@ -290,7 +290,7 @@
 				&:hover > a {
 					background-color: #fff;
 					color: #000;
-				}			
+				}
 				& > a {
 					background-color: #fff;
 					color: #000;
@@ -303,7 +303,7 @@
 					&:after {
 						content: "\e257";
 					}
-					
+
 				}
 			}
 			.open {
@@ -319,7 +319,7 @@
 						&:after {
 							content: "\e259";
 						}
-						
+
 					}
 				}
 

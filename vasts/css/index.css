@@ -163,7 +163,7 @@
     display: block;
     padding: 10px 12px;
     font-weight: 300;
-    width: 195px; }
+    min-width: 195px; }
     .hot-menu .dropdown-menu a:hover {
       color: #ced5de;
       background-color: #4586be; }
