@@ -7,6 +7,6 @@
 .smart_menu_a{display:block; height:35px; line-height:35px; color: #fff; padding:0 5px 0 25px; font-size:12px; text-decoration:none; overflow:hidden;}
 .smart_menu_a:hover, .smart_menu_a_hover{background-color:#236dad; color:#fff; text-decoration:none;}
 .smart_menu_li_separate{line-height:0; margin:3px; border-bottom:1px solid #B8CBCB; font-size:0;}
-.smart_menu_triangle{width:0; height:0; border:5px dashed transparent; border-left:5px solid #666; overflow:hidden; position:absolute; top:7px; right:5px;}
+.smart_menu_triangle{width:0; height:0; border:5px dashed transparent; border-left:5px solid #fff; overflow:hidden; position:absolute; top:12px; right:5px;}
 .smart_menu_a:hover .smart_menu_triangle, .smart_menu_a_hover .smart_menu_triangle{border-left-color:#fff;}
-.smart_menu_li_hover .smart_menu_box{top:-1px; left:130px;}
+.smart_menu_li_hover .smart_menu_box{top:-1px; left:162px;}

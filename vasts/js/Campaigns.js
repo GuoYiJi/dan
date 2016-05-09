@@ -51,19 +51,56 @@ $(function() {
 		[{
 			text: "Edit Campaign", //修改
 			func: function() {
-				var _$target;
-				_$target = $('.J_siderBar');
-				_$target.addClass('side-bar-open');
-				_$target.find('[data-target="close"]').on('click', function (){
-					_$target.removeClass('side-bar-open');
-				});
+				// var _$target;
+				// _$target = $('.J_siderBar');
+				// _$target.addClass('side-bar-open');
+				// _$target.find('[data-target="close"]').on('click', function (){
+				// 	_$target.removeClass('side-bar-open');
+				// });
 			}
 		}],
 		[{
 			text: "Report", //看报表
-			func: function() {
-
-			}
+	        data: [[{
+	            text: "Report1",
+	            func: function() {
+	            }
+	        }, {
+	            text: "Report2",
+	            func: function() {
+	            }
+	        }, {
+	            text: "Report3",
+	            func: function() {
+	            }
+	        }]]
+		}],
+		[{
+			text: "Download", //看报表
+	        data: [[{
+	            text: "Download1",
+		        data: [[{
+		            text: "Download1.1",
+		            func: function() {
+		            }
+		        }, {
+		            text: "Download1.2",
+		            func: function() {
+		            }
+		        }, {
+		            text: "Download1.3",
+		            func: function() {
+		            }
+		        }]]
+	        }, {
+	            text: "Download2",
+	            func: function() {
+	            }
+	        }, {
+	            text: "Download3",
+	            func: function() {
+	            }
+	        }]]
 		}],
 		[{
 			text: "Clone Campaign", //复制
