@@ -245,9 +245,19 @@
 			padding: 10px 12px;
 			font-weight: 300;
 			min-width: 195px;
+			span.clearfix-new{
+				width: 60px; 
+				height: 20px; 
+				background-color: #fff; 
+				text-align: center;
+				color: #337ab7; 
+				margin-left: 10px;
+			}
 			&:hover {
-				color: #ced5de;
-				background-color: #4586be;
+				background-color: #337ab7;
+				span.clearfix-new{
+					opacity: 0.8;
+				}
 			}
 		}
 	}
