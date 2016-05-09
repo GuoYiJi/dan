@@ -168,6 +168,9 @@
       color: #ced5de;
       background-color: #4586be; }
 
+.hot-menu .dropdown-menu-new a {
+  width: 275px; }
+
 .hot-menu .dropdown-submenu .arrow {
   float: right; }
 
