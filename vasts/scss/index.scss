@@ -235,6 +235,11 @@
 			background-color: #3c85c3 !important;
 		}
 	}
+	.open {
+		& > .dropdown-menu {
+			display: none;
+		}
+	}
 	.dropdown-menu {
 		padding: 0;
 		margin-top: 0;

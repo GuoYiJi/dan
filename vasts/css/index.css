@@ -122,10 +122,13 @@
   color: #f1f1f1;
   background-color: #3c85c3; }
 
+<<<<<<< HEAD
 .hot-menu .navbar-nav > .menu-dropdown:focus {
   color: #f1f1f1;
   background-color: #3c85c3; }
 
+=======
+>>>>>>> ea1f230e0892d9dde11141a477f340ff2dd9c288
 .hot-menu .navbar-nav > .menu-dropdown:hover > .dropdown-menu {
   display: block; }
 
@@ -154,6 +157,12 @@
 .hot-menu .current > a:focus {
   background-color: #3c85c3 !important; }
 
+<<<<<<< HEAD
+=======
+.hot-menu .open > .dropdown-menu {
+  display: none; }
+
+>>>>>>> ea1f230e0892d9dde11141a477f340ff2dd9c288
 .hot-menu .dropdown-menu {
   padding: 0;
   margin-top: 0;
