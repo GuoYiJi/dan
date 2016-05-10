@@ -191,6 +191,13 @@
 				color: #f1f1f1;
 				background-color: #3c85c3;
 			}
+			&:focus{
+				color: #f1f1f1;
+				background-color: #3c85c3;
+				.dropdown-menu{
+					
+				}
+			}
 			&:hover > .dropdown-menu {
 
 				display: block;

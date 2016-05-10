@@ -905,7 +905,8 @@
                 </div>
             </div>
             <div class="form-group-block">
-                <select multiple="" data-role="tagsinput">
+                <label class="">Check</label>
+                <select multiple="" data-role="tagsinput" class="col-xs-12">
                     <option value="Amsterdam" selected="selected">Amsterdam</option>
                     <option value="Washington" selected="selected">Washington</option>
                     <option value="Sydney" selected="selected">Sydney</option>
@@ -1165,7 +1166,63 @@
                 </select>
             </div>
             <div class="form-group-block">
-                <textarea class="form-control" rows="10" style="width: 700px;"></textarea>
+                <textarea class="form-control col-md-7" rows="10"></textarea>
+            </div>
+            <div class="form-grop-block">
+                <div class="new-select">
+                    <div class="form-control"><span class="red">NEW !</span> Referer filter</div>
+                    <div class="new-select-main">
+                        <p>Filter visitoFilter visitoFilter visito</p>
+                        <div class="new-select-main-content">
+                            <ul>
+                                <li>dev.facebppl</li>
+                                <li>dev.facebppl</li>
+                            </ul>
+                            <div>
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                            </div>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-select">
+                    <div class="form-control"><span class="red">NEW !</span> Referer filter</div>
+                    <div class="new-select-main">
+                        <p>Filter visitoFilter visitoFilter visito</p>
+                        <div class="new-select-main-content">
+                            <ul>
+                                <li>dev.facebppl</li>
+                                <li>dev.facebppl</li>
+                            </ul>
+                            <div>
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                            </div>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="new-select">
+                    <div class="form-control"><span class="red">NEW !</span> Referer filter</div>
+                    <div class="new-select-main">
+                        <p>Filter visitoFilter visitoFilter visito</p>
+                        <div class="new-select-main-content">
+                            <ul>
+                                <li>dev.facebppl</li>
+                                <li>dev.facebppl</li>
+                            </ul>
+                            <div>
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                                <input type="radio" name="radio">Disable filter
+                            </div>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="addpath"></div>
             <div class="form-group-block">
@@ -1184,6 +1241,10 @@
     <script>
     $(function() {
 
+        $(document).on('click','.form-control',function(){
+            $('.new-select-main').hide();
+            $(this).next().show();
+        });
 
         $('#my_multi_select1').multiSelect();
         $('#my_multi_select2').multiSelect();

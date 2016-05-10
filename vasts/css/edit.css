@@ -189,7 +189,8 @@
   border-radius: 4px;
   max-width: 100%;
   line-height: 22px;
-  cursor: text; }
+  cursor: text;
+  width: 100%; }
 
 .bootstrap-tagsinput input {
   border: none;
@@ -384,8 +385,8 @@
 .select2-container-multi .select2-choices .select2-search-choice {
   padding: 4px 7px 4px 18px;
   margin: 5px 0 3px 5px;
-  color: #555555;
-  background: #f5f5f5;
+  color: #fff;
+  background: #71b6f9;
   -webkit-box-shadow: none;
   box-shadow: none;
   line-height: 13px;
@@ -669,7 +670,7 @@
   top: 4px;
   font-size: 1px;
   outline: none;
-  background: url("../images/select2.png") right top no-repeat; }
+  background: url("../images/select2.png") -36px top no-repeat; }
 
 html[dir="rtl"] .select2-search-choice-close {
   right: auto;
@@ -683,3 +684,52 @@ html[dir="rtl"] .select2-search-choice-close {
 
 .select2-container-multi .select2-choices .select2-search-choice-focus .select2-search-choice-close {
   background-position: right -11px; }
+
+.select2-hidden-accessible {
+  display: none; }
+
+@media (min-width: 992px) {
+  .col-md-7 {
+    width: 58.33333% !important; } }
+
+.btn-default {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7; }
+  .btn-default:hover, .btn-default:focus {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    opacity: 0.8; }
+
+.new-select {
+  margin-bottom: 10px; }
+  .new-select .form-control {
+    margin-bottom: 0;
+    cursor: pointer; }
+  .new-select .red {
+    color: red; }
+  .new-select .new-select-main {
+    display: none;
+    border: 1px solid #E3E3E3;
+    border-top: 0;
+    border-radius: 0 0 4px 4px;
+    padding: 7px 12px;
+    padding-bottom: 20px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+    .new-select .new-select-main .new-select-main-content {
+      padding-left: 20px; }
+      .new-select .new-select-main .new-select-main-content li {
+        list-style-type: decimal;
+        margin-left: 20px; }
+      .new-select .new-select-main .new-select-main-content div {
+        margin: 20px 0; }
+      .new-select .new-select-main .new-select-main-content textarea {
+        width: 100%;
+        border: none;
+        background: #fafafa;
+        height: 150px; }
+    .new-select .new-select-main input[type=radio] {
+      margin-left: 10px;
+      margin-right: 5px; }
