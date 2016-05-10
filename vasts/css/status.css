@@ -21,7 +21,7 @@
     .status-left li a:hover {
       text-decoration: none; }
   .status-left li:hover, .status-left li.active {
-    background-color: #5b69bc; }
+    background-color: #337ab7; }
 
 .status-left::-webkit-scrollbar {
   width: 14px;
@@ -108,7 +108,7 @@
     border-radius: 3px;
     color: #363636; }
   .pagecount a.current {
-    background-color: #5281eb;
+    background-color: #337ab7;
     color: #fff; }
 
 .prev i, .next i {
