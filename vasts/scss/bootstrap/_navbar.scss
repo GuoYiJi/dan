@@ -462,7 +462,6 @@
       &,
       &:hover,
       &:focus {
-        background-color: $navbar-default-link-active-bg;
         color: $navbar-default-link-active-color;
       }
     }
@@ -596,7 +595,6 @@
       &,
       &:hover,
       &:focus {
-        background-color: $navbar-inverse-link-active-bg;
         color: $navbar-inverse-link-active-color;
       }
     }
@@ -615,7 +613,6 @@
           &:hover,
           &:focus {
             color: $navbar-inverse-link-hover-color;
-            background-color: $navbar-inverse-link-hover-bg;
           }
         }
         > .active > a {
@@ -623,7 +620,6 @@
           &:hover,
           &:focus {
             color: $navbar-inverse-link-active-color;
-            background-color: $navbar-inverse-link-active-bg;
           }
         }
         > .disabled > a {
