@@ -1,0 +1,43 @@
+
+.u-icon {
+	display: inline-block;
+	background: url(../images/common_icon.png) no-repeat;
+
+	@at-root {
+		#{&}-logo {
+			$w: 359px;
+			$h: 58px;
+			width: $w;
+			height: $h;
+			background-position: -37px 0;
+		}
+		#{&}-user {
+			$w: 22px;
+			$h: 21px;
+			width: $w;
+			height: $h;
+			background-position: 0 0;
+		}
+		#{&}-pass {
+			$w: 19px;
+			$h: 21px;
+			width: $w;
+			height: $h;
+			background-position: 0 -30px;
+		}
+		#{&}-email {
+			$w: 22px;
+			$h: 17px;
+			width: $w;
+			height: $h;
+			background-position: 0 -56px;
+		}
+		#{&}-name {
+			$w: 22px;
+			$h: 17px;
+			width: $w;
+			height: $h;
+			background-position: 0 -78px;
+		}
+	}
+}
