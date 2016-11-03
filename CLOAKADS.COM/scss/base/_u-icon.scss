@@ -39,5 +39,23 @@
 			height: $h;
 			background-position: 0 -78px;
 		}
+		#{&}-dashboard {
+			$size: 15px;
+			width: $size;
+			height: $size;
+			background-position: 0 -120px;
+		}
+		#{&}-create {
+			$size: 15px;
+			width: $size;
+			height: $size;
+			background-position: 0 -141px;
+		}
+		#{&}-cloak {
+			$size: 15px;
+			width: $size;
+			height: $size;
+			background-position: 0 -163px;
+		}
 	}
 }

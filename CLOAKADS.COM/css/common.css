@@ -17,6 +17,9 @@ a {
 input:focus {
   outline: none; }
 
+li {
+  list-style: none; }
+
 .u-icon {
   display: inline-block;
   background: url(../images/common_icon.png) no-repeat; }
@@ -40,6 +43,18 @@ input:focus {
     width: 22px;
     height: 17px;
     background-position: 0 -78px; }
+  .u-icon-dashboard {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -120px; }
+  .u-icon-create {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -141px; }
+  .u-icon-cloak {
+    width: 15px;
+    height: 15px;
+    background-position: 0 -163px; }
 
 .container-form {
   position: absolute;
