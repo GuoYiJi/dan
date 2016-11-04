@@ -29,8 +29,36 @@
         border: 1px solid #737373;
         border-radius: 4px;
         font-size: 12px; }
+        .table > tbody > tr .action a:last-child {
+          border-color: #ff7e78;
+          color: #ff7e78; }
         .table > tbody > tr .action a > i {
           margin-right: 10px; }
         .table > tbody > tr .action a > span {
           display: inline-block;
-          vertical-align: top; }
+          vertical-align: top;
+          line-height: 32px; }
+    .table > tbody > tr .switch {
+      position: relative;
+      -webkit-appearance: none;
+      outline: 0;
+      width: 54px;
+      height: 22px;
+      background-color: #bfbfbf;
+      border-radius: 10px;
+      cursor: pointer; }
+      .table > tbody > tr .switch:before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+        content: "";
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #fff; }
+      .table > tbody > tr .switch:checked {
+        background-color: #39a9f6; }
+        .table > tbody > tr .switch:checked:before {
+          left: auto;
+          right: 10px; }

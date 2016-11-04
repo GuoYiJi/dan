@@ -1,5 +1,12 @@
+html, body {
+  height: 100%;
+}
 header {
+  position: absolute;
+  left: 0;
+  top: 0;
   padding-left: 70px;
+  width: 100%;
   height: 60px;
   line-height: 60px;
   background-color: #f5f7f9;
@@ -7,14 +14,15 @@ header {
   font-size: 20px;
   color: #999;
 }
-
-
+main {
+  padding-top: 60px;
+  height: 100%;
+}
 .navbar {
   padding-top: 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-right: 1px solid #e7eaed;
   .avatar {
     $size: 92px;
     position: relative;
@@ -58,6 +66,8 @@ header {
   }
   @at-root {
     #{&}__item {
+      display: block;
+      padding: 0 30px;
       margin: 10px 0;
       height: 50px;
       line-height: 50px;
@@ -66,6 +76,21 @@ header {
       & > i {
         margin-right: 22px;
         vertical-align: middle;
+      }
+      @at-root {
+        #{&}-active {
+          position: relative;
+          background-color: #f5f6f7;
+          &:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #39aaf7;
+          }
+        }
       }
     }
   }

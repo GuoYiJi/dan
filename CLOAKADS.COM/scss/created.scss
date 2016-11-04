@@ -1,6 +1,7 @@
 
 .create-form {
   padding: 50px;
+  padding-bottom: 0;
   @at-root {
     #{&}__group {
       margin-bottom: 20px;
@@ -51,14 +52,10 @@
       display: inline-block;
       padding: 0 10px;
       margin: 5px;
-      margin-left: 0;
       line-height: 32px;
       border-radius: 4px;
       background-color: #ebebeb;
       color: #999;
-      &:first-child {
-        margin-left: 5px;
-      }
       & > i {
         padding-right: 5px;
         cursor: pointer;
@@ -76,18 +73,46 @@
         height: 32px;
         @at-root {
           #{&}__radio {
+            $size: 16px;
             display: flex;
             align-items: center;
-            font-size: 12px;
-            color: #999;
-            vertical-align: middle;
+            & > label {
+              margin-right: 30px;
+              line-height: $size;
+              font-size: 12px;
+              color: #999;
+            }
             input {
               display: inline-block;
             }
             input[type="radio"] {
-              margin-right: 7px;
-              font-size: 16px;
-              border-color: #6e6e6e;
+              position: absolute;
+              left: -9999em;
+              & ~ .checked {
+                position: relative;
+                display: inline-block;
+                margin-right: 7px;
+                vertical-align: middle;
+                width: $size;
+                height: $size;
+                border: 1px solid #6e6e6e;
+                border-radius: 50%;
+              }
+              &:checked ~.checked {
+                $color: #31a5f5;
+                border-color: $color;
+                &:after {
+                  $space: 2px;
+                  position: absolute;
+                  content: "";
+                  left: $space;
+                  top: $space;
+                  right: $space;
+                  bottom: $space;
+                  border-radius: 50%;
+                  background-color: $color;
+                }
+              }
             }
             input[type="text"] {
               $h: 30px;
@@ -103,27 +128,39 @@
                 background-color: #f5f5f5;
               }
             }
-            & > li {
-              margin-right: 30px;
-            }
           }
         }
       }
     }
     #{&}__checkbox {
-      ul {
-        margin-bottom: 18px;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        color: #8c8c8c;
-        li {
-          margin-right: 20px;
-          vertical-align: middle;
+      @at-root {
+        #{&}-flex {
+          margin-bottom: 18px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: #8c8c8c;
         }
-        input {
+      }
+      label {
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+      input {
+        position: absolute;
+        left: -99999em;
+        & ~ .checked {
+          $size: 16px;
           display: inline-block;
           margin-right: 10px;
+          width: $size;
+          height: $size;
+          border: 1px solid #8c8c8c;
+          border-radius: 50%;
+        }
+        &:checked ~ .checked {
+          background: url(../images/common_icon.png) no-repeat 0 -100px;
+          border: 0;
         }
       }
     }
@@ -144,6 +181,11 @@
       h3 {
         font-size: 12px;
         color: #666;
+      }
+      i {
+        font-family: "微软雅黑";
+        font-size: 24px;
+        font-weight: bold;
       }
     }
     #{&}__bd {
@@ -212,7 +254,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  padding: 20px 0;
   & > a {
     display: block;
     width: 180px;
@@ -224,4 +266,3 @@ footer {
     border-radius: 20px;
   }
 }
-
