@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  font-family: 'Myriad Pro';
+  font-family: "Roboto",sans-serif;
   font-size: 14px; }
 
 a {
@@ -58,6 +58,22 @@ table {
     width: 15px;
     height: 15px;
     background-position: 0 -163px; }
+  .u-icon-edit {
+    width: 13px;
+    height: 16px;
+    background-position: 0 -189px; }
+  .u-icon-log {
+    width: 14px;
+    height: 17px;
+    background-position: 0 -213px; }
+  .u-icon-clone {
+    width: 14px;
+    height: 15px;
+    background-position: 0 -240px; }
+  .u-icon-delete {
+    width: 14px;
+    height: 15px;
+    background-position: 0 -263px; }
 
 .container-form {
   position: absolute;
