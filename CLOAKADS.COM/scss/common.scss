@@ -2,5 +2,11 @@
 @import 'base/reset',
 				'base/u-icon',
 
-// Form
-				'pages/form';
+// Pages
+				'pages/form',
+				'pages/common',
+
+// Bootstrap
+				'bootstrap/variables',
+				'bootstrap/mixins/table-row',
+				'bootstrap/tables';
