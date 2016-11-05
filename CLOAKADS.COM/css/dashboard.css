@@ -1,5 +1,5 @@
 .table {
-  padding: 0 30px;
+  padding: 0 50px;
   width: 100%; }
   .table > thead > tr {
     height: 70px; }
@@ -29,7 +29,10 @@
         border: 1px solid #737373;
         border-radius: 4px;
         font-size: 12px; }
-        .table > tbody > tr .action a:last-child {
+        .table > tbody > tr .action a:active {
+          color: #39aaf7;
+          border-color: #39aaf7; }
+        .table > tbody > tr .action a:last-child:active {
           border-color: #ff7e78;
           color: #ff7e78; }
         .table > tbody > tr .action a > i {

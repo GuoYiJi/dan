@@ -1,5 +1,5 @@
 .table {
-	padding: 0 30px;
+	padding: 0 50px;
 	width: 100%;
 	& > thead {
 		& > tr {
@@ -38,7 +38,11 @@
 					border: 1px solid #737373;
 					border-radius: 4px;
 					font-size: 12px;
-					&:last-child {
+					&:active {
+						color: #39aaf7;
+						border-color: #39aaf7;
+					}
+					&:last-child:active {
 						border-color: #ff7e78;
 						color: #ff7e78;
 					}

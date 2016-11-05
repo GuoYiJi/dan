@@ -10,8 +10,8 @@
 <body>
   <header>
     <div class="u-cell">
-      <div class="u-cell__hd">LOGO</div>
-      <div class="u-cell__bd">Profile</div>
+      <div class="u-cell__hd" style="padding-left: 70px;">LOGO</div>
+      <div class="u-cell__bd" style="padding-left: 50px;">Profile</div>
     </div>
   </header>
   <main>
@@ -52,9 +52,9 @@
                 <div class="control__hd">Activate after X views</div>
                 <div class="control__bd">
                   <div class="control__radio">
-                    <label for="x1"><input id="x1" name="radio1" type="radio"><span class="checked"></span>Enable</label>
-                    <label for="x2"><input id="x2" name="radio1" type="radio" checked><span class="checked"></span>Disable</label>
-                    <label><input type="text" disabled value="Enter clicks count"></label>
+                    <label for="x1"><input class="J-checkRadio" data-index="0" id="x1" name="radio1" type="radio" checked><span class="checked"></span>Enable</label>
+                    <label for="x2"><input class="J-checkRadio" data-index="1" id="x2" name="radio1" type="radio"><span class="checked"></span>Disable</label>
+                    <label><input type="text" value="Enter clicks count"></label>
                   </div>
                 </div>
               </div>
@@ -62,9 +62,9 @@
                 <div class="control__hd">Activate after X views</div>
                 <div class="control__bd">
                   <div class="control__radio">
-                    <label for="x3"><input id="x3" name="radio2" type="radio" checked><span class="checked"></span>Enable</label>
-                    <label for="x4"><input id="x4" name="radio2" type="radio"><span class="checked"></span>Disable</label>
-                    <label><input type="text"></label>
+                    <label for="x3"><input class="J-checkRadio" data-index="0" id="x3" name="radio2" type="radio" checked><span class="checked"></span>Enable</label>
+                    <label for="x4"><input class="J-checkRadio" data-index="1" id="x4" name="radio2" type="radio"><span class="checked"></span>Disable</label>
+                    <label><input type="text" value="Enter clicks count"></label>
                   </div>
                 </div>
               </div>
@@ -85,51 +85,20 @@
           </div>
           <div class="create-form__group create-form__group-row">
             <h3 style="margin-bottom: 20px;">Dashboard</h3>
-            <div class="menu">
-              <div class="menu__hd">
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
                 <h3>Addling a collapsible content chunk</h3>
                 <i>+</i>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu__hd">
-                <h3>Example(copy and paste into HTML window to get started)</h3>
-                <i>+</i>
-              </div>
-            </div>
-            <div class="menu">
-              <div class="menu__hd">
-                <h3>Addling a collapsible content chunk</h3>
-                <i>-</i>
               </div>
               <div class="menu__bd">
                 <div class="menu-select">
-                  <div class="menu-select__hd">
+                  <div class="menu-select__hd J-menuSelectBtn">
                     <a href="javascript:;">Include(Whillelist)</a>
                     <a href="javascript:;">Exclube(Blacklist)</a>
                   </div>
                   <div class="menu-select__bd">
-                    <div class="create-form__input-default">
-                      <div class="create-form__tag"><i>x</i> Administrator</div>
-                      <div class="create-form__tag"><i>x</i> Administrator</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="menu" style="height: 320px;">
-              <div class="menu__hd">
-                <h3>Expand/Collapse All </h3>
-                <i>-</i>
-              </div>
-              <div class="menu__bd">
-                <div class="menu-select">
-                  <div class="menu-select__hd">
-                    <a href="javascript:;">Include(Whillelist)</a>
-                    <a href="javascript:;">Exclube(Blacklist)</a>
-                  </div>
-                  <div class="menu-select__bd">
-                    <div class="create-form__input-default">
+                    <div class="create-form__input-default J-menuSelectSub">
+                      <input type="text" />
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                     </div>
@@ -143,20 +112,103 @@
                 </div>
               </div>
             </div>
-            <div class="menu">
-            <div class="menu">
-              <div class="menu__hd">
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
+                <h3>Example(copy and paste into HTML window to get started)</h3>
+                <i>+</i>
+              </div>
+              <div class="menu__bd">
+                <div class="menu-select">
+                  <div class="menu-select__hd J-menuSelectBtn">
+                    <a href="javascript:;">Include(Whillelist)</a>
+                    <a href="javascript:;">Exclube(Blacklist)</a>
+                  </div>
+                  <div class="menu-select__bd">
+                    <div class="create-form__input-default J-menuSelectSub">
+                      <input type="text" />
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                    </div>
+                    <ul class="menu-select__sub">
+                      <li><a class="active" href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
                 <h3>Addling a collapsible content chunk</h3>
-                <i>-</i>
+                <i>+</i>
+              </div>
+              <div class="menu__bd">
+                <div class="menu-select">
+                  <div class="menu-select__hd J-menuSelectBtn">
+                    <a href="javascript:;">Include(Whillelist)</a>
+                    <a href="javascript:;">Exclube(Blacklist)</a>
+                  </div>
+                  <div class="menu-select__bd">
+                    <div class="create-form__input-default J-menuSelectSub">
+                      <input type="text" />
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                    </div>
+                    <ul class="menu-select__sub">
+                      <li><a class="active" href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
+                <h3>Expand/Collapse All </h3>
+                <i>+</i>
+              </div>
+              <div class="menu__bd">
+                <div class="menu-select">
+                  <div class="menu-select__hd J-menuSelectBtn">
+                    <a href="javascript:;">Include(Whillelist)</a>
+                    <a href="javascript:;">Exclube(Blacklist)</a>
+                  </div>
+                  <div class="menu-select__bd">
+                    <div class="create-form__input-default J-menuSelectSub">
+                      <input type="text" />
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                      <div class="create-form__tag"><i>x</i> Administrator</div>
+                    </div>
+                    <ul class="menu-select__sub">
+                      <li><a class="active" href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu J-menu">
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
+                <h3>Addling a collapsible content chunk</h3>
+                <i>+</i>
               </div>
               <div class="menu__bd">
                 <div class="menu-select">
                   <div class="menu-select__hd">
-                    <a href="javascript:;" style="background-color: #3daffe;">Include(Whillelist)</a>
-                    <a href="javascript:;" style="background-color: #ff5555;">Exclube(Blacklist)</a>
+                    <a href="javascript:;">Include(Whillelist)</a>
+                    <a href="javascript:;">Exclube(Blacklist)</a>
                   </div>
                   <div class="menu-select__bd">
-                    <div class="create-form__input-default" style="height: 100%;">
+                    <div class="create-form__input-default J-menuSelectSub"
+                    inputstyle="height: 100%;">
+                      <input type="text">
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                       <div class="create-form__tag"><i>x</i> Administrator</div>
@@ -167,23 +219,31 @@
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                       <div class="create-form__tag"><i>x</i> Administrator</div>
                     </div>
+
+                    <ul class="menu-select__sub">
+                      <li><a class="active" href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                      <li><a href="javascript:;">Administrator</a></li>
+                    </ul>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="menu">
-              <div class="menu__hd">
+            <div class="menu J-menu">
+              <div class="menu__hd J-selectToggle" data-show="hide">
                 <h3>Addling a collapsible content chunk</h3>
-                <i>-</i>
+                <i>+</i>
               </div>
               <div class="menu__bd">
                 <div class="menu-select">
                   <div class="menu-select__hd">
-                    <a href="javascript:;" style="background-color: #3daffe;">Include(Whillelist)</a>
-                    <a href="javascript:;" style="background-color: #ff5555;">Exclube(Blacklist)</a>
+                    <a href="javascript:;">Include(Whillelist)</a>
+                    <a href="javascript:;">Exclube(Blacklist)</a>
                   </div>
                   <div class="menu-select__bd">
-                    <div class="create-form__input-default" style="height: 100%;">
+                    <div class="create-form__input-default J-menuSelectSub"
+                    inputstyle="height: 100%;">
                     </div>
                   </div>
                 </div>
@@ -199,5 +259,7 @@
       <a href="javascript:;">Create</a>
     </footer>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/created.js"></script>
 </body>
 </html>
