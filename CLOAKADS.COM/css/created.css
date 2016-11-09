@@ -33,6 +33,9 @@
         border: 1px solid #9ed7ff; }
     .create-form__input-default {
       position: relative; }
+      .create-form__input-default.textarea {
+        width: 100%;
+        height: 100%; }
       .create-form__input-default > input {
         position: absolute;
         left: 0;
@@ -190,11 +193,12 @@
     .menu-select__sub {
       position: absolute;
       left: 0;
-      top: 0;
+      bottom: 0;
       right: 0;
       padding-top: 44px;
       border: 1px solid #9dd6fe;
-      display: none; }
+      display: none;
+      background-color: #fff; }
       .menu-select__sub a {
         display: block;
         padding: 0 20px;

@@ -43,6 +43,21 @@ $(function (){
   })
 
   // menu-select__bd
+
+  $('.J-inputDefault').focus(function (){
+    var menuHeight = 0, $menu, $this= $(this), $menuSub
+    $menu = $this.parents('.J-menu')
+    $menuSub = $this.next()
+    menuHeight = $menu.find('.J-selectToggle').outerHeight() + 15 + $menuSub.outerHeight()
+    $menu.height(menuHeight)
+    $menuSub.show()
+  }).blur(function (){
+    var _this = $(this)
+    setTimeout(function (){
+      _this.next().hide()
+      _this.parents('.J-menu').height('auto')
+    }, 200)
+  })
   $('.J-inputDefault input').focus(function (){
     var menuHeight = 0, $menu, $this= $(this), $menuSub
     $menu = $this.parents('.J-menu')
