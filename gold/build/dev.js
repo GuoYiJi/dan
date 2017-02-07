@@ -9,7 +9,7 @@ cooking.set({
   },
   dist: examples + '/build',
   template: examples + '/index.tpl',
-  publicPath: '/examples/build',
+  publicPath: './',
   hash: true,
   devServer: {
     hostname: '0.0.0.0',
