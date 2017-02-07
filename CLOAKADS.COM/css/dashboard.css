@@ -1,11 +1,12 @@
 .table {
-  padding: 0 30px;
+  padding: 0 50px;
   width: 100%; }
   .table > thead > tr {
     height: 70px; }
     .table > thead > tr > td {
       vertical-align: middle;
-      padding: 0; }
+      padding: 0;
+      color: #999; }
   .table > tbody > tr {
     color: #333;
     font-size: 15px; }
@@ -14,4 +15,53 @@
     .table > tbody > tr > td {
       padding: 20px 0;
       border-top: none;
-      border-bottom: 1px solid #ddd; }
+      border-bottom: 1px solid #ddd;
+      vertical-align: middle; }
+    .table > tbody > tr .action {
+      display: flex;
+      align-items: center; }
+      .table > tbody > tr .action a {
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        color: #737373;
+        border: 1px solid #737373;
+        border-radius: 4px;
+        font-size: 12px; }
+        .table > tbody > tr .action a:active {
+          color: #39aaf7;
+          border-color: #39aaf7; }
+        .table > tbody > tr .action a:last-child:active {
+          border-color: #ff7e78;
+          color: #ff7e78; }
+        .table > tbody > tr .action a > i {
+          margin-right: 10px; }
+        .table > tbody > tr .action a > span {
+          display: inline-block;
+          vertical-align: top;
+          line-height: 32px; }
+    .table > tbody > tr .switch {
+      position: relative;
+      -webkit-appearance: none;
+      outline: 0;
+      width: 54px;
+      height: 22px;
+      background-color: #bfbfbf;
+      border-radius: 10px;
+      cursor: pointer; }
+      .table > tbody > tr .switch:before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+        content: "";
+        width: 13px;
+        height: 13px;
+        border-radius: 50%;
+        background-color: #fff; }
+      .table > tbody > tr .switch:checked {
+        background-color: #39a9f6; }
+        .table > tbody > tr .switch:checked:before {
+          left: auto;
+          right: 10px; }

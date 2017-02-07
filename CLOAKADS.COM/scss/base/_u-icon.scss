@@ -57,5 +57,25 @@
 			height: $size;
 			background-position: 0 -163px;
 		}
+		#{&}-edit {
+			width: 13px;
+			height: 16px;
+			background-position: 0 -189px;
+		}
+		#{&}-log {
+			width: 14px;
+			height: 17px;
+			background-position: 0 -213px;
+		}
+		#{&}-clone {
+			width: 14px;
+			height: 15px;
+			background-position: 0 -240px;
+		}
+		#{&}-delete {
+			width: 14px;
+			height: 15px;
+			background-position: 0 -263px;
+		}
 	}
 }

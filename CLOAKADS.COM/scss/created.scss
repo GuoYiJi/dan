@@ -1,6 +1,7 @@
 
 .create-form {
   padding: 50px;
+  padding-bottom: 0;
   @at-root {
     #{&}__group {
       margin-bottom: 20px;
@@ -36,14 +37,37 @@
         border: none;
         width: 100%;
         height: 43px;
+        border: 1px solid #e1e1e1;
       }
       @at-root {
         #{&}-primary {
-          border: 1px solid #9ed7ff;
-          border-radius: 4px;
+          & > input {
+            border-radius: 4px;
+            &:hover, &:focus {
+              border: 1px solid #9ed7ff;
+            }
+          }
         }
         #{&}-default {
-          border: 1px solid #e1e1e1;
+          position: relative;
+          &.textarea {
+            width: 100%;
+            height: 100%;
+          }
+          & > input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            border: 1px solid #e1e1e1;
+            &:hover, &:focus {
+              border: 1px solid #9ed7ff;
+            }
+          }
         }
       }
     }
@@ -51,14 +75,10 @@
       display: inline-block;
       padding: 0 10px;
       margin: 5px;
-      margin-left: 0;
       line-height: 32px;
       border-radius: 4px;
       background-color: #ebebeb;
       color: #999;
-      &:first-child {
-        margin-left: 5px;
-      }
       & > i {
         padding-right: 5px;
         cursor: pointer;
@@ -68,6 +88,7 @@
       padding: 0 16px;
       flex: 1;
       background-color: #fafafa;
+      border: 1px solid #e1e1e1;
       .control {
         margin: 15px 0;
         display: flex;
@@ -76,18 +97,46 @@
         height: 32px;
         @at-root {
           #{&}__radio {
+            $size: 16px;
             display: flex;
             align-items: center;
-            font-size: 12px;
-            color: #999;
-            vertical-align: middle;
+            & > label {
+              margin-right: 30px;
+              line-height: $size;
+              font-size: 12px;
+              color: #999;
+            }
             input {
               display: inline-block;
             }
             input[type="radio"] {
-              margin-right: 7px;
-              font-size: 16px;
-              border-color: #6e6e6e;
+              position: absolute;
+              left: -9999em;
+              & ~ .checked {
+                position: relative;
+                display: inline-block;
+                margin-right: 7px;
+                vertical-align: middle;
+                width: $size;
+                height: $size;
+                border: 1px solid #6e6e6e;
+                border-radius: 50%;
+              }
+              &:checked ~.checked {
+                $color: #31a5f5;
+                border-color: $color;
+                &:after {
+                  $space: 2px;
+                  position: absolute;
+                  content: "";
+                  left: $space;
+                  top: $space;
+                  right: $space;
+                  bottom: $space;
+                  border-radius: 50%;
+                  background-color: $color;
+                }
+              }
             }
             input[type="text"] {
               $h: 30px;
@@ -103,27 +152,39 @@
                 background-color: #f5f5f5;
               }
             }
-            & > li {
-              margin-right: 30px;
-            }
           }
         }
       }
     }
     #{&}__checkbox {
-      ul {
-        margin-bottom: 18px;
-        display: flex;
-        align-items: center;
-        font-size: 14px;
-        color: #8c8c8c;
-        li {
-          margin-right: 20px;
-          vertical-align: middle;
+      @at-root {
+        #{&}-flex {
+          margin-bottom: 18px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: #8c8c8c;
         }
-        input {
+      }
+      label {
+        margin-right: 20px;
+        vertical-align: middle;
+      }
+      input {
+        position: absolute;
+        left: -99999em;
+        & ~ .checked {
+          $size: 16px;
           display: inline-block;
           margin-right: 10px;
+          width: $size;
+          height: $size;
+          border: 1px solid #8c8c8c;
+          border-radius: 50%;
+        }
+        &:checked ~ .checked {
+          background: url(../images/common_icon.png) no-repeat 0 -100px;
+          border: 0;
         }
       }
     }
@@ -141,9 +202,17 @@
       border: 1px solid #e3e3e3;
       border-radius: 4px;
       background-color: #fafafa;
+      cursor: pointer;
       h3 {
         font-size: 12px;
         color: #666;
+      }
+      i {
+        display: block;
+        font-family: "微软雅黑";
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
       }
     }
     #{&}__bd {
@@ -151,6 +220,7 @@
       height: 130px;
       border: 1px solid #e3e3e3;
       background-color: #fff;
+      display: none;
     }
     #{&}-select {
       display: flex;
@@ -169,25 +239,31 @@
             &:first-child {
               margin-bottom: 10px;
               background-color: #b2b2b2;
+              &.active {
+                background-color: #3daffe;
+              }
             }
             &:last-child {
               margin-bottom: 0;
               background-color: #999;
+              &.active {
+                background-color: #ff5555;
+              }
             }
           }
         }
         #{&}__bd {
           position: relative;
           flex: 1;
-
         }
         #{&}__sub {
           position: absolute;
           left: 0;
-          top: 0;
           right: 0;
           padding-top: 44px;
           border: 1px solid #9dd6fe;
+          display: none;
+          background-color: #fff;
           a {
             display: block;
             padding: 0 20px;
@@ -196,9 +272,6 @@
             color: #666;
             background-color: #fff;
             &:hover {
-              background-color: #f2f2f2;
-            }
-            &.active {
               background-color: #2ba2f4;
               color: #fff;
             }
@@ -212,7 +285,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  padding: 20px 0;
   & > a {
     display: block;
     width: 180px;
@@ -224,4 +297,3 @@ footer {
     border-radius: 20px;
   }
 }
-

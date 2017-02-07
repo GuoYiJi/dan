@@ -1,11 +1,12 @@
 .table {
-	padding: 0 30px;
+	padding: 0 50px;
 	width: 100%;
 	& > thead {
 		& > tr {
 			& > td {
 				vertical-align: middle;
 				padding: 0;
+				color: #999;
 			}
 			height: 70px;
 		}
@@ -16,7 +17,6 @@
 			font-size: 15px;
 			&:first-child {
 				& > td {
-
 					border-top: 1px solid #ddd;
 				}
 			}
@@ -24,6 +24,66 @@
 				padding: 20px 0;
 				border-top: none;
 				border-bottom: 1px solid #ddd;
+				vertical-align: middle;
+			}
+			.action {
+				display: flex;
+				align-items: center;
+				a {
+					margin-right: 12px;
+					display: flex;
+					align-items: center;
+					padding: 0 10px;
+					color: #737373;
+					border: 1px solid #737373;
+					border-radius: 4px;
+					font-size: 12px;
+					&:active {
+						color: #39aaf7;
+						border-color: #39aaf7;
+					}
+					&:last-child:active {
+						border-color: #ff7e78;
+						color: #ff7e78;
+					}
+					& > i {
+						margin-right: 10px;
+					}
+					& > span {
+						display: inline-block;
+						vertical-align: top;
+						line-height: 32px;
+					}
+				}
+			}
+			.switch {
+				position: relative;
+				-webkit-appearance: none;
+				outline: 0;
+				width: 54px;
+				height: 22px;
+				background-color: #bfbfbf;
+				border-radius: 10px;
+				cursor: pointer;
+				&:before {
+					position: absolute;
+					left: 10px;
+					top: 50%;
+					transform: translate(0, -50%);
+					$size: 13px;
+					content: "";
+					width: $size;
+					height: $size;
+					border-radius: 50%;
+					background-color: #fff;
+				}
+				&:checked {
+					background-color: #39a9f6;
+					&:before {
+						left: auto;
+						right: 10px;
+					}
+				}
 			}
 		}
 	}
