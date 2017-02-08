@@ -6,21 +6,27 @@ header {
   left: 0;
   right: 0;
   height: 4em;
-  background-color: #fff;
-  border: 1px solid #f1f1f1;
+  background-color: #000;
+  color: #fff;
   .logo-text {
     padding-left: 2.3em;
     letter-spacing: .2em;
-    color: #000;
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+      .logo-text {
+        display: none;
+      }
   }
   .actions {
     float: left;
     .item {
       display: inline-block;
-      padding: 1em .75em;
-      vertical-align: middle;
+      padding: 1.25em .75em;
+      vertical-align: top;
       @at-root {
         #{&}-image {
+          padding: 1em .75em;
           img {
             height: 2em;
           }
@@ -41,6 +47,11 @@ header {
             background-color: transparent;
           }
         }
+        @media (max-width: 600px) {
+          #{&}-input {
+            display: none;
+          }
+        }
       }
 
     }
@@ -51,7 +62,7 @@ header {
           display: inline-block;
           padding: .15em .8em;
           font-size: .9em;
-          color: #000;
+          color: #fff;
           &.register {
             padding-right: 0;
           }

@@ -3,7 +3,12 @@
 	    position: fixed;
 	    top: 5em;
 	    display: inline-block;
-	    width: 140px
+	    width: 140px;
+	    @media (max-width: 600px) {
+	    	& {
+	    		display: none;
+	    	}
+	    }
 	}
 	.aside-list {
 	    color: #909090
@@ -22,7 +27,7 @@
 	}
 
 	.aside-list>li.true,.aside-list>li:active,.aside-list>li:hover {
-	    color: #007fff;
+	    color: #fff;
 	    background-color: hsla(0,0%,87%,.2);
 	    border-radius: 2px
 	}
