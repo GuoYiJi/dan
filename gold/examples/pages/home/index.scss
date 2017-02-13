@@ -24,3 +24,45 @@
 .welcome header .action-input {
     padding: 1em .75em
 }
+
+.video {
+  @at-root {
+    #{&}-box {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: #fff;
+    }
+    #{&}__item {
+      padding: 2px;
+      flex: 0 0 31%;
+      & > .hd {
+        & > img {
+          display: block;
+          width: 100%;
+          height: 150px;
+        }
+      }
+      & > .bd {
+        h3 {
+          margin: 0;
+          padding: 10px 5px 0;
+          font-size: 14px;
+        }
+        .avatar {
+          $size: 24px;
+          line-height: $size;
+          font-size: 12px;
+          color: #999;
+          & > img {
+            margin-right: 5px;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+}
