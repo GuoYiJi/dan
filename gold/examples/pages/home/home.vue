@@ -45,6 +45,18 @@
               </div>
             </div>
           </div>
+          <div class="btns">
+            <i>1</i>
+            <i>2</i>
+            <i>3</i>
+            <i>4</i>
+            <i>5</i>
+            <i>6</i>
+            <i>7</i>
+            <i>8</i>
+            <i>9</i>
+            <i>Next</i>
+          </div>
         </div>
       </div>
     </div>
@@ -53,14 +65,14 @@
       <i class="ion-close-round close-icon" @click="show = false"></i>
       <span class="text-alert text-small float-right"></span>
       <div class="login" v-if="toggleType === 'login'">
-        <label class="login-label">登录</label><p class="input-relative"><input type="text" name="emailOrPhone" placeholder="邮箱/手机" required="" class="welcome-input login-email-or-phone-inpput"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" required="" class="welcome-input"></p><button class="fullwidth welcome-large-btn">登录</button><div class="login-text"><a href="/reset-password"><span class="text-blue to-reset-password-text">忘记密码</span></a><span class="text-blue to-register-text" @click.stop="toggleAction('register')">注册账户</span></div>
+        <label class="login-label">登录</label><p class="input-relative"><input type="text" name="emailOrPhone" placeholder="邮箱/手机" required="" class="welcome-input login-email-or-phone-inpput"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" required="" class="welcome-input"></p><button class="fullwidth welcome-large-btn">登录</button><div class="login-text"><a href="/reset-password"><span class="to-reset-password-text">忘记密码</span></a><span class="to-register-text" @click.stop="toggleAction('register')">注册账户</span></div>
       </div>
       <div class="register" v-else>
         <label class="login-label">请先注册</label>
         <p class="input-relative">
           <input type="text" name="username" placeholder="昵称" maxlength="20" tabindex="1" required="" autofocus="" class="welcome-input register-username-input">
         </p>
-        <p class="input-relative"><input type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" required="" class="welcome-input"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" tabindex="4" required="" class="welcome-input"><!--v-if--></p><button class="fullwidth welcome-large-btn">立即注册</button><div class="to-login-text text-center text-blue" @click.stop="toggleAction('login')">已有账号登录</div>
+        <p class="input-relative"><input type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" required="" class="welcome-input"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" tabindex="4" required="" class="welcome-input"></p><button class="fullwidth welcome-large-btn">立即注册</button><div class="to-login-text text-center" @click.stop="toggleAction('login')">已有账号登录</div>
       </div>
     </div>
   </div>

@@ -4329,7 +4329,7 @@ header .home-logo {
     border: none;
     padding: .5em;
     font-size: .8em;
-    color: rgba(0,0,0,.3);
+    color: #fff;
     background: transparent
 }
 
@@ -4364,7 +4364,9 @@ header .home-logo {
     width: 100%;
     min-height: 366px;
     padding-left: 9.7em;
-    padding-top: 1em
+    padding-top: 1em;
+    overflow: hidden;
+    text-align: center;
 }
 
 .welcome .entry-box {
@@ -4936,7 +4938,8 @@ header .home-logo {
 }
 
 .welcome .welcome-large-btn {
-    padding: .7em
+    padding: .7em;
+    background-color: #000;
 }
 
 .welcome .to-login-text {
