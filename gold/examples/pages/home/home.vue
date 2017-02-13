@@ -3,7 +3,7 @@
 </style>
 <template>
   <div class="welcome">
-    <x-header></x-header>
+    <x-header v-on:toggle="handleToggle"></x-header>
     <div class="main">
       <div class="container">
         <x-nav></x-nav>
@@ -20,8 +20,24 @@
         <x-right></x-right>
       </div>
     </div>
-    <div class="hero-cover welcome-hero-cover"></div>
-    <div class="login-cover"><i class="ion-close-round close-icon"></i><span class="text-alert text-small float-right"></span><!--v-if--><div class="register"><label class="login-label">请先注册</label><p class="input-relative"><input type="text" name="username" placeholder="昵称" maxlength="20" tabindex="1" required="" autofocus="" class="welcome-input register-username-input"><!--v-if--></p><p class="input-relative"><input type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" required="" class="welcome-input"><!--v-if--></p><!--v-if--><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" tabindex="4" required="" class="welcome-input"><!--v-if--></p><button class="fullwidth welcome-large-btn">立即注册</button><div class="to-login-text text-center text-blue">已有账号登录</div></div><!--v-if--><div class="other-platform"><span class="text-muted other-platform-text">第三方账号登录：</span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/weibo.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/wechat.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/github.svg" class="inline"></span></div></div>
+    <div class="hero-cover welcome-hero-cover" :class="{ 'open': show }"></div>
+    <div class="login-cover" :class="{ 'open': show }">
+      <i class="ion-close-round close-icon" @click="show = false"></i>
+      <span class="text-alert text-small float-right"></span>
+      <div class="login" v-if="toggleType === 'login'">
+        <label class="login-label">登录</label><p class="input-relative"><input type="text" name="emailOrPhone" placeholder="邮箱/手机" required="" class="welcome-input login-email-or-phone-inpput"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" required="" class="welcome-input"></p><button class="fullwidth welcome-large-btn">登录</button><div class="login-text"><a href="/reset-password"><span class="text-blue to-reset-password-text">忘记密码</span></a><span class="text-blue to-register-text" @click.stop="toggleAction('register')">注册账户</span></div>
+      </div>
+      <div class="register" v-else>
+        <label class="login-label">请先注册</label>
+        <p class="input-relative">
+          <input type="text" name="username" placeholder="昵称" maxlength="20" tabindex="1" required="" autofocus="" class="welcome-input register-username-input">
+        </p>
+        <p class="input-relative"><input type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" required="" class="welcome-input"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" tabindex="4" required="" class="welcome-input"><!--v-if--></p><button class="fullwidth welcome-large-btn">立即注册</button><div class="to-login-text text-center text-blue" @click.stop="toggleAction('login')">已有账号登录</div>
+      </div>
+      <div class="other-platform">
+        <span class="text-muted other-platform-text">第三方账号登录：</span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/weibo.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/wechat.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/github.svg" class="inline"></span>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -36,9 +52,18 @@
     },
     data() {
       return {
+        show: false,
+        toggleType: 'login'
       }
     },
     methods: {
+      handleToggle(type){
+        this.show = !this.show
+        this.toggleType = type
+      },
+      toggleAction(type){
+        this.toggleType = type
+      }
     },
     mounted(){
     }

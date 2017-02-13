@@ -3,7 +3,8 @@
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    font-size: 16px;
 }
 
 body {
@@ -4172,7 +4173,7 @@ i+i,i+span,span+i {
 }
 
 .aside-list>li.true,.aside-list>li:active,.aside-list>li:hover {
-    color: #007fff;
+    color: #fff;
     background-color: hsla(0,0%,87%,.2);
     border-radius: 2px
 }
@@ -4213,9 +4214,108 @@ body {
     background-color: #f4f5f5
 }
 
+
+
+
+header {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    height: 4em
+}
+
+header .invite-tag {
+    cursor: pointer;
+    position: absolute;
+    right: 5.18em;
+    top: 4em;
+    padding: .4em 1em .5em;
+    background-color: #007fff;
+    border-radius: 3px;
+    z-index: 10
+}
+
+header .invite-tag:before {
+    width: .8rem;
+    height: .8rem;
+    background-color: #007fff;
+    content: '';
+    position: absolute;
+    left: 50%;
+    margin-left: -.4rem;
+    top: -.4rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+header .invite-tag .text {
+    display: inline-block;
+    font-size: .8em;
+    color: #fff
+}
+
+header .invite-tag .close {
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 1em;
+    position: relative;
+    top: .05em;
+    color: #fff
+}
+
+header .action {
+    padding: 1.25em .75em;
+    vertical-align: top
+}
+
+header .action-image {
+    padding: 1em .75em
+}
+
+header .header-icon {
+    font-size: 1.2em;
+    line-height: 1.25em
+}
+
+header .dropdown-list {
+    top: 4em;
+    left: auto;
+    right: 0
+}
+
+header .avatar-block {
+    position: relative;
+    height: 2em
+}
+
+header .avatar-block .have-new {
+    position: absolute;
+    top: -.1em;
+    right: -.1em;
+    background-color: #e22323;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: 1px solid #fff
+}
+
+header .avatar.inline {
+    width: 2em;
+    height: 2em
+}
+
+header .home-logo {
+    height: 2em
+}
+
 .welcome .header-logo-text {
     letter-spacing: .2em;
-    padding-left: 2.3em
+    padding-left: 2.3em;
+    color: #fff;
 }
 
 .welcome .tag-input-block {
