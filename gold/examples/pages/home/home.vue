@@ -34,9 +34,6 @@
         </p>
         <p class="input-relative"><input type="text" name="phoneOrEmail" placeholder="邮箱/手机" tabindex="2" required="" class="welcome-input"></p><p class="input-relative"><input type="password" name="password" placeholder="密码" minlength="6" tabindex="4" required="" class="welcome-input"><!--v-if--></p><button class="fullwidth welcome-large-btn">立即注册</button><div class="to-login-text text-center text-blue" @click.stop="toggleAction('login')">已有账号登录</div>
       </div>
-      <div class="other-platform">
-        <span class="text-muted other-platform-text">第三方账号登录：</span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/weibo.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/wechat.svg" class="inline"></span><span class="other-platform-img"><img src="https://gold-cdn.xitu.io/images/register-login/github.svg" class="inline"></span>
-      </div>
     </div>
   </div>
 </template>
