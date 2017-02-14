@@ -51,9 +51,10 @@
       & > .bd {
         h3 {
           margin: 0;
+          margin-bottom: 5px;
           padding: 10px 5px 0;
           font-size: 14px;
-          color: #fff;
+          color: #999;
         }
         .avatar {
           $size: 24px;
@@ -99,10 +100,16 @@
     display: inline-block;
     padding: 2px 5px;
     line-height: 20px;
-    background: #999;
+    background: #f0f2f4;
     color: #000;
     font-style: normal;
     font-size: 15px;
+    cursor: pointer;
+    opacity: .8;
+    &:hover {
+      background: #f0f2f4;
+      opacity: 1;
+    }
   }
 
   i + i {
