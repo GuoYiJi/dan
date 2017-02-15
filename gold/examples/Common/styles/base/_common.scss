@@ -4603,3 +4603,13 @@ header .home-logo {
         margin: 1em auto .5em
     }
 }
+// flex布局单行文字截断
+.nowrap-flex {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    -webkit-box-flex: 1;
+    height: inherit;
+}
