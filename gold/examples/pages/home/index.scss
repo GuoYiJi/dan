@@ -17,12 +17,12 @@
 
 .welcome header .action-input {
     padding: 1em .75em
-}
-
-.video {
-  @at-root {
-    #{&}-box {
-      display: flex;
+}    
+    
+.video {    
+  @at-root {    
+    #{&}-box {    
+      display: flex;    
       flex-direction: row;
       flex-wrap: wrap;
       margin-right: -20px;
@@ -100,15 +100,23 @@
     display: inline-block;
     padding: 2px 5px;
     line-height: 15px;
-    background: #f0f2f4;
-    color: #000;
+    color: #cdcdcd;
     font-style: normal;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
-    opacity: .8;
-    &:hover {
-      background: #f0f2f4;
-      opacity: 1;
+    &:last-child {
+      position: relative;
+      padding-left: 62px;
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -1px;
+        width: 50px;
+        height: 2px;
+        content: "";
+        background: #282828;
+      }
     }
   }
 
