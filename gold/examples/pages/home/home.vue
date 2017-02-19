@@ -10,37 +10,58 @@
         <div class="welcome-center">
           <div class="video-box">
             <div class="video__item">
-              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""></div>
+              <div class="hd"><img src="./1.png"><i>11:11</i></div>
               <div class="bd">
-                <h3>33 个 2017 年必须了解的 iOS 开源库</h3>
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
                 <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
               </div>
             </div>
             <div class="video__item">
-              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""></div>
+              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""><i>11:11</i></div>
               <div class="bd">
-                <h3>33 个 2017 年必须了解的 iOS 开源库</h3>
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
                 <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
               </div>
             </div>
             <div class="video__item">
-              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""></div>
+              <div class="hd"><img src="./2.png"><i>11:11</i></div>
               <div class="bd">
-                <h3>33 个 2017 年必须了解的 iOS 开源库</h3>
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库开源库开源库</h3>
                 <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
               </div>
             </div>
             <div class="video__item">
-              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""></div>
+              <div class="hd"><img src="./3(1).png"><i>11:11</i></div>
               <div class="bd">
-                <h3>33 个 2017 年必须了解的 iOS 开源库</h3>
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
                 <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
               </div>
             </div>
             <div class="video__item">
-              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""></div>
+              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""><i>11:11</i></div>
               <div class="bd">
-                <h3>33 个 2017 年必须了解的 iOS 开源库</h3>
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
+                <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
+              </div>
+            </div>
+            <div class="video__item">
+              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""><i>11:11</i></div>
+              <div class="bd">
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
+                <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
+              </div>
+            </div>
+            <div class="video__item">
+              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""><i>11:11</i></div>
+              <div class="bd">
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
+                <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
+              </div>
+            </div>
+            <div class="video__item">
+              <div class="hd"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt=""><i>11:11</i></div>
+              <div class="bd">
+                <h3 class="nowrap-flex">33 个 2017 年必须了解的 iOS 开源库</h3>
                 <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
               </div>
             </div>
@@ -53,9 +74,10 @@
             <i>5</i>
             <i>6</i>
             <i>7</i>
-            <i>8</i>
-            <i>9</i>
-            <i>Next</i>
+            <i>...</i>
+            <i>10</i>
+            <i>20</i>
+            <i>NEXT</i>
           </div>
         </div>
       </div>
@@ -80,12 +102,10 @@
 <script>
   import xHeader from '../../components/x-header.vue'
   import xNav from '../../components/x-nav.vue'
-  import xRight from '../../components/x-right.vue'
   export default {
     components: {
       'x-header': xHeader,
-      'x-nav': xNav,
-      'x-right': xRight
+      'x-nav': xNav
     },
     data() {
       return {
