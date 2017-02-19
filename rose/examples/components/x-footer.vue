@@ -1,7 +1,6 @@
 <style lang="scss">
-	footer {
-		padding: 84px 0;
-		height: 570px;
+	.footer {
+		padding: 80px 0;
 		background-color: #2e2e2c;
 		.main {
 			margin: 0 auto;
@@ -40,7 +39,7 @@
 	}
 </style>
 <template>
-	<footer>
+	<div class="footer">
 		<div class="main">
 			<div class="work-box">
 				<h2>Work</h2>
@@ -61,5 +60,5 @@
 			</div>
 			<div class="about-box"></div>
 		</div>
-	</footer>
+	</div>
 </template>
