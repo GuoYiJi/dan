@@ -1,24 +1,24 @@
 <style lang="scss">
   @import '../Common/styles/base/vars';
   .header {
+    display: flex;
     padding: 25px 60px;
     height: 110px;
     @at-root {
       #{&}__logo {
         $w: 175px;
         $h: 42px;
-        float: left;
         margin-right: 65px;
         width: $w;
         height: $h;
         background: url(logo.png) no-repeat;
       }
       #{&}__list {
-        float: left;
+        flex: 1;
         padding: 15px;
         height: 100%;
         li {
-          padding-right: 50px;
+          padding-right: 2.6%;
           float: left;
           height: 100%;
           &.current {

@@ -1,17 +1,93 @@
-
+.container {
+  overflow: hidden;
+}
 .banner {
   height: 806px;
-  background-color: red;
-  @at-root {
-  }
 }
 
+
 .pic-box1 {
-  height: 1084px;
-  background-color: blue;
+  .tit {
+    $w: 670px;
+    $h: 177px;
+    margin: 0 auto;
+    width: $w;
+    height: $h;
+    background: url(box1-tit.png) no-repeat;
+    background-size: $w $h;
+  }
+  ul {
+    display: flex;
+    margin-top: 70px;
+    width: 100%;
+    li {
+      flex: 1;
+      cursor: pointer;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      &:hover, &.current {
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 4px;
+          background-color: #ee6a4d;
+        }
+      }
+    }
+  }
 }
 .pic-box2 {
+
+  padding-bottom: 70px;
+  position: relative;
   background-color: #f9f7f6;
+  .btns {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 70px;
+    & > i {
+      $size: 45px;
+      width: $size;
+      height: $size;
+      background-color: red;
+    }
+    .btn-prev {
+      float: left;
+    }
+    .btn-next {
+      float: right;
+    }
+  }
+  .tit {
+    $w: 670px;
+    $h: 168px;
+    margin: 78px auto;
+    width: $w;
+    height: $h;
+    background: url(box2-tit.png) no-repeat;
+    background-size: $w $h;
+  }
+
+  .num {
+    $size: 62px;
+    display: flex;
+    position: absolute;
+    width: $size;
+    height: $size;
+    background-color: #fff;
+    font-size: 32px;
+    font-style: italic;
+    align-items: center;
+    justify-content: center;
+  }
   .pic-block-big {
     height: 570px;
     .pic-item {
@@ -22,7 +98,6 @@
         float: left;
         width: 50%;
         height:50%;
-        background-color: red;
       }
       @at-root {
         #{&}-1 {
@@ -37,24 +112,37 @@
             position: absolute;
             right: 0;
             top: 0;
-            bottom: 60%;
             width: 40%;
-            background-color: #fff;
+            width: 531px;
+            height: 286px;
+            background: url(box2/1-tit.png) no-repeat;
+          }
+        }
+        #{&}-2 {
+          img {
+            display: block;
+            max-width: 100%;
+            height: 100%;
+          }
+          li {
+            position: relative;
           }
         }
       }
     }
   }
   .pic-block-small {
-    padding-bottom: 70px;
     .pic-item {
       float: left;
       width: 50%;
-      height: 290px;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
       @at-root {
         #{&}-3 {
           .bg {
-
             float: right;
             width: 50%;
             height: 100%;
@@ -62,11 +150,10 @@
         }
         #{&}-4 {
           .bg {
-
+            position: relative;
             float: left;
             width: 50%;
             height: 100%;
-            background-color: blue;
           }
         }
       }
@@ -105,7 +192,10 @@
           display: inline-block;
           width: 17%;
           height: 210px;
-          background-color: yellow;
+          img {
+            max-width: 100%;
+            height: 100%;
+          }
         }
         .link {
           position: relative;
@@ -144,6 +234,48 @@
     }
     &.share {
       background-color: #f08068;
+    }
+  }
+}
+
+
+.item_box { width: 100%; padding: 0px 0px 82px 0px; overflow: hidden;}
+.item_box_wp { width: 1180px; margin:0 auto;}
+.item_box_wp .title h1 { font-size: 36px; color: #3f616c;}
+.item_box_wp .title h2 { font-size: 18px; color: #aaa;}
+.item_box_wp h3 { color: #67b83d; font-size: 36px; margin: 74px 0px 50px 0px;}
+.item_box_wp h4 { color: #3f616c; font-size: 36px; margin: 65px 0px 25px 0px; text-align: center;}
+
+
+.voice_2 { width: 100%; position: relative; left: 50%; transform: translateX(-50%)}
+.voice_2 ul li { float: left; overflow: hidden; height: 806px; color: #fff; cursor: pointer; position: relative;}
+.voice {
+  @at-root {
+    #{&}_2 {
+      .unfold {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 215px;
+        background: #fff;
+        color: #3e3d3b;
+        flex-direction: column;
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+    #{&}__hd {
+      img {
+        display: block;
+      }
     }
   }
 }
