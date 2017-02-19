@@ -1,0 +1,6 @@
+$rem: 48;
+
+
+@mixin px2($px){
+	@return ($px / 2) * 1px
+}

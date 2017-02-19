@@ -1,0 +1,18 @@
+*.log
+.cache
+.DS_Store
+.idea
+node_modules
+.gitkeep
+converage
+# Logs
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+*.pid
+.tmp
+App/**/dist/*.css
+App/**/dist/*.js

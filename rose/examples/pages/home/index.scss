@@ -1,0 +1,149 @@
+
+.banner {
+  height: 806px;
+  background-color: red;
+  @at-root {
+  }
+}
+
+.pic-box1 {
+  height: 1084px;
+  background-color: blue;
+}
+.pic-box2 {
+  background-color: #f9f7f6;
+  .pic-block-big {
+    height: 570px;
+    .pic-item {
+      float: left;
+      width: 50%;
+      height: 100%;
+      li {
+        float: left;
+        width: 50%;
+        height:50%;
+        background-color: red;
+      }
+      @at-root {
+        #{&}-1 {
+          position: relative;
+          img {
+            margin-left: 8px;
+            display: block;
+            width: 70%;
+            height: 100%;
+          }
+          .bg {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 60%;
+            width: 40%;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .pic-block-small {
+    padding-bottom: 70px;
+    .pic-item {
+      float: left;
+      width: 50%;
+      height: 290px;
+      @at-root {
+        #{&}-3 {
+          .bg {
+
+            float: right;
+            width: 50%;
+            height: 100%;
+          }
+        }
+        #{&}-4 {
+          .bg {
+
+            float: left;
+            width: 50%;
+            height: 100%;
+            background-color: blue;
+          }
+        }
+      }
+    }
+  }
+}
+.pic-box3 {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+.pic-box4 {
+  padding: 75px 2.5%;
+  .main {
+    padding: 0 55px;
+    height: 100%;
+    background-color: #f9f7f6;
+    @at-root {
+      #{&}__hd {
+        $w: 555px;
+        $h: 110px;
+        margin-top: 70px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
+        width: $w;
+        height: $h;
+        background: url(box4-tit.png) no-repeat;
+        background-size: contain;
+      }
+      #{&}__bd {
+        text-align: center;
+        li {
+          display: inline-block;
+          width: 17%;
+          height: 210px;
+          background-color: yellow;
+        }
+        .link {
+          position: relative;
+          margin-top: 35px;
+          width: 100%;
+          height: 4px;
+          background-color: #e6e0dc;
+          & > i {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 17%;
+            background-color: #ee6a4d;
+          }
+        }
+        .desc {
+          padding-top: 15px;
+          padding-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+.ft-btns {
+  color: #fff;
+  .btn {
+    float: left;
+    width: 50%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    &.like {
+      background-color: #ee6a4d;
+    }
+    &.share {
+      background-color: #f08068;
+    }
+  }
+}
