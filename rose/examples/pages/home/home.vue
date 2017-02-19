@@ -99,6 +99,7 @@
   </div>
 </template>
 <script>
+  import $ from 'jQuery'
   import xHeader from '../../components/x-header.vue'
   import xFooter from '../../components/x-footer.vue'
   export default {
@@ -122,7 +123,6 @@
       }
     },
     mounted(){
-      var $ = window.$
       $(".voice_2 ul li").each(function(){
         if ($(this).index() === 0) {
           $(this).width('58%');
