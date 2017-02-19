@@ -43,6 +43,8 @@
     }
   }
 }
+
+
 .pic-box2 {
 
   padding-bottom: 70px;
@@ -128,6 +130,11 @@
             position: relative;
           }
         }
+      }
+    }
+    @media (max-width: 767px) {
+      .pic-item {
+        width: 100%;
       }
     }
   }
@@ -275,6 +282,47 @@
     #{&}__hd {
       img {
         display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .pic-box1 {
+
+    ul {
+      padding: 0 5px;
+      flex-wrap: wrap;
+
+      li {
+        margin-bottom: 10px;
+        padding: 0 10px;
+        flex: 0 0 50%;
+        &.current {
+          &:after {
+            left: 10px;
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .pic-box4 {
+
+    .main {
+      @at-root {
+        #{&}__hd {
+        }
+        #{&}__bd {
+          li {
+            float: left;
+            width: 50%;
+          }
+          .link {
+          }
+          .desc {
+          }
+        }
       }
     }
   }
