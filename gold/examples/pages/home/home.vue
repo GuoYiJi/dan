@@ -66,6 +66,16 @@
               </div>
             </div>
           </div>
+          <div class="tag-container tag-box">
+            <div class="tag__item"><img src="" alt="">#sex</div>
+            <div class="tag__item"><img src="" alt="">#sexsexsex</div>
+            <div class="tag__item"><img src="" alt="">#sex</div>
+            <div class="tag__item"><img src="" alt="">#sexsexsex</div>
+            <div class="tag__item"><img src="" alt="">#sexsexsex</div>
+            <div class="tag__item"><img src="" alt="">#sex</div>
+            <div class="tag__item"><img src="" alt="">#sexsexsex</div>
+            <div class="tag__item"><img src="" alt="">#sex</div>
+          </div>
           <div class="btns">
             <i>1</i>
             <i>2</i>
@@ -100,6 +110,7 @@
   </div>
 </template>
 <script>
+  const $ = require('jquery')
   import xHeader from '../../components/x-header.vue'
   import xNav from '../../components/x-nav.vue'
   export default {
@@ -123,6 +134,7 @@
       }
     },
     mounted(){
+      $('.tag-container').rowGrid({minMargin: 10, maxMargin: 35, itemSelector: '.tag__item'})
     }
   }
 </script>

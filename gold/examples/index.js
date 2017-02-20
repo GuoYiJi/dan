@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import App from './pages/App.vue'
 import routes from './route.config.js'
 import './Common/styles/index.scss'
+import 'rowgrid.js'
 Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',

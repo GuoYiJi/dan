@@ -33,4 +33,15 @@ cooking.add('plugins.Define', new webpack.DefinePlugin({
   'process.env.NODE_ENV': JSON.stringify('development')
 }));
 
+cooking.add('plugins.ProvidePlugin', new webpack.ProvidePlugin({
+  $: 'jquery',
+  jQuery: 'jquery',
+  'window.jQuery': 'jquery'
+}));
+
+cooking.add('loader.jQuery', {
+  test: require.resolve('jQuery'),
+  loader: 'expose?jQuery'
+});
+
 module.exports = cooking.resolve();
