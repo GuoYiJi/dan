@@ -112,8 +112,9 @@
             <div class="tag__item"><img src="" alt="">#sex</div>
           </div>
           <div class="btns">
-            <i>1</i>
-            <i>2</i>
+            <i class="disabled">PREV</i>
+            <i class="link" style="margin-left: -5px"></i>
+            <i class="current">2</i>
             <i>3</i>
             <i>4</i>
             <i>5</i>
@@ -122,7 +123,8 @@
             <i>...</i>
             <i>10</i>
             <i>20</i>
-            <i>NEXT</i>
+            <i class="link" style="margin-right: -4px"></i>
+            <i class="current">NEXT</i>
           </div>
         </div>
       </div>

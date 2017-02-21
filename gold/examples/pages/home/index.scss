@@ -89,29 +89,35 @@
 
 .btns {
   display: inline-block;
-  padding: 2px;
+  padding: 10px;
   margin: 20px;
+  background: #030406;
   & > i {
     display: inline-block;
-    padding: 2px 5px;
-    line-height: 15px;
-    color: #cdcdcd;
+    padding: 0 10px;
+    line-height: 28px;
+    color: #b1b2b2;
     font-style: normal;
-    font-size: 16px;
+    font-size: 14px;
     cursor: pointer;
+    &.link {
+      margin: 0;
+      padding: 0 10px;
+      vertical-align: middle;
+      height: 2px;
+      background: #181212;
+    }
+    &.disabled {
+      border: 1px solid #222;
+      color: #222;
+    }
+    &.current {
+
+      border: 1px solid #992c2c;
+    }
     &:last-child {
       position: relative;
-      padding-left: 62px;
-      &:after {
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-top: -1px;
-        width: 50px;
-        height: 2px;
-        content: "";
-        background: #282828;
-      }
+      margin-left: 0;
     }
   }
 
@@ -123,18 +129,20 @@
 .tag {
   @at-root {
     #{&}-box {
-      padding-top: 5px;
+      padding-top: 10px;
       margin: 0 auto;
-      width: 500px;
+      width: 100%;
       background-color: #080508;
     }
     #{&}__item {
       position: relative;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       float: left;
       padding: 5px 10px;
+      width: 25%;
       background-color: #0e0e10;
       color: #cdcdcd;
+      border: 1px solid #992c2c;
       & > img {
         position: absolute;
         width: 100%;
@@ -152,7 +160,7 @@
       img {
         display: block;
         margin: 0 auto;
-        width: 650px;
+        width: 100%;
         height: auto;
       }
     }
