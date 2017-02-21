@@ -5,9 +5,9 @@
   <div class="welcome">
     <x-header v-on:toggle="handleToggle"></x-header>
     <div class="main">
-      <div class="container">
+      <div class="container clearfix">
         <x-nav></x-nav>
-        <div class="welcome-center">
+        <div class="main-center welcome-center">
           <div class="video-box">
             <div class="video__item">
               <div class="hd"><img src="./1.png"><i>11:11</i></div>
@@ -127,9 +127,9 @@
         </div>
       </div>
       <div class="container">
-        <div class="banner__item"><img src="./1.png"></div>
-        <div class="banner__item"><img src="./2.png"></div>
-        <div class="banner__item"><img src="./3(1).png"></div>
+        <div class="banner__item"><img src="http://u1.img.mobile.sina.cn/public/files/image/600x150_img58aaaa71d3f1f.png"></div>
+        <div class="banner__item"><img src="https://dn-mhke0kuv.qbox.me/e8966d2fbceeda1864a1.png"></div>
+        <div class="banner__item"><img src="https://gold-cdn.xitu.io/images/welcome/extension@2x.png"></div>
       </div>
     </div>
     <div class="hero-cover welcome-hero-cover" :class="{ 'open': show }"></div>

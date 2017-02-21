@@ -1,7 +1,17 @@
 <style lang="scss">
+	.left-aside {
+		margin-top: 1em;
+		float: left;
+		width: 140px;
+	}
+	@media (max-width: 810px) {
+		.left-aside {
+			display: none;
+		}
+	}
 </style>
 <template>
-	<div class="welcome-left-aside">
+	<div class="welcome-left-aside left-aside">
 		<ul class="aside-list">
 			<li class="home true v-link-active">
 				<svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home" class="active"></use><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#home_normal" class="inactive"></use></svg>

@@ -48,49 +48,6 @@
     padding-left: 0
 }
 
-.text-normal {
-    color: #333
-}
-
-.text-muted {
-    color: #666
-}
-
-.text-muted2 {
-    color: #838383
-}
-
-.text-gray {
-    color: #909090
-}
-
-.text-light {
-    color: #d2d2d2
-}
-
-.text-blue {
-    color: #007fff
-}
-
-.text-blue-hover {
-    color: #0371df
-}
-
-.text-green {
-    color: #37c700
-}
-
-.text-green-hover {
-    color: #3cb40e
-}
-
-.text-orange {
-    color: #ff8900
-}
-
-.text-red {
-    color: #e22323
-}
 
 .text-a,.text-link {
     cursor: pointer;
@@ -523,23 +480,6 @@ nav .secondary .dropdown-list {
     }
 }
 
-@media (max-width: 600px) {
-    .inner {
-        width:80vw;
-        min-width: 0
-    }
-}
-
-footer {
-    position: fixed;
-    z-index: 5;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: .5em 1em;
-    background: #f8f9fa;
-    border-top: 1px solid #f1f1f1
-}
 
 @-webkit-keyframes spin {
     0% {
@@ -570,13 +510,6 @@ i.spin {
 
 i+i,i+span,span+i {
     margin-left: .5em
-}
-
-.welcome-left-aside {
-    position: fixed;
-    top: 5em;
-    display: inline-block;
-    width: 140px
 }
 
 .aside-list {
@@ -641,16 +574,7 @@ body {
 
 
 
-header {
-    position: fixed;
-    z-index: 5;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: #000;
-    color: #fff;
-    height: 4em
-}
+
 
 header .invite-tag {
     cursor: pointer;
@@ -691,14 +615,7 @@ header .invite-tag .close {
     color: #fff
 }
 
-header .action {
-    padding: 1.25em .75em;
-    vertical-align: top
-}
 
-header .action-image {
-    padding: 1em .75em
-}
 
 header .header-icon {
     font-size: 1.2em;
@@ -736,11 +653,7 @@ header .home-logo {
     height: 2em
 }
 
-.welcome .header-logo-text {
-    letter-spacing: .2em;
-    padding-left: 2.3em;
-    color: #fff;
-}
+
 
 .welcome .tag-input-block {
     border: 1px solid #ddd;
@@ -766,15 +679,16 @@ header .home-logo {
     background-color: rgba(0, 0, 0, .85);
 }
 
-.welcome .container {
-    width: 1000px
+.container {
+    width: 1000px;
 }
-
-.welcome .welcome-left-aside {
-    position: fixed;
-    top: 5em;
-    display: inline-block;
-    width: 140px
+@media (max-width: 810px) {
+    .container {
+        width: 100%;
+    }
+    header .action-input {
+        display: none;
+    }
 }
 
 .welcome .app-img {
@@ -786,14 +700,6 @@ header .home-logo {
 .welcome .rss-img {
     display: block;
     margin: auto
-}
-
-.welcome .welcome-center {
-    width: 100%;
-    padding-left: 9.7em;
-    padding-top: 1em;
-    overflow: hidden;
-    text-align: center;
 }
 
 
@@ -889,9 +795,7 @@ header .home-logo {
     transition: opacity .2s ease
 }
 
-.welcome .cover-enter,.welcome .cover-leave {
-    opacity: 0
-}
+
 
 .welcome .close-icon {
     position: absolute;
@@ -928,7 +832,7 @@ header .home-logo {
 }
 
 .welcome .input-relative .welcome-input:focus {
-    border: 1px solid #007fff
+    border: 1px solid #000;
 }
 
 .welcome .input-relative .checkmark-icon {
@@ -980,19 +884,7 @@ header .home-logo {
     font-size: .8em
 }
 
-.welcome .other-platform {
-    text-align: center;
-    margin-top: 1em
-}
 
-.welcome .other-platform .other-platform-text {
-    font-size: .8em
-}
-
-.welcome .other-platform .other-platform-img {
-    margin: 0 .5em;
-    cursor: pointer
-}
 
 @media (max-width: 600px) {
     .welcome .container {

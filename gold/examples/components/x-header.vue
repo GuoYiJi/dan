@@ -1,86 +1,39 @@
 <style lang="scss">
-// header {
-//   position: fixed;
-//   z-index: 10;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   height: 4em;
-//   background-color: #000;
-//   color: #fff;
-//   .logo-text {
-//     padding-left: 2.3em;
-//     letter-spacing: .2em;
-//     color: #fff;
-//   }
-//   @media (max-width: 600px) {
-//       .logo-text {
-//         display: none;
-//       }
-//   }
-//   .actions {
-//     float: left;
-//     .item {
-//       display: inline-block;
-//       padding: 1.25em .75em;
-//       vertical-align: top;
-//       @at-root {
-//         #{&}-image {
-//           padding: 1em .75em;
-//           img {
-//             height: 2em;
-//           }
-//         }
-//         #{&}-input {
-//           padding: 1em .75em;
-//           .tag-input-block {
-//             border: 1px solid #ddd;
-//             border-radius: 2px;
-//             padding: 0 .5em;
-//             width: 15em;
-//           }
-//           .tag-input {
-//             padding: .5em;
-//             border: 0;
-//             color: rgba(0,0,0,.3);
-//             font-size: .8em;
-//             background-color: transparent;
-//           }
-//         }
-//         @media (max-width: 600px) {
-//           #{&}-input {
-//             display: none;
-//           }
-//         }
-//       }
+  header {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: #000;
+      color: #fff;
+      height: 4em;
+  }
+  header .action {
+      padding: 1.25em .75em;
+      vertical-align: top
+  }
 
-//     }
-//     &.search {
-//       float: right;
-//       .btns {
-//         & > a {
-//           display: inline-block;
-//           padding: .15em .8em;
-//           font-size: .9em;
-//           color: #fff;
-//           &.register {
-//             padding-right: 0;
-//           }
-//           &.login {
-//             padding: 0;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+  header .action-image {
+      padding: 1em .75em
+  }
+  header .header-logo-text {
+    line-height: 62px;
+    padding-top: 0;
+    padding-bottom: 0;
+    span {
+      letter-spacing: .2em;
+      padding-left: 2.3em;
+      color: #fff;
+    }
+  }
 </style>
 <template>
   <header>
     <div class="container clearfix">
       <ul class="actions">
         <li class="action action-image"><a><img class="inline home-logo" src="https://gold-cdn.xitu.io/images/logo-header.svg" alt=""></a></li>
-        <li class="action"><span class="text-blue header-logo-text">高质量的技术社区</span></li>
+        <li class="action header-logo-text"><span>高质量的技术社区</span></li>
       </ul>
       <ul class="actions secondary">
         <li class="action action-input">

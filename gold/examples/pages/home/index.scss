@@ -17,7 +17,16 @@
 
 .welcome header .action-input {
     padding: 1em .75em
-}    
+}
+
+.main-center {
+  float: left;
+  padding-left: 1.4em;
+  padding-top: 1em;
+  width: 860px;
+  overflow: hidden;
+  text-align: center;
+} 
     
 .video {    
   @at-root {    
@@ -42,10 +51,14 @@
         }
         & > i {
           position: absolute;
-          right: 20px;
-          bottom: 10px;
-          color: yellow;
+          right: 5px;
+          bottom: 5px;
+          color: #fff;
           font-style: normal;
+          background-color: rgba(0, 0, 0, .8);
+          padding: 2px 4px;
+          font-size: 12px;
+          border-radius: 2px;
         }
       }
       & > .bd {
@@ -67,24 +80,6 @@
             height: $size;
             border-radius: 50%;
             vertical-align: top;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 600px) {
-  .video {
-    @at-root {
-      #{&}-box {
-        margin-right: 0;
-        display: block;
-      }
-      #{&}__item {
-        margin: 0 10px 20px;
-        .hd {
-          img {
-            height: 250px;
           }
         }
       }
@@ -153,12 +148,82 @@
 .banner {
   @at-root {
     #{&}__item {
-      margin: 10px 0;
+      margin-bottom: 15px;
       img {
         display: block;
         margin: 0 auto;
-        width: 300px;
-        height: 250px;
+        width: 650px;
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 810px) {
+  .main-center {
+    padding-left: 0;
+    width: 100%;
+  }
+  .video {
+    @at-root {
+      #{&}-box {
+        margin-right: 0;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 10px;
+      }
+      #{&}__item {
+        flex: 0 0 50%;
+        margin-right: 0;
+        padding: 0 10px;
+        .hd {
+          img {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .video {
+    @at-root {
+      #{&}-box {
+        margin-right: 0;
+        display: block;
+      }
+      #{&}__item {
+        margin: 0 10px 20px;
+        .hd {
+          img {
+            height: 250px;
+          }
+        }
+      }
+    }
+  }
+  .tag-box {
+    margin: 0 5%;
+    width: 90%;
+  }
+  .btns {
+    margin: 10px 5%;
+    & > i {
+
+      &:last-child {
+        &:after {
+          width: 30%;
+        }
+        padding-left: 10%;
+      }
+    }
+  }
+  .banner {
+    @at-root {
+      #{&}__item {
+        padding: 0 10px;
+        img {
+          width: 100%;
+        }
       }
     }
   }
