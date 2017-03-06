@@ -8,6 +8,24 @@
       <div class="container clearfix">
         <x-nav></x-nav>
         <div class="main-center welcome-center">
+          <div class="top-wrapper">
+            <h3>这是一个标题</h3>
+            <div class="userinfo">
+              <div class="avatar"><img src="https://dn-mhke0kuv.qbox.me/4cbc64201313953bb45b.jpg?imageView/1/w/120/h/120/q/100/format/png" alt="">轩辕小羽 | 325k plays</div>
+            </div>
+            <div class="video-wrapper" id="video"></div>
+            <script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
+
+            <script type="text/javascript">
+                var flashvars={
+                    f:'http://movie.ks.js.cn/flv/other/1_0.flv',
+                    c:0
+                };
+                var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+                var video=['http://movie.ks.js.cn/flv/other/1_0.mp4->video/mp4'];
+                CKobject.embed('/ckplayer/ckplayer.swf','video','ckplayer_a1','100%','100%',true,flashvars,video,params);
+            </script>
+          </div>
           <div class="video-box">
             <div class="video__item">
               <div class="hd"><img src="./1.png"><i>11:11</i></div>

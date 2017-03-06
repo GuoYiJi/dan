@@ -517,6 +517,7 @@ i+i,i+span,span+i {
 }
 
 .aside-list>li {
+    text-align: center;
     margin: 0 0 .3em;
     padding: .4em .6em;
     cursor: pointer;
@@ -558,13 +559,6 @@ i+i,i+span,span+i {
     position: relative
 }
 
-.aside-list span {
-    top: -.2em
-}
-
-.aside-list-span {
-    margin-left: .9em
-}
 
 body {
     background-color: #f4f5f5;
